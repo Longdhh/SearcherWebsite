@@ -1,0 +1,81 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-xxl">
+      <a class="navbar-brand" routerLink="/home">
+        <img src="../../../assets/logo/logo.png" alt="" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="filter-job" [formGroup]="companyForm">
+            <div class="d-flex search-box">
+                <div class="search-input">
+                    <i class="fa-solid fa-magnifying-glass icon"></i>
+                    <input formControlName="name" class="form-control me-2 search-bar" type="search" placeholder="Tìm kiếm công ty" aria-label="Search">
+                </div>
+                <!-- <div class="divider"></div>
+                <div class="location-select">
+                <i class="fa-solid fa-location-dot icon"></i>
+                <select class="select-input">
+                    <option [value]="item.id" *ngFor="let item of provinceList">{{item.name}}</option>
+                </select>
+                </div> -->
+            </div>
+        </form>
+        <button class="btn btn-search" (click)="getCompanies()">Tìm kiếm</button>
+      </div>
+      <div class="header__navbar-user" *ngIf="user!==null">
+        <img src="{{imageRoute + user.avatar}}" alt="" class="header__navbar-user-img">
+        <span class="header__navbar-user-name">{{user.name}}</span>
+        <ul class="header__navbar-user-menu">
+          <li class="header__navbar-user-item">
+            <a routerLink="/main/account">Tài khoản của tôi</a>
+          </li>
+          <li class="header__navbar-user-item">
+            <a routerLink="/main/registed-job">Các công việc đã ứng tuyển</a>
+          </li>
+          <li class="header__navbar-user-item header__navbar-user-item--seperate">
+            <a (click)="logout()" style="cursor: pointer">Đăng xuất</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__navbar-user" *ngIf="user==null || user==undefined">
+        <a class="btn btn-purple" routerLink="/home">Đăng nhập</a>
+      </div>
+    </div>
+  </nav>
+<div class="header">
+    <div class="container-xl">
+        <h1 class="title">Công ty</h1>
+        <p>Tìm kiếm những công ty phù hợp với bạn</p>
+    </div>
+</div>
+<div class="body">
+    <div class="container-xl">
+        <div class="row gy-5">
+            <div class="col-4" *ngFor="let item of companyList; index as i">
+                <div class="company">
+                    <a routerLink="/main/company/company-info/{{item.Id}}">
+                        <img src="{{imageRoute + item.avatar}}" alt="" class="banner">
+                    </a>
+                    <div class="info">
+                        <h4 class="company__name">
+                            <a routerLink="/main/company/company-info/{{item.Id}}">
+                                {{item.name}}
+                            </a>
+                        </h4>
+                        <p class="province">{{this.provinceList[i].name}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <div class="col-md-12">
+              <pagination [boundaryLinks]="true" [itemsPerPage]="pageSize" (pageChanged)="pageChanged($event)"
+                [totalItems]="totalRow" [(ngModel)]="pageIndex" class="pagination-sm" previousText="&lsaquo;"
+                nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+            </div>
+          </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="container-xl">
+    <div class="row">
+        <div class="col-12">
+            <div class="header">
+                <div class="header-info">
+                    <img src="{{server + company.avatar}}" alt="" class="thumbnails">
+                    <div class="overall-info">
+                        <h4>{{company.name}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="body">
+                <div class="description">
+                    <h4 class="title">Giới thiệu về công ty</h4>
+                    <p>{{company.description}}</p>
+                </div>
+                <div class="categories">
+                    <div class="block">
+                        <h5 class="sub-title">
+                            Địa chỉ
+                        </h5>
+                        <p class="date">
+                            {{company.address}}
+                        </p>
+                    </div>
+                    <div class="block">
+                        <h5 class="sub-title">
+                            Liên hệ
+                        </h5>
+                        <p class="contact">Số điện thoại: {{company.fax}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="job__header">
+                <p>{{totalRow}} việc làm phù hợp tìm được tại {{company.name}}</p>
+            </div>
+            <div class="job__list">
+                <div class="job__item" *ngFor="let item of jobList, let i = index">
+                    <div class="thumbnail-holder">
+                      <img src="{{server + company.avatar}}" class="thumbnail">
+                    </div>
+                    <div class="job__info">
+                        <h5 (click)="navigateToJob(item.job_id)" class="job__title">{{item.name}}</h5>
+                        <div class="salary">{{salaryList[i].name}}</div>
+                        <p>{{province.name}}</p>
+                        <p>Ngày hết hạn: {{item.job_end_date}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

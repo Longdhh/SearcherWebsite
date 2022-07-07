@@ -1,0 +1,13 @@
+.tos__page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f3f7;
+}
+.tos__document {
+    width: 70%;
+    padding: 50px;
+    box-shadow: 0px 0px 16px rgba(47,47,47,0.12);
+    background-color: var(--bs-white);
+    margin:50px 0;
+}

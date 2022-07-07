@@ -1,0 +1,990 @@
+"use strict";
+(self["webpackChunkWorkWebsite"] = self["webpackChunkWorkWebsite"] || []).push([["main"],{
+
+/***/ 158:
+/*!***************************************!*\
+  !*** ./src/app/app-routing.module.ts ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AppRoutingModule": () => (/* binding */ AppRoutingModule),
+/* harmony export */   "routingComponents": () => (/* binding */ routingComponents)
+/* harmony export */ });
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ 2816);
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home/home.component */ 5067);
+/* harmony import */ var _user_login_login_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./user/login/login.component */ 4270);
+/* harmony import */ var _user_register_register_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./user/register/register.component */ 2859);
+/* harmony import */ var _user_change_password_change_password_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./user/change-password/change-password.component */ 2384);
+/* harmony import */ var _user_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./user/forgot-password/forgot-password.component */ 7076);
+/* harmony import */ var _website_term_of_service_term_of_service_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./website/term-of-service/term-of-service.component */ 3787);
+/* harmony import */ var _website_security_security_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./website/security/security.component */ 6955);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 3184);
+
+
+
+
+
+
+
+
+
+
+const routes = [
+    { path: 'login', component: _user_login_login_component__WEBPACK_IMPORTED_MODULE_1__.LoginComponent, data: { animation: 0 } },
+    { path: 'home', component: _home_home_component__WEBPACK_IMPORTED_MODULE_0__.HomeComponent },
+    { path: 'register', component: _user_register_register_component__WEBPACK_IMPORTED_MODULE_2__.RegisterComponent, data: { animation: 1 } },
+    { path: 'change-password', component: _user_change_password_change_password_component__WEBPACK_IMPORTED_MODULE_3__.ChangePasswordComponent },
+    { path: 'forgot-password', component: _user_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_4__.ForgotPasswordComponent, data: { animation: 2 } },
+    { path: 'terms-of-service', component: _website_term_of_service_term_of_service_component__WEBPACK_IMPORTED_MODULE_5__.TermOfServiceComponent },
+    { path: 'security', component: _website_security_security_component__WEBPACK_IMPORTED_MODULE_6__.SecurityComponent }
+];
+class AppRoutingModule {
+}
+AppRoutingModule.ɵfac = function AppRoutingModule_Factory(t) { return new (t || AppRoutingModule)(); };
+AppRoutingModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineNgModule"]({ type: AppRoutingModule });
+AppRoutingModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjector"]({ imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_8__.RouterModule.forRoot(routes)], _angular_router__WEBPACK_IMPORTED_MODULE_8__.RouterModule] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵsetNgModuleScope"](AppRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_8__.RouterModule], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_8__.RouterModule] }); })();
+const routingComponents = [_user_login_login_component__WEBPACK_IMPORTED_MODULE_1__.LoginComponent, _home_home_component__WEBPACK_IMPORTED_MODULE_0__.HomeComponent, _user_register_register_component__WEBPACK_IMPORTED_MODULE_2__.RegisterComponent, _user_change_password_change_password_component__WEBPACK_IMPORTED_MODULE_3__.ChangePasswordComponent, _user_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_4__.ForgotPasswordComponent,
+    _website_term_of_service_term_of_service_component__WEBPACK_IMPORTED_MODULE_5__.TermOfServiceComponent, _website_security_security_component__WEBPACK_IMPORTED_MODULE_6__.SecurityComponent];
+
+
+/***/ }),
+
+/***/ 5041:
+/*!**********************************!*\
+  !*** ./src/app/app.component.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AppComponent": () => (/* binding */ AppComponent)
+/* harmony export */ });
+/* harmony import */ var _route_animation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./route-animation */ 6067);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 2816);
+
+
+
+class AppComponent {
+    constructor() {
+        this.title = 'WorkSearchingWebsite';
+    }
+    prepareRoute(outlet) {
+        return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    }
+}
+AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
+AppComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 3, vars: 1, consts: [["outlet", "outlet"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "main");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "router-outlet", null, 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        const _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵreference"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("@routeAnimations", ctx.prepareRoute(_r0));
+    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_2__.RouterOutlet], styles: ["main[_ngcontent-%COMP%] {\r\n    position: relative;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0FBQ3RCIiwiZmlsZSI6ImFwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWFpbiB7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn0iXX0= */"], data: { animation: [_route_animation__WEBPACK_IMPORTED_MODULE_0__.slider] } });
+
+
+/***/ }),
+
+/***/ 6747:
+/*!*******************************!*\
+  !*** ./src/app/app.module.ts ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AppModule": () => (/* binding */ AppModule)
+/* harmony export */ });
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/platform-browser */ 318);
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app-routing.module */ 158);
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ 5041);
+/* harmony import */ var ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ngx-bootstrap/tooltip */ 6996);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/forms */ 587);
+/* harmony import */ var _user_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./user/forgot-password/forgot-password.component */ 7076);
+/* harmony import */ var _user_change_password_change_password_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./user/change-password/change-password.component */ 2384);
+/* harmony import */ var _website_term_of_service_term_of_service_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./website/term-of-service/term-of-service.component */ 3787);
+/* harmony import */ var _website_security_security_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./website/security/security.component */ 6955);
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/platform-browser/animations */ 3598);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _user_login_login_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./user/login/login.component */ 4270);
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./home/home.component */ 5067);
+/* harmony import */ var _user_register_register_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./user/register/register.component */ 2859);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class AppModule {
+}
+AppModule.ɵfac = function AppModule_Factory(t) { return new (t || AppModule)(); };
+AppModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent] });
+AppModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineInjector"]({ providers: [], imports: [[
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__.BrowserModule,
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule,
+            _angular_forms__WEBPACK_IMPORTED_MODULE_11__.ReactiveFormsModule,
+            _angular_forms__WEBPACK_IMPORTED_MODULE_11__.FormsModule,
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__.BrowserAnimationsModule,
+            ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_13__.TooltipModule.forRoot()
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent, _user_login_login_component__WEBPACK_IMPORTED_MODULE_6__.LoginComponent, _home_home_component__WEBPACK_IMPORTED_MODULE_7__.HomeComponent, _user_register_register_component__WEBPACK_IMPORTED_MODULE_8__.RegisterComponent, _user_change_password_change_password_component__WEBPACK_IMPORTED_MODULE_3__.ChangePasswordComponent, _user_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_2__.ForgotPasswordComponent, _website_term_of_service_term_of_service_component__WEBPACK_IMPORTED_MODULE_4__.TermOfServiceComponent, _website_security_security_component__WEBPACK_IMPORTED_MODULE_5__.SecurityComponent, _user_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_2__.ForgotPasswordComponent,
+        _user_change_password_change_password_component__WEBPACK_IMPORTED_MODULE_3__.ChangePasswordComponent,
+        _website_term_of_service_term_of_service_component__WEBPACK_IMPORTED_MODULE_4__.TermOfServiceComponent,
+        _website_security_security_component__WEBPACK_IMPORTED_MODULE_5__.SecurityComponent], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__.BrowserModule,
+        _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule,
+        _angular_forms__WEBPACK_IMPORTED_MODULE_11__.ReactiveFormsModule,
+        _angular_forms__WEBPACK_IMPORTED_MODULE_11__.FormsModule,
+        _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__.BrowserAnimationsModule, ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_13__.TooltipModule] }); })();
+
+
+/***/ }),
+
+/***/ 5067:
+/*!****************************************!*\
+  !*** ./src/app/home/home.component.ts ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "HomeComponent": () => (/* binding */ HomeComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 3184);
+
+class HomeComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(); };
+HomeComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 2, vars: 0, template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "home works!");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJob21lLmNvbXBvbmVudC5jc3MifQ== */"] });
+
+
+/***/ }),
+
+/***/ 6067:
+/*!************************************!*\
+  !*** ./src/app/route-animation.ts ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "fader": () => (/* binding */ fader),
+/* harmony export */   "slider": () => (/* binding */ slider)
+/* harmony export */ });
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/animations */ 1631);
+
+const fader = (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.trigger)('routeAnimations', [
+    (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.transition)('* <=> *', [
+        (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.query)(':enter, :leave', [
+            (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.style)({
+                position: 'absolute',
+                left: 0,
+                width: '100%',
+                opacity: 0,
+                transform: 'scale(0) translateY(100%)'
+            }),
+        ], { optional: true }),
+        (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.query)(':enter', [
+            (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.animate)('600ms ease', (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.style)({ opacity: 1, transform: 'scale(1) translateY(0)' }))
+        ], { optional: true })
+    ])
+]);
+const slider = (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.trigger)('routeAnimations', [
+    (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.transition)(':increment', slideTo('right')),
+    (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.transition)(':decrement', slideTo('left')),
+]);
+function slideTo(direction) {
+    const optional = { optional: true };
+    return [
+        (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.query)(':enter, :leave', [
+            (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.style)({
+                position: 'absolute',
+                top: 0,
+                [direction]: 0,
+                width: '100%'
+            })
+        ], optional),
+        (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.query)(':enter', [
+            (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.style)({ [direction]: '-100%' })
+        ]),
+        (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.group)([
+            (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.query)(':leave', [
+                (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.animate)('600ms ease', (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.style)({ [direction]: '100%' }))
+            ], optional),
+            (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.query)(':enter', [
+                (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.animate)('600ms ease', (0,_angular_animations__WEBPACK_IMPORTED_MODULE_0__.style)({ [direction]: '0%' }))
+            ]),
+        ])
+    ];
+}
+
+
+/***/ }),
+
+/***/ 2384:
+/*!*******************************************************************!*\
+  !*** ./src/app/user/change-password/change-password.component.ts ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ChangePasswordComponent": () => (/* binding */ ChangePasswordComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ 587);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 6362);
+
+
+
+
+function ChangePasswordComponent_span_19_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Xin h\u00E3y nh\u1EADp \u0111\u1ECBa ch\u1EC9 email");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function ChangePasswordComponent_span_20_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "\u0110\u1ECBa ch\u1EC9 email kh\u00F4ng ch\u00EDnh x\u00E1c");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function ChangePasswordComponent_span_28_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Xin h\u00E3y nh\u1EADp m\u1EADt kh\u1EA9u");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function ChangePasswordComponent_span_29_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "M\u1EADt kh\u1EA9u c\u00F3 \u0111\u1ED9 d\u00E0i kh\u00F4ng ph\u00F9 h\u1EE3p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function ChangePasswordComponent_span_35_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Xin h\u00E3y nh\u1EADp l\u1EA1i m\u1EADt kh\u1EA9u");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+class ChangePasswordComponent {
+    constructor() { }
+    ngOnInit() {
+        this.initializeForm();
+    }
+    initializeForm() {
+        this.changePasswordForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormGroup({
+            'email': new _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControl('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.email]),
+            'password': new _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControl('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.minLength(6), _angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.maxLength(32)]),
+            're-password': new _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControl('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.required)
+        });
+    }
+    onSubmit() {
+        console.log('success');
+    }
+}
+ChangePasswordComponent.ɵfac = function ChangePasswordComponent_Factory(t) { return new (t || ChangePasswordComponent)(); };
+ChangePasswordComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ChangePasswordComponent, selectors: [["app-change-password"]], decls: 38, vars: 6, consts: [["role", "change-password-page", 1, "change-password__page"], [1, "container-fluid"], [1, "row", "g-0"], [1, "col-6", "col"], [1, "change-password__banner"], [1, "change-password__img", 2, "background-image", "url('../../assets/img/change-password/change-password-wallpaper.jpg')"], [1, "change-password__column"], ["role", "change-password-form", 1, "change-password-form"], [1, "change-password__title"], [1, "change-password__description"], ["name", "change-passwordForm", 3, "formGroup", "ngSubmit"], [1, "input-block"], ["for", "user", 1, "change-password__email"], [1, "fa-solid", "fa-envelope", "icon"], ["formControlName", "email", "placeholder", "Nh\u1EADp email", 1, "input"], ["class", "error", 4, "ngIf"], ["for", "password", 1, "change-password__password-title"], [1, "fa-solid", "fa-key", "icon"], ["formControlName", "password", "type", "password", "placeholder", "Nh\u1EADp m\u1EADt kh\u1EA9u m\u1EDBi", 1, "input"], [1, "instruction"], ["class", "error password-error", 4, "ngIf"], ["for", "re-password", 1, "change-password__re-password-title"], [1, "fa-brands", "fa-keybase", "icon"], ["formControlName", "re-password", "type", "password", "placeholder", "Nh\u1EADp l\u1EA1i m\u1EADt kh\u1EA9u", 1, "input"], ["type", "submit", "name", "submit", 1, "btn", "change-password__btn"], [1, "error"], [1, "error", "password-error"]], template: function ChangePasswordComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3)(4, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 3)(7, "div", 6)(8, "div", 7)(9, "h1", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "\u0110\u1ED5i m\u1EADt kh\u1EA9u");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "p", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "H\u00E3y nh\u1EADp l\u1EA1i email v\u00E0 m\u1EADt kh\u1EA9u m\u1EDBi \u0111\u1EC3 x\u00E1c nh\u1EADn thay \u0111\u1ED5i m\u1EADt kh\u1EA9u");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "form", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function ChangePasswordComponent_Template_form_ngSubmit_13_listener() { return ctx.onSubmit(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 11)(15, "label", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "\u0110\u1ECBa ch\u1EC9 Email: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "i", 13)(18, "input", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](19, ChangePasswordComponent_span_19_Template, 2, 0, "span", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](20, ChangePasswordComponent_span_20_Template, 2, 0, "span", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 11)(22, "label", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, "M\u1EADt kh\u1EA9u: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "i", 17)(25, "input", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "p", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "M\u1EADt kh\u1EA9u t\u1EEB 6-32 k\u00FD t\u1EF1, c\u00F3 \u00EDt nh\u1EA5t 1 k\u00ED t\u1EF1 ch\u1EEF, 1 k\u00ED t\u1EF1 s\u1ED1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](28, ChangePasswordComponent_span_28_Template, 2, 0, "span", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](29, ChangePasswordComponent_span_29_Template, 2, 0, "span", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "div", 11)(31, "label", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, "Nh\u1EADp l\u1EA1i m\u1EADt kh\u1EA9u: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](33, "i", 22)(34, "input", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](35, ChangePasswordComponent_span_35_Template, 2, 0, "span", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "button", 24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, "Thay \u0111\u1ED5i m\u1EADt kh\u1EA9u");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()()()()()();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.changePasswordForm);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.changePasswordForm.get("email").touched && ctx.changePasswordForm.get("email").hasError("required"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.changePasswordForm.get("email").hasError("email"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.changePasswordForm.get("password").touched && ctx.changePasswordForm.get("password").hasError("required"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.changePasswordForm.get("password").hasError("minlength") || ctx.changePasswordForm.get("password").hasError("maxlength"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.changePasswordForm.get("re-password").touched && ctx.changePasswordForm.get("re-password").invalid);
+    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormGroupDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControlName, _angular_common__WEBPACK_IMPORTED_MODULE_2__.NgIf], styles: ["*[_ngcontent-%COMP%] {\r\n    padding: 0;\r\n\r\n}\r\n\r\n.error[_ngcontent-%COMP%] {\r\n    color: var(--bs-red);\r\n    position: absolute;\r\n    display: block;\r\n    margin-left: 30px;\r\n    font-size:14px;\r\n}\r\n\r\n.link[_ngcontent-%COMP%] {\r\n    color: var(--bs-purple);\r\n    text-decoration: none;\r\n    font-size:16px;\r\n}\r\n\r\n.icon[_ngcontent-%COMP%] {\r\n    font-size:15px;\r\n    position: absolute;\r\n    left: 15px;\r\n    top: 50px;\r\n    color: var(--bs-purple);\r\n}\r\n\r\n.input[_ngcontent-%COMP%] {\r\n    padding: 10px 20px 10px 40px;\r\n    width: 100%;\r\n    outline: 0;\r\n    border: 1px solid #dee2e6;\r\n    border-radius:3px;\r\n    margin-top:10px;\r\n}\r\n\r\n.input[_ngcontent-%COMP%]:focus {\r\n    border-color: var(--bs-purple);\r\n    outline: 0;\r\n}\r\n\r\n.instruction[_ngcontent-%COMP%] {\r\n    color: var(--bs-gray);\r\n    font-size:12px;\r\n    margin-left: 20px;\r\n    margin-top: 10px;\r\n}\r\n\r\n.input-block[_ngcontent-%COMP%] {\r\n    margin-top:30px;\r\n    position: relative;\r\n}\r\n\r\n.change-password__page[_ngcontent-%COMP%] {\r\n    background-color: #f2f3f7;\r\n}\r\n\r\n.change-password-form[_ngcontent-%COMP%] {\r\n    padding: 50px;\r\n    border-radius: 10px;\r\n    background-color: var(--bs-white);\r\n    z-index: 100;\r\n    box-shadow: 0px 0px 16px rgba(47,47,47,0.12);\r\n}\r\n\r\n.change-password__title[_ngcontent-%COMP%] {\r\n    color: var(--bs-purple);\r\n}\r\n\r\n.change-password__description[_ngcontent-%COMP%] {\r\n    opacity: 0.6;\r\n}\r\n\r\n.change-password__column[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    background-color: #f2f3f7;\r\n    height: 100vh;\r\n}\r\n\r\n.change-password__user-title[_ngcontent-%COMP%] {\r\n    display: block;\r\n}\r\n\r\n.change-password__password-title[_ngcontent-%COMP%] {\r\n    display: block;\r\n}\r\n\r\n.change-password__btn[_ngcontent-%COMP%] {\r\n    margin-top:30px;\r\n    padding: 10px 15px;\r\n    background-color:var(--bs-purple);\r\n    border-color: var(--bs-purple);\r\n    color: var(--bs-white);\r\n    width: 100%;\r\n}\r\n\r\n.change-password__banner[_ngcontent-%COMP%] {\r\n\r\n    width: 50%;\r\n    position: absolute;\r\n    left: 0px;\r\n    height: 100%;\r\n}\r\n\r\n.change-password__img[_ngcontent-%COMP%] {\r\n    max-height: 100%;\r\n    height: 100%;\r\n    background-repeat: no-repeat;\r\n    background-position: 15% 50%;\r\n}\r\n\r\n.change-password__text[_ngcontent-%COMP%] {\r\n    margin-top:20px;\r\n}\r\n\r\n.employer__change-password[_ngcontent-%COMP%] {\r\n    padding: 10px 15px;\r\n    margin-top:20px;\r\n    width: 100%;\r\n    display: block;\r\n    background-color: var(--bs-white);\r\n    border-color: var(--bs-purple);\r\n    color: var(--bs-purple);\r\n}\r\n\r\n.employer__change-password[_ngcontent-%COMP%]:hover {\r\n    background-color: var(--bs-purple);\r\n    color: var(--bs-white);\r\n}\r\n\r\n.tos-and-security[_ngcontent-%COMP%] {\r\n    margin-top:10px;\r\n}\r\n\r\n.password-error[_ngcontent-%COMP%] {\r\n    margin-top:-10px\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNoYW5nZS1wYXNzd29yZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksVUFBVTs7QUFFZDs7QUFFQTtJQUNJLG9CQUFvQjtJQUNwQixrQkFBa0I7SUFDbEIsY0FBYztJQUNkLGlCQUFpQjtJQUNqQixjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksdUJBQXVCO0lBQ3ZCLHFCQUFxQjtJQUNyQixjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksY0FBYztJQUNkLGtCQUFrQjtJQUNsQixVQUFVO0lBQ1YsU0FBUztJQUNULHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLDRCQUE0QjtJQUM1QixXQUFXO0lBQ1gsVUFBVTtJQUNWLHlCQUF5QjtJQUN6QixpQkFBaUI7SUFDakIsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLDhCQUE4QjtJQUM5QixVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxxQkFBcUI7SUFDckIsY0FBYztJQUNkLGlCQUFpQjtJQUNqQixnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxlQUFlO0lBQ2Ysa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0kseUJBQXlCO0FBQzdCOztBQUVBO0lBQ0ksYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixpQ0FBaUM7SUFDakMsWUFBWTtJQUNaLDRDQUE0QztBQUNoRDs7QUFFQTtJQUNJLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLHVCQUF1QjtJQUN2Qix5QkFBeUI7SUFDekIsYUFBYTtBQUNqQjs7QUFFQTtJQUNJLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksZUFBZTtJQUNmLGtCQUFrQjtJQUNsQixpQ0FBaUM7SUFDakMsOEJBQThCO0lBQzlCLHNCQUFzQjtJQUN0QixXQUFXO0FBQ2Y7O0FBRUE7O0lBRUksVUFBVTtJQUNWLGtCQUFrQjtJQUNsQixTQUFTO0lBQ1QsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixZQUFZO0lBQ1osNEJBQTRCO0lBQzVCLDRCQUE0QjtBQUNoQzs7QUFFQTtJQUNJLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsZUFBZTtJQUNmLFdBQVc7SUFDWCxjQUFjO0lBQ2QsaUNBQWlDO0lBQ2pDLDhCQUE4QjtJQUM5Qix1QkFBdUI7QUFDM0I7O0FBRUE7SUFDSSxrQ0FBa0M7SUFDbEMsc0JBQXNCO0FBQzFCOztBQUVBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtJQUNJO0FBQ0oiLCJmaWxlIjoiY2hhbmdlLXBhc3N3b3JkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIqIHtcclxuICAgIHBhZGRpbmc6IDA7XHJcblxyXG59XHJcblxyXG4uZXJyb3Ige1xyXG4gICAgY29sb3I6IHZhcigtLWJzLXJlZCk7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIG1hcmdpbi1sZWZ0OiAzMHB4O1xyXG4gICAgZm9udC1zaXplOjE0cHg7XHJcbn1cclxuXHJcbi5saW5rIHtcclxuICAgIGNvbG9yOiB2YXIoLS1icy1wdXJwbGUpO1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG4gICAgZm9udC1zaXplOjE2cHg7XHJcbn1cclxuXHJcbi5pY29uIHtcclxuICAgIGZvbnQtc2l6ZToxNXB4O1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbGVmdDogMTVweDtcclxuICAgIHRvcDogNTBweDtcclxuICAgIGNvbG9yOiB2YXIoLS1icy1wdXJwbGUpO1xyXG59XHJcblxyXG4uaW5wdXQge1xyXG4gICAgcGFkZGluZzogMTBweCAyMHB4IDEwcHggNDBweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgb3V0bGluZTogMDtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkICNkZWUyZTY7XHJcbiAgICBib3JkZXItcmFkaXVzOjNweDtcclxuICAgIG1hcmdpbi10b3A6MTBweDtcclxufVxyXG5cclxuLmlucHV0OmZvY3VzIHtcclxuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tYnMtcHVycGxlKTtcclxuICAgIG91dGxpbmU6IDA7XHJcbn1cclxuXHJcbi5pbnN0cnVjdGlvbiB7XHJcbiAgICBjb2xvcjogdmFyKC0tYnMtZ3JheSk7XHJcbiAgICBmb250LXNpemU6MTJweDtcclxuICAgIG1hcmdpbi1sZWZ0OiAyMHB4O1xyXG4gICAgbWFyZ2luLXRvcDogMTBweDtcclxufVxyXG5cclxuLmlucHV0LWJsb2NrIHtcclxuICAgIG1hcmdpbi10b3A6MzBweDtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxufVxyXG5cclxuLmNoYW5nZS1wYXNzd29yZF9fcGFnZSB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjJmM2Y3O1xyXG59XHJcblxyXG4uY2hhbmdlLXBhc3N3b3JkLWZvcm0ge1xyXG4gICAgcGFkZGluZzogNTBweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1icy13aGl0ZSk7XHJcbiAgICB6LWluZGV4OiAxMDA7XHJcbiAgICBib3gtc2hhZG93OiAwcHggMHB4IDE2cHggcmdiYSg0Nyw0Nyw0NywwLjEyKTtcclxufVxyXG5cclxuLmNoYW5nZS1wYXNzd29yZF9fdGl0bGUge1xyXG4gICAgY29sb3I6IHZhcigtLWJzLXB1cnBsZSk7XHJcbn1cclxuXHJcbi5jaGFuZ2UtcGFzc3dvcmRfX2Rlc2NyaXB0aW9uIHtcclxuICAgIG9wYWNpdHk6IDAuNjtcclxufVxyXG5cclxuLmNoYW5nZS1wYXNzd29yZF9fY29sdW1uIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjJmM2Y3O1xyXG4gICAgaGVpZ2h0OiAxMDB2aDtcclxufVxyXG5cclxuLmNoYW5nZS1wYXNzd29yZF9fdXNlci10aXRsZSB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxufVxyXG5cclxuLmNoYW5nZS1wYXNzd29yZF9fcGFzc3dvcmQtdGl0bGUge1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbn1cclxuXHJcbi5jaGFuZ2UtcGFzc3dvcmRfX2J0biB7XHJcbiAgICBtYXJnaW4tdG9wOjMwcHg7XHJcbiAgICBwYWRkaW5nOiAxMHB4IDE1cHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOnZhcigtLWJzLXB1cnBsZSk7XHJcbiAgICBib3JkZXItY29sb3I6IHZhcigtLWJzLXB1cnBsZSk7XHJcbiAgICBjb2xvcjogdmFyKC0tYnMtd2hpdGUpO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5jaGFuZ2UtcGFzc3dvcmRfX2Jhbm5lciB7XHJcblxyXG4gICAgd2lkdGg6IDUwJTtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGxlZnQ6IDBweDtcclxuICAgIGhlaWdodDogMTAwJTtcclxufVxyXG5cclxuLmNoYW5nZS1wYXNzd29yZF9faW1nIHtcclxuICAgIG1heC1oZWlnaHQ6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogMTUlIDUwJTtcclxufVxyXG5cclxuLmNoYW5nZS1wYXNzd29yZF9fdGV4dCB7XHJcbiAgICBtYXJnaW4tdG9wOjIwcHg7XHJcbn1cclxuXHJcbi5lbXBsb3llcl9fY2hhbmdlLXBhc3N3b3JkIHtcclxuICAgIHBhZGRpbmc6IDEwcHggMTVweDtcclxuICAgIG1hcmdpbi10b3A6MjBweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1icy13aGl0ZSk7XHJcbiAgICBib3JkZXItY29sb3I6IHZhcigtLWJzLXB1cnBsZSk7XHJcbiAgICBjb2xvcjogdmFyKC0tYnMtcHVycGxlKTtcclxufVxyXG5cclxuLmVtcGxveWVyX19jaGFuZ2UtcGFzc3dvcmQ6aG92ZXIge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYnMtcHVycGxlKTtcclxuICAgIGNvbG9yOiB2YXIoLS1icy13aGl0ZSk7XHJcbn1cclxuXHJcbi50b3MtYW5kLXNlY3VyaXR5IHtcclxuICAgIG1hcmdpbi10b3A6MTBweDtcclxufVxyXG5cclxuLnBhc3N3b3JkLWVycm9yIHtcclxuICAgIG1hcmdpbi10b3A6LTEwcHhcclxufSJdfQ== */"] });
+
+
+/***/ }),
+
+/***/ 7076:
+/*!*******************************************************************!*\
+  !*** ./src/app/user/forgot-password/forgot-password.component.ts ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ForgotPasswordComponent": () => (/* binding */ ForgotPasswordComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ 587);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 6362);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 2816);
+
+
+
+
+
+function ForgotPasswordComponent_span_17_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Xin h\u00E3y nh\u1EADp \u0111\u1ECBa ch\u1EC9 email");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function ForgotPasswordComponent_span_18_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "\u0110\u1ECBa ch\u1EC9 email kh\u00F4ng ch\u00EDnh x\u00E1c");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+class ForgotPasswordComponent {
+    constructor() { }
+    ngOnInit() {
+        this.initialize();
+    }
+    initialize() {
+        this.forgotPasswordForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormGroup({
+            'email': new _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControl('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.email, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.required])
+        });
+    }
+    onSubmit() {
+        console.log('success');
+    }
+}
+ForgotPasswordComponent.ɵfac = function ForgotPasswordComponent_Factory(t) { return new (t || ForgotPasswordComponent)(); };
+ForgotPasswordComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ForgotPasswordComponent, selectors: [["app-forgot-password"]], decls: 34, vars: 3, consts: [["role", "forgot-password-page", 1, "forgot-password__page"], [1, "container-fluid"], [1, "row", "g-0"], [1, "col-6", "col"], [1, "forgot-password__banner"], [1, "forgot-password__img", 2, "background-image", "url('../../assets/img/forgot-password/forgot-password-wallpaper.jpg')"], [1, "forgot-password__column"], ["role", "forgot-password-form", 1, "forgot-password-form"], [1, "forgot-password__title"], ["name", "forgot-passwordForm", 3, "formGroup", "ngSubmit"], [1, "input-block"], ["for", "user", 1, "forgot-password__email"], [1, "fa-solid", "fa-envelope", "icon"], ["formControlName", "email", "placeholder", "Nh\u1EADp email", 1, "input"], ["class", "error", 4, "ngIf"], [1, "tos-and-security"], ["routerLink", "/tos", 1, "link"], ["routerLink", "/security", 1, "link"], ["type", "submit", "name", "submit", 1, "btn", "forgot-password__btn"], [1, "register-and-login"], ["routerLink", "/login", 1, "link"], ["routerLink", "/register", 1, "link"], [1, "error"]], template: function ForgotPasswordComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3)(4, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 3)(7, "div", 6)(8, "div", 7)(9, "h1", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Qu\u00EAn m\u1EADt kh\u1EA9u");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "form", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function ForgotPasswordComponent_Template_form_ngSubmit_11_listener() { return ctx.onSubmit(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 10)(13, "label", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, "\u0110\u1ECBa ch\u1EC9 Email: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "i", 12)(16, "input", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, ForgotPasswordComponent_span_17_Template, 2, 0, "span", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](18, ForgotPasswordComponent_span_18_Template, 2, 0, "span", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "p", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "B\u1EB1ng c\u00E1ch \u1EA5n v\u00E0o n\u00FAt \u0111\u1ED5i m\u1EADt kh\u1EA9u, b\u1EA1n \u0111\u00E3 \u0111\u1ED3ng \u00FD v\u1EDBi ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "a", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "\u0110i\u1EC1u kho\u1EA3n d\u1ECBch v\u1EE5");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, " v\u00E0 ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "a", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Ch\u00EDnh s\u00E1ch b\u1EA3o m\u1EADt");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, " c\u1EE7a ch\u00FAng t\u00F4i ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "button", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, "\u0110\u1ED5i m\u1EADt kh\u1EA9u");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div", 19)(30, "a", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "Quay l\u1EA1i \u0111\u0103ng nh\u1EADp");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "a", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "\u0110\u0103ng k\u00FD t\u00E0i kho\u1EA3n m\u1EDBi");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()()()()()();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.forgotPasswordForm);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.forgotPasswordForm.get("email").touched && ctx.forgotPasswordForm.get("email").hasError("required"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.forgotPasswordForm.get("email").hasError("email"));
+    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormGroupDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControlName, _angular_common__WEBPACK_IMPORTED_MODULE_2__.NgIf, _angular_router__WEBPACK_IMPORTED_MODULE_3__.RouterLinkWithHref], styles: ["*[_ngcontent-%COMP%] {\r\n    padding: 0;\r\n\r\n}\r\n\r\n.error[_ngcontent-%COMP%] {\r\n    color: var(--bs-red);\r\n    position: absolute;\r\n    display: block;\r\n    margin-left: 30px;\r\n    font-size:14px;\r\n}\r\n\r\n.link[_ngcontent-%COMP%] {\r\n    color: var(--bs-purple);\r\n    text-decoration: none;\r\n    font-size:16px;\r\n}\r\n\r\n.icon[_ngcontent-%COMP%] {\r\n    font-size:15px;\r\n    position: absolute;\r\n    left: 15px;\r\n    top: 50px;\r\n    color: var(--bs-purple);\r\n}\r\n\r\n.input[_ngcontent-%COMP%] {\r\n    padding: 10px 20px 10px 40px;\r\n    width: 100%;\r\n    outline: 0;\r\n    border: 1px solid #dee2e6;\r\n    border-radius:3px;\r\n    margin-top:10px;\r\n}\r\n\r\n.input[_ngcontent-%COMP%]:focus {\r\n    border-color: var(--bs-purple);\r\n    outline: 0;\r\n}\r\n\r\n.instruction[_ngcontent-%COMP%] {\r\n    color: var(--bs-gray);\r\n    font-size:12px;\r\n    margin-left: 40px;\r\n    margin-top: 10px;\r\n}\r\n\r\n.password-error[_ngcontent-%COMP%] {\r\n    margin-top: -14px;\r\n}\r\n\r\n.input-block[_ngcontent-%COMP%] {\r\n    margin-top:30px;\r\n    position: relative;\r\n}\r\n\r\n.forgot-password__page[_ngcontent-%COMP%] {\r\n    background-color: #f2f3f7;\r\n}\r\n\r\n.forgot-password-form[_ngcontent-%COMP%] {\r\n    padding: 50px;\r\n    border-radius: 10px;\r\n    z-index: 100;\r\n    background-color: var(--bs-white);\r\n    box-shadow: 0px 0px 16px rgba(47,47,47,0.12);\r\n    margin: 0 50px;\r\n    margin-top:50px;\r\n}\r\n\r\n.forgot-password__title[_ngcontent-%COMP%] {\r\n    color: var(--bs-purple);\r\n}\r\n\r\n.forgot-password__description[_ngcontent-%COMP%] {\r\n    opacity: 0.6;\r\n}\r\n\r\n.forgot-password__column[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    background-color: #f2f3f7;\r\n    padding-bottom: 20px;\r\n    height: 100vh;\r\n}\r\n\r\n.forgot-password__user-title[_ngcontent-%COMP%] {\r\n    display: block;\r\n}\r\n\r\n.forgot-password__password-title[_ngcontent-%COMP%] {\r\n    display: block;\r\n}\r\n\r\n.forgot-password__btn[_ngcontent-%COMP%] {\r\n    padding: 10px 15px;\r\n    background-color:var(--bs-purple);\r\n    border-color: var(--bs-purple);\r\n    color: var(--bs-white);\r\n    width: 100%;\r\n}\r\n\r\n.forgot-password__banner[_ngcontent-%COMP%] {\r\n    background-repeat: no-repeat;\r\n    width: 50%;\r\n    position: absolute;\r\n    left: 0px;\r\n    height: 100vh;\r\n}\r\n\r\n.forgot-password__img[_ngcontent-%COMP%] {\r\n    background-size: cover;\r\n    height: 100%;\r\n}\r\n\r\n.forgot-password__text[_ngcontent-%COMP%] {\r\n    margin-top:20px;\r\n}\r\n\r\n.employer__forgot-password[_ngcontent-%COMP%] {\r\n    padding: 10px 15px;\r\n    margin-top:20px;\r\n    width: 100%;\r\n    display: block;\r\n    background-color: var(--bs-white);\r\n    border-color: var(--bs-purple);\r\n    color: var(--bs-purple);\r\n}\r\n\r\n.employer__forgot-password[_ngcontent-%COMP%]:hover {\r\n    background-color: var(--bs-purple);\r\n    color: var(--bs-white);\r\n}\r\n\r\n.tos-and-security[_ngcontent-%COMP%] {\r\n    margin-top:30px;\r\n}\r\n\r\n.register-and-login[_ngcontent-%COMP%] {\r\n    margin-top:20px;\r\n    display: flex;\r\n    justify-content:space-between;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvcmdvdC1wYXNzd29yZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksVUFBVTs7QUFFZDs7QUFFQTtJQUNJLG9CQUFvQjtJQUNwQixrQkFBa0I7SUFDbEIsY0FBYztJQUNkLGlCQUFpQjtJQUNqQixjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksdUJBQXVCO0lBQ3ZCLHFCQUFxQjtJQUNyQixjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksY0FBYztJQUNkLGtCQUFrQjtJQUNsQixVQUFVO0lBQ1YsU0FBUztJQUNULHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLDRCQUE0QjtJQUM1QixXQUFXO0lBQ1gsVUFBVTtJQUNWLHlCQUF5QjtJQUN6QixpQkFBaUI7SUFDakIsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLDhCQUE4QjtJQUM5QixVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxxQkFBcUI7SUFDckIsY0FBYztJQUNkLGlCQUFpQjtJQUNqQixnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxlQUFlO0lBQ2Ysa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0kseUJBQXlCO0FBQzdCOztBQUVBO0lBQ0ksYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixZQUFZO0lBQ1osaUNBQWlDO0lBQ2pDLDRDQUE0QztJQUM1QyxjQUFjO0lBQ2QsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLHVCQUF1QjtJQUN2Qix5QkFBeUI7SUFDekIsb0JBQW9CO0lBQ3BCLGFBQWE7QUFDakI7O0FBRUE7SUFDSSxjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksY0FBYztBQUNsQjs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixpQ0FBaUM7SUFDakMsOEJBQThCO0lBQzlCLHNCQUFzQjtJQUN0QixXQUFXO0FBQ2Y7O0FBRUE7SUFDSSw0QkFBNEI7SUFDNUIsVUFBVTtJQUNWLGtCQUFrQjtJQUNsQixTQUFTO0lBQ1QsYUFBYTtBQUNqQjs7QUFFQTtJQUNJLHNCQUFzQjtJQUN0QixZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixlQUFlO0lBQ2YsV0FBVztJQUNYLGNBQWM7SUFDZCxpQ0FBaUM7SUFDakMsOEJBQThCO0lBQzlCLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLGtDQUFrQztJQUNsQyxzQkFBc0I7QUFDMUI7O0FBRUE7SUFDSSxlQUFlO0FBQ25COztBQUVBO0lBQ0ksZUFBZTtJQUNmLGFBQWE7SUFDYiw2QkFBNkI7QUFDakMiLCJmaWxlIjoiZm9yZ290LXBhc3N3b3JkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIqIHtcclxuICAgIHBhZGRpbmc6IDA7XHJcblxyXG59XHJcblxyXG4uZXJyb3Ige1xyXG4gICAgY29sb3I6IHZhcigtLWJzLXJlZCk7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIG1hcmdpbi1sZWZ0OiAzMHB4O1xyXG4gICAgZm9udC1zaXplOjE0cHg7XHJcbn1cclxuXHJcbi5saW5rIHtcclxuICAgIGNvbG9yOiB2YXIoLS1icy1wdXJwbGUpO1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG4gICAgZm9udC1zaXplOjE2cHg7XHJcbn1cclxuXHJcbi5pY29uIHtcclxuICAgIGZvbnQtc2l6ZToxNXB4O1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbGVmdDogMTVweDtcclxuICAgIHRvcDogNTBweDtcclxuICAgIGNvbG9yOiB2YXIoLS1icy1wdXJwbGUpO1xyXG59XHJcblxyXG4uaW5wdXQge1xyXG4gICAgcGFkZGluZzogMTBweCAyMHB4IDEwcHggNDBweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgb3V0bGluZTogMDtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkICNkZWUyZTY7XHJcbiAgICBib3JkZXItcmFkaXVzOjNweDtcclxuICAgIG1hcmdpbi10b3A6MTBweDtcclxufVxyXG5cclxuLmlucHV0OmZvY3VzIHtcclxuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tYnMtcHVycGxlKTtcclxuICAgIG91dGxpbmU6IDA7XHJcbn1cclxuXHJcbi5pbnN0cnVjdGlvbiB7XHJcbiAgICBjb2xvcjogdmFyKC0tYnMtZ3JheSk7XHJcbiAgICBmb250LXNpemU6MTJweDtcclxuICAgIG1hcmdpbi1sZWZ0OiA0MHB4O1xyXG4gICAgbWFyZ2luLXRvcDogMTBweDtcclxufVxyXG5cclxuLnBhc3N3b3JkLWVycm9yIHtcclxuICAgIG1hcmdpbi10b3A6IC0xNHB4O1xyXG59XHJcblxyXG4uaW5wdXQtYmxvY2sge1xyXG4gICAgbWFyZ2luLXRvcDozMHB4O1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcblxyXG4uZm9yZ290LXBhc3N3b3JkX19wYWdlIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmMmYzZjc7XHJcbn1cclxuXHJcbi5mb3Jnb3QtcGFzc3dvcmQtZm9ybSB7XHJcbiAgICBwYWRkaW5nOiA1MHB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogMTBweDtcclxuICAgIHotaW5kZXg6IDEwMDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWJzLXdoaXRlKTtcclxuICAgIGJveC1zaGFkb3c6IDBweCAwcHggMTZweCByZ2JhKDQ3LDQ3LDQ3LDAuMTIpO1xyXG4gICAgbWFyZ2luOiAwIDUwcHg7XHJcbiAgICBtYXJnaW4tdG9wOjUwcHg7XHJcbn1cclxuXHJcbi5mb3Jnb3QtcGFzc3dvcmRfX3RpdGxlIHtcclxuICAgIGNvbG9yOiB2YXIoLS1icy1wdXJwbGUpO1xyXG59XHJcblxyXG4uZm9yZ290LXBhc3N3b3JkX19kZXNjcmlwdGlvbiB7XHJcbiAgICBvcGFjaXR5OiAwLjY7XHJcbn1cclxuXHJcbi5mb3Jnb3QtcGFzc3dvcmRfX2NvbHVtbiB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2YyZjNmNztcclxuICAgIHBhZGRpbmctYm90dG9tOiAyMHB4O1xyXG4gICAgaGVpZ2h0OiAxMDB2aDtcclxufVxyXG5cclxuLmZvcmdvdC1wYXNzd29yZF9fdXNlci10aXRsZSB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxufVxyXG5cclxuLmZvcmdvdC1wYXNzd29yZF9fcGFzc3dvcmQtdGl0bGUge1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbn1cclxuXHJcbi5mb3Jnb3QtcGFzc3dvcmRfX2J0biB7XHJcbiAgICBwYWRkaW5nOiAxMHB4IDE1cHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOnZhcigtLWJzLXB1cnBsZSk7XHJcbiAgICBib3JkZXItY29sb3I6IHZhcigtLWJzLXB1cnBsZSk7XHJcbiAgICBjb2xvcjogdmFyKC0tYnMtd2hpdGUpO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5mb3Jnb3QtcGFzc3dvcmRfX2Jhbm5lciB7XHJcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gICAgd2lkdGg6IDUwJTtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGxlZnQ6IDBweDtcclxuICAgIGhlaWdodDogMTAwdmg7XHJcbn1cclxuXHJcbi5mb3Jnb3QtcGFzc3dvcmRfX2ltZyB7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcblxyXG4uZm9yZ290LXBhc3N3b3JkX190ZXh0IHtcclxuICAgIG1hcmdpbi10b3A6MjBweDtcclxufVxyXG5cclxuLmVtcGxveWVyX19mb3Jnb3QtcGFzc3dvcmQge1xyXG4gICAgcGFkZGluZzogMTBweCAxNXB4O1xyXG4gICAgbWFyZ2luLXRvcDoyMHB4O1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWJzLXdoaXRlKTtcclxuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tYnMtcHVycGxlKTtcclxuICAgIGNvbG9yOiB2YXIoLS1icy1wdXJwbGUpO1xyXG59XHJcblxyXG4uZW1wbG95ZXJfX2ZvcmdvdC1wYXNzd29yZDpob3ZlciB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1icy1wdXJwbGUpO1xyXG4gICAgY29sb3I6IHZhcigtLWJzLXdoaXRlKTtcclxufVxyXG5cclxuLnRvcy1hbmQtc2VjdXJpdHkge1xyXG4gICAgbWFyZ2luLXRvcDozMHB4O1xyXG59XHJcblxyXG4ucmVnaXN0ZXItYW5kLWxvZ2luIHtcclxuICAgIG1hcmdpbi10b3A6MjBweDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjtcclxufSJdfQ== */"] });
+
+
+/***/ }),
+
+/***/ 4270:
+/*!***********************************************!*\
+  !*** ./src/app/user/login/login.component.ts ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "LoginComponent": () => (/* binding */ LoginComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ 587);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 6362);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 2816);
+
+
+
+
+
+function LoginComponent_span_19_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Xin h\u00E3y nh\u1EADp t\u00EAn t\u00E0i kho\u1EA3n");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function LoginComponent_span_25_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Xin h\u00E3y nh\u1EADp m\u1EADt kh\u1EA9u");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+class LoginComponent {
+    constructor() { }
+    ngOnInit() {
+        this.initializeForm();
+    }
+    initializeForm() {
+        this.loginForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormGroup({
+            'username': new _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControl("", _angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.required),
+            'password': new _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControl("", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.required])
+        });
+    }
+    onSubmit() {
+        console.log(this.loginForm);
+    }
+}
+LoginComponent.ɵfac = function LoginComponent_Factory(t) { return new (t || LoginComponent)(); };
+LoginComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LoginComponent, selectors: [["app-login"]], decls: 36, vars: 3, consts: [["role", "login-page", 1, "login-page"], [1, "container-fluid"], [1, "row", "g-0"], [1, "col-6", "col"], [1, "login__banner"], [1, "login__img", 2, "background-image", "url('../../assets/img/login/wallpaper.jpg')"], [1, "login__column"], ["role", "login-form", 1, "login-form"], [1, "login__title"], [1, "login__description"], [1, "loginForm", 3, "formGroup", "ngSubmit"], [1, "login__username-block"], ["for", "user", 1, "login__user-title"], [1, "fa-solid", "fa-user", "user-icon"], ["formControlName", "username", "type", "text", "placeholder", "Nh\u1EADp t\u00EAn t\u00E0i kho\u1EA3n", 1, "login__user-input"], ["class", "not-typed-user", 4, "ngIf"], [1, "login__password-block"], ["for", "password", 1, "login__password-title"], [1, "fa-solid", "fa-key", "user-password"], ["formControlName", "password", "type", "password", "placeholder", "Nh\u1EADp m\u1EADt kh\u1EA9u", 1, "login__password-input"], ["class", "not-typed-password", 4, "ngIf"], ["type", "submit", "name", "submit", 1, "btn", "login__btn"], [1, "register__text"], ["routerLink", "/register", 1, "register__link"], ["routerLink", "/forgot-password", 1, "forget-password__link"], [1, "employer__register", "btn"], [1, "not-typed-user"], [1, "not-typed-password"]], template: function LoginComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3)(4, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 3)(7, "div", 6)(8, "div", 7)(9, "h1", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Ch\u00E0o m\u1EEBng \u0111\u1EBFn v\u1EDBi WorkSearching");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "p", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "\u0110\u0103ng nh\u1EADp \u0111\u1EC3 t\u00ECm ki\u1EBFm nh\u1EEFng c\u00F4ng vi\u1EC7c l\u00FD t\u01B0\u1EDFng d\u00E0nh cho b\u1EA1n");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "form", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function LoginComponent_Template_form_ngSubmit_13_listener() { return ctx.onSubmit(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 11)(15, "label", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "T\u00EAn t\u00E0i kho\u1EA3n: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "i", 13)(18, "input", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](19, LoginComponent_span_19_Template, 2, 0, "span", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 16)(21, "label", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "M\u1EADt kh\u1EA9u: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "i", 18)(24, "input", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](25, LoginComponent_span_25_Template, 2, 0, "span", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "button", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "\u0110\u0103ng nh\u1EADp");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "p", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "Ch\u01B0a c\u00F3 t\u00E0i kho\u1EA3n ? ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "a", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "\u0110\u0103ng k\u00FD ngay");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "a", 24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "Qu\u00EAn m\u1EADt kh\u1EA9u ?");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "button", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, "B\u1EA1n l\u00E0 nh\u00E0 tuy\u1EC3n d\u1EE5ng ?");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()()()()();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.loginForm);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.loginForm.get("username").touched && ctx.loginForm.get("username").hasError("required"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.loginForm.get("password").touched && ctx.loginForm.get("password").hasError("required"));
+    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormGroupDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControlName, _angular_common__WEBPACK_IMPORTED_MODULE_2__.NgIf, _angular_router__WEBPACK_IMPORTED_MODULE_3__.RouterLinkWithHref], styles: ["*[_ngcontent-%COMP%] {\r\n    padding: 0;\r\n}\r\n\r\n.login-form[_ngcontent-%COMP%] {\r\n    padding: 50px;\r\n    border-radius: 10px;\r\n    background-color: var(--bs-white);\r\n    box-shadow: 0px 0px 16px rgba(47,47,47,0.12);\r\n    margin: 0 50px;\r\n}\r\n\r\n.login__title[_ngcontent-%COMP%] {\r\n    color: var(--bs-purple);\r\n}\r\n\r\n.login__description[_ngcontent-%COMP%] {\r\n    opacity: 0.6;\r\n}\r\n\r\n.login__column[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    align-items: center;\r\n    height: 100vh;\r\n    justify-content: center;\r\n    background-color: #f2f3f7;\r\n\r\n}\r\n\r\n.login__user-title[_ngcontent-%COMP%] {\r\n    display: block;\r\n}\r\n\r\n.login__password-title[_ngcontent-%COMP%] {\r\n    display: block;\r\n}\r\n\r\n.user-icon[_ngcontent-%COMP%], .user-password[_ngcontent-%COMP%] {\r\n    font-size:15px;\r\n    position: absolute;\r\n    left: 15px;\r\n    top: 50px;\r\n    color: var(--bs-purple);\r\n}\r\n\r\n.login__user-input[_ngcontent-%COMP%], .login__password-input[_ngcontent-%COMP%] {\r\n    padding: 10px 20px 10px 40px;\r\n    width: 100%;\r\n    outline: 0;\r\n    border: 1px solid #dee2e6;\r\n    border-radius:3px;\r\n    margin-top:10px;\r\n}\r\n\r\n.login__user-input[_ngcontent-%COMP%]:focus, .login__password-input[_ngcontent-%COMP%]:focus {\r\n    border-color: var(--bs-purple);\r\n    outline: 0;\r\n}\r\n\r\n.login__username-block[_ngcontent-%COMP%], .login__password-block[_ngcontent-%COMP%] {\r\n    margin-top:30px;\r\n    position: relative;\r\n}\r\n\r\n.not-typed-user[_ngcontent-%COMP%], .not-typed-password[_ngcontent-%COMP%] {\r\n    color: var(--bs-red);\r\n    position: absolute;\r\n    display: block;\r\n    margin-left: 30px;\r\n    bottom: -24px;\r\n    font-size:14px;\r\n}\r\n\r\n.login__btn[_ngcontent-%COMP%] {\r\n    margin-top:40px;\r\n    padding: 10px 15px;\r\n    background-color:var(--bs-purple);\r\n    border-color: var(--bs-purple);\r\n    color: var(--bs-white);\r\n    width: 100%;\r\n}\r\n\r\n.login__banner[_ngcontent-%COMP%] {\r\n    align-items: center;\r\n    justify-content: center;\r\n    position: relative;\r\n}\r\n\r\n.login__img[_ngcontent-%COMP%] {\r\n    position: absolute;\r\n    background-size: cover;\r\n    width: 100%;\r\n    height: 100vh;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n}\r\n\r\n.register__text[_ngcontent-%COMP%] {\r\n    margin-top:20px;\r\n}\r\n\r\n.forget-password__link[_ngcontent-%COMP%], .register__link[_ngcontent-%COMP%] {\r\n    color: var(--bs-purple);\r\n    text-decoration: none;\r\n    font-size:16px;\r\n}\r\n\r\n.employer__register[_ngcontent-%COMP%] {\r\n    padding: 10px 15px;\r\n    margin-top:20px;\r\n    width: 100%;\r\n    display: block;\r\n    background-color: var(--bs-white);\r\n    border-color: var(--bs-purple);\r\n    color: var(--bs-purple);\r\n}\r\n\r\n.employer__register[_ngcontent-%COMP%]:hover {\r\n    background-color: var(--bs-purple);\r\n    color: var(--bs-white);\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxvZ2luLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLGlDQUFpQztJQUNqQyw0Q0FBNEM7SUFDNUMsY0FBYztBQUNsQjs7QUFFQTtJQUNJLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLGFBQWE7SUFDYix1QkFBdUI7SUFDdkIseUJBQXlCOztBQUU3Qjs7QUFDQTtJQUNJLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxjQUFjO0FBQ2xCOztBQUVBOztJQUVJLGNBQWM7SUFDZCxrQkFBa0I7SUFDbEIsVUFBVTtJQUNWLFNBQVM7SUFDVCx1QkFBdUI7QUFDM0I7O0FBRUE7O0lBRUksNEJBQTRCO0lBQzVCLFdBQVc7SUFDWCxVQUFVO0lBQ1YseUJBQXlCO0lBQ3pCLGlCQUFpQjtJQUNqQixlQUFlO0FBQ25COztBQUVBOztJQUVJLDhCQUE4QjtJQUM5QixVQUFVO0FBQ2Q7O0FBRUE7O0lBRUksZUFBZTtJQUNmLGtCQUFrQjtBQUN0Qjs7QUFDQTs7SUFFSSxvQkFBb0I7SUFDcEIsa0JBQWtCO0lBQ2xCLGNBQWM7SUFDZCxpQkFBaUI7SUFDakIsYUFBYTtJQUNiLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxlQUFlO0lBQ2Ysa0JBQWtCO0lBQ2xCLGlDQUFpQztJQUNqQyw4QkFBOEI7SUFDOUIsc0JBQXNCO0lBQ3RCLFdBQVc7QUFDZjs7QUFFQTtJQUNJLG1CQUFtQjtJQUNuQix1QkFBdUI7SUFDdkIsa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLHNCQUFzQjtJQUN0QixXQUFXO0lBQ1gsYUFBYTtJQUNiLDRCQUE0QjtJQUM1QiwyQkFBMkI7QUFDL0I7O0FBRUE7SUFDSSxlQUFlO0FBQ25COztBQUVBOztJQUVJLHVCQUF1QjtJQUN2QixxQkFBcUI7SUFDckIsY0FBYztBQUNsQjs7QUFDQTtJQUNJLGtCQUFrQjtJQUNsQixlQUFlO0lBQ2YsV0FBVztJQUNYLGNBQWM7SUFDZCxpQ0FBaUM7SUFDakMsOEJBQThCO0lBQzlCLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLGtDQUFrQztJQUNsQyxzQkFBc0I7QUFDMUIiLCJmaWxlIjoibG9naW4uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIioge1xyXG4gICAgcGFkZGluZzogMDtcclxufVxyXG5cclxuLmxvZ2luLWZvcm0ge1xyXG4gICAgcGFkZGluZzogNTBweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1icy13aGl0ZSk7XHJcbiAgICBib3gtc2hhZG93OiAwcHggMHB4IDE2cHggcmdiYSg0Nyw0Nyw0NywwLjEyKTtcclxuICAgIG1hcmdpbjogMCA1MHB4O1xyXG59XHJcblxyXG4ubG9naW5fX3RpdGxlIHtcclxuICAgIGNvbG9yOiB2YXIoLS1icy1wdXJwbGUpO1xyXG59XHJcblxyXG4ubG9naW5fX2Rlc2NyaXB0aW9uIHtcclxuICAgIG9wYWNpdHk6IDAuNjtcclxufVxyXG5cclxuLmxvZ2luX19jb2x1bW4ge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICBoZWlnaHQ6IDEwMHZoO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjJmM2Y3O1xyXG5cclxufVxyXG4ubG9naW5fX3VzZXItdGl0bGUge1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbn1cclxuXHJcbi5sb2dpbl9fcGFzc3dvcmQtdGl0bGUge1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbn1cclxuXHJcbi51c2VyLWljb24sXHJcbi51c2VyLXBhc3N3b3JkIHtcclxuICAgIGZvbnQtc2l6ZToxNXB4O1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbGVmdDogMTVweDtcclxuICAgIHRvcDogNTBweDtcclxuICAgIGNvbG9yOiB2YXIoLS1icy1wdXJwbGUpO1xyXG59XHJcblxyXG4ubG9naW5fX3VzZXItaW5wdXQsXHJcbi5sb2dpbl9fcGFzc3dvcmQtaW5wdXQge1xyXG4gICAgcGFkZGluZzogMTBweCAyMHB4IDEwcHggNDBweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgb3V0bGluZTogMDtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkICNkZWUyZTY7XHJcbiAgICBib3JkZXItcmFkaXVzOjNweDtcclxuICAgIG1hcmdpbi10b3A6MTBweDtcclxufVxyXG5cclxuLmxvZ2luX191c2VyLWlucHV0OmZvY3VzLFxyXG4ubG9naW5fX3Bhc3N3b3JkLWlucHV0OmZvY3VzIHtcclxuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tYnMtcHVycGxlKTtcclxuICAgIG91dGxpbmU6IDA7XHJcbn1cclxuXHJcbi5sb2dpbl9fdXNlcm5hbWUtYmxvY2ssXHJcbi5sb2dpbl9fcGFzc3dvcmQtYmxvY2sge1xyXG4gICAgbWFyZ2luLXRvcDozMHB4O1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcbi5ub3QtdHlwZWQtdXNlcixcclxuLm5vdC10eXBlZC1wYXNzd29yZCB7XHJcbiAgICBjb2xvcjogdmFyKC0tYnMtcmVkKTtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDMwcHg7XHJcbiAgICBib3R0b206IC0yNHB4O1xyXG4gICAgZm9udC1zaXplOjE0cHg7XHJcbn1cclxuXHJcbi5sb2dpbl9fYnRuIHtcclxuICAgIG1hcmdpbi10b3A6NDBweDtcclxuICAgIHBhZGRpbmc6IDEwcHggMTVweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6dmFyKC0tYnMtcHVycGxlKTtcclxuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tYnMtcHVycGxlKTtcclxuICAgIGNvbG9yOiB2YXIoLS1icy13aGl0ZSk7XHJcbiAgICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLmxvZ2luX19iYW5uZXIge1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcblxyXG4ubG9naW5fX2ltZyB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDEwMHZoO1xyXG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxufVxyXG5cclxuLnJlZ2lzdGVyX190ZXh0IHtcclxuICAgIG1hcmdpbi10b3A6MjBweDtcclxufVxyXG5cclxuLmZvcmdldC1wYXNzd29yZF9fbGluayxcclxuLnJlZ2lzdGVyX19saW5rIHtcclxuICAgIGNvbG9yOiB2YXIoLS1icy1wdXJwbGUpO1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG4gICAgZm9udC1zaXplOjE2cHg7XHJcbn1cclxuLmVtcGxveWVyX19yZWdpc3RlciB7XHJcbiAgICBwYWRkaW5nOiAxMHB4IDE1cHg7XHJcbiAgICBtYXJnaW4tdG9wOjIwcHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYnMtd2hpdGUpO1xyXG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1icy1wdXJwbGUpO1xyXG4gICAgY29sb3I6IHZhcigtLWJzLXB1cnBsZSk7XHJcbn1cclxuXHJcbi5lbXBsb3llcl9fcmVnaXN0ZXI6aG92ZXIge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYnMtcHVycGxlKTtcclxuICAgIGNvbG9yOiB2YXIoLS1icy13aGl0ZSk7XHJcbn0iXX0= */"] });
+
+
+/***/ }),
+
+/***/ 2859:
+/*!*****************************************************!*\
+  !*** ./src/app/user/register/register.component.ts ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "RegisterComponent": () => (/* binding */ RegisterComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ 587);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 6362);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 2816);
+
+
+
+
+
+function RegisterComponent_span_19_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Xin h\u00E3y nh\u1EADp t\u00EAn t\u00E0i kho\u1EA3n");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function RegisterComponent_span_25_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Xin h\u00E3y nh\u1EADp \u0111\u1ECBa ch\u1EC9 email");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function RegisterComponent_span_26_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "\u0110\u1ECBa ch\u1EC9 email kh\u00F4ng ch\u00EDnh x\u00E1c");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function RegisterComponent_span_34_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Xin h\u00E3y nh\u1EADp m\u1EADt kh\u1EA9u");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function RegisterComponent_span_35_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "M\u1EADt kh\u1EA9u c\u00F3 \u0111\u1ED9 d\u00E0i kh\u00F4ng ph\u00F9 h\u1EE3p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function RegisterComponent_span_41_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Xin h\u00E3y nh\u1EADp l\u1EA1i m\u1EADt kh\u1EA9u");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+class RegisterComponent {
+    constructor() { }
+    ngOnInit() {
+        this.initializeForm();
+    }
+    initializeForm() {
+        this.registerForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormGroup({
+            'username': new _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControl("", _angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.required),
+            'email': new _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControl("", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.email]),
+            'password': new _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControl("", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.minLength(6), _angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.maxLength(32)]),
+            're-password': new _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControl("", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.required])
+        });
+    }
+    onSubmit() {
+        console.log(this.registerForm);
+    }
+}
+RegisterComponent.ɵfac = function RegisterComponent_Factory(t) { return new (t || RegisterComponent)(); };
+RegisterComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: RegisterComponent, selectors: [["app-register"]], decls: 58, vars: 7, consts: [["role", "register-page", 1, "register-page"], [1, "container-fluid"], [1, "row", "g-0"], [1, "col-6", "col"], [1, "register__banner"], [1, "register__img", 2, "background-image", "url('../../assets/img/register/register-banner.jpg')"], [1, "register__column"], ["role", "register-form", 1, "register-form"], [1, "register__title"], [1, "register__description"], ["name", "registerForm", 3, "formGroup", "ngSubmit"], [1, "input-block"], ["for", "user", 1, "register__user-title"], [1, "fa-solid", "fa-user", "icon"], ["formControlName", "username", "type", "text", "placeholder", "Nh\u1EADp t\u00EAn t\u00E0i kho\u1EA3n", 1, "input"], ["class", "error", 4, "ngIf"], ["for", "user", 1, "register__user-email"], [1, "fa-solid", "fa-envelope", "icon"], ["formControlName", "email", "placeholder", "Nh\u1EADp email", 1, "input"], ["for", "password", 1, "register__password-title"], [1, "fa-solid", "fa-key", "icon"], ["formControlName", "password", "type", "password", "placeholder", "Nh\u1EADp m\u1EADt kh\u1EA9u", 1, "input"], [1, "instruction"], ["class", "error password-error", 4, "ngIf"], ["for", "re-password", 1, "register__re-password-title"], [1, "fa-brands", "fa-keybase", "icon"], ["formControlName", "re-password", "type", "password", "placeholder", "Nh\u1EADp l\u1EA1i m\u1EADt kh\u1EA9u", 1, "input"], [1, "tos-and-security"], ["routerLink", "/tos", 1, "link"], ["routerLink", "/security", 1, "link"], ["type", "submit", "name", "submit", 1, "btn", "register__btn"], [1, "register__text"], ["routerLink", "/login", 1, "link"], [1, "employer__register", "btn"], [1, "error"], [1, "error", "password-error"]], template: function RegisterComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3)(4, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 3)(7, "div", 6)(8, "div", 7)(9, "h1", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Ch\u00E0o m\u1EEBng \u0111\u1EBFn v\u1EDBi WorkSearching");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "p", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "T\u1EA1o t\u00E0i kho\u1EA3n \u0111\u1EC3 b\u1EAFt \u0111\u1EA7u t\u00ECm ki\u1EBFm nh\u1EEFng c\u00F4ng vi\u1EC7c l\u00FD t\u01B0\u1EDFng d\u00E0nh cho b\u1EA1n");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "form", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function RegisterComponent_Template_form_ngSubmit_13_listener() { return ctx.onSubmit(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 11)(15, "label", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "T\u00EAn t\u00E0i kho\u1EA3n: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "i", 13)(18, "input", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](19, RegisterComponent_span_19_Template, 2, 0, "span", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 11)(21, "label", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "\u0110\u1ECBa ch\u1EC9 Email: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "i", 17)(24, "input", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](25, RegisterComponent_span_25_Template, 2, 0, "span", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](26, RegisterComponent_span_26_Template, 2, 0, "span", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "div", 11)(28, "label", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "M\u1EADt kh\u1EA9u: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](30, "i", 20)(31, "input", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "p", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "M\u1EADt kh\u1EA9u t\u1EEB 6-32 k\u00FD t\u1EF1, c\u00F3 \u00EDt nh\u1EA5t 1 k\u00ED t\u1EF1 ch\u1EEF, 1 k\u00ED t\u1EF1 s\u1ED1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](34, RegisterComponent_span_34_Template, 2, 0, "span", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](35, RegisterComponent_span_35_Template, 2, 0, "span", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "div", 11)(37, "label", 24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, "Nh\u1EADp l\u1EA1i m\u1EADt kh\u1EA9u: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](39, "i", 25)(40, "input", 26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](41, RegisterComponent_span_41_Template, 2, 0, "span", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "p", 27);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, "B\u1EB1ng c\u00E1ch \u1EA5n v\u00E0o n\u00FAt \u0111\u0103ng k\u00FD, b\u1EA1n \u0111\u00E3 \u0111\u1ED3ng \u00FD v\u1EDBi ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "a", 28);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, "\u0110i\u1EC1u kho\u1EA3n d\u1ECBch v\u1EE5");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, " v\u00E0 ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "a", 29);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](48, "Ch\u00EDnh s\u00E1ch b\u1EA3o m\u1EADt");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](49, " c\u1EE7a ch\u00FAng t\u00F4i ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "button", 30);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](51, "\u0110\u0103ng k\u00FD");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "p", 31);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](53, "B\u1EA1n \u0111\u00E3 l\u00E0 th\u00E0nh vi\u00EAn ? ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "a", 32);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](55, "\u0110\u0103ng nh\u1EADp");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](56, "button", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](57, "B\u1EA1n l\u00E0 nh\u00E0 tuy\u1EC3n d\u1EE5ng ?");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()()()()();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.registerForm);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.registerForm.get("username").touched && ctx.registerForm.get("password").hasError("required"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.registerForm.get("email").touched && ctx.registerForm.get("email").hasError("required"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.registerForm.get("email").hasError("email"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.registerForm.get("password").touched && ctx.registerForm.get("password").hasError("required"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.registerForm.get("password").hasError("minlength") || ctx.registerForm.get("password").hasError("maxlength"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.registerForm.get("re-password").touched && ctx.registerForm.get("re-password").invalid);
+    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormGroupDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControlName, _angular_common__WEBPACK_IMPORTED_MODULE_2__.NgIf, _angular_router__WEBPACK_IMPORTED_MODULE_3__.RouterLinkWithHref], styles: ["*[_ngcontent-%COMP%] {\r\n    padding: 0;\r\n\r\n}\r\n\r\n.error[_ngcontent-%COMP%] {\r\n    color: var(--bs-red);\r\n    position: absolute;\r\n    display: block;\r\n    margin-left: 30px;\r\n    font-size:14px;\r\n}\r\n\r\n.link[_ngcontent-%COMP%] {\r\n    color: var(--bs-purple);\r\n    text-decoration: none;\r\n    font-size:16px;\r\n}\r\n\r\n.icon[_ngcontent-%COMP%] {\r\n    font-size:15px;\r\n    position: absolute;\r\n    left: 15px;\r\n    top: 50px;\r\n    color: var(--bs-purple);\r\n}\r\n\r\n.input[_ngcontent-%COMP%] {\r\n    padding: 10px 20px 10px 40px;\r\n    width: 100%;\r\n    outline: 0;\r\n    border: 1px solid #dee2e6;\r\n    border-radius:3px;\r\n    margin-top:10px;\r\n}\r\n\r\n.input[_ngcontent-%COMP%]:focus {\r\n    border-color: var(--bs-purple);\r\n    outline: 0;\r\n}\r\n\r\n.instruction[_ngcontent-%COMP%] {\r\n    color: var(--bs-gray);\r\n    font-size:12px;\r\n    margin-left: 40px;\r\n    margin-top: 10px;\r\n}\r\n\r\n.password-error[_ngcontent-%COMP%] {\r\n    margin-top: -14px;\r\n}\r\n\r\n.input-block[_ngcontent-%COMP%] {\r\n    margin-top:30px;\r\n    position: relative;\r\n}\r\n\r\n.register__page[_ngcontent-%COMP%] {\r\n    background-color: #f2f3f7;\r\n}\r\n\r\n.register-form[_ngcontent-%COMP%] {\r\n    padding: 50px;\r\n    border-radius: 10px;\r\n    z-index: 100;\r\n    background-color: var(--bs-white);\r\n    box-shadow: 0px 0px 16px rgba(47,47,47,0.12);\r\n    margin: 0 50px;\r\n    margin-top:50px;\r\n}\r\n\r\n.register__title[_ngcontent-%COMP%] {\r\n    color: var(--bs-purple);\r\n}\r\n\r\n.register__description[_ngcontent-%COMP%] {\r\n    opacity: 0.6;\r\n}\r\n\r\n.register__column[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    background-color: #f2f3f7;\r\n    padding-bottom: 20px;\r\n}\r\n\r\n.register__user-title[_ngcontent-%COMP%] {\r\n    display: block;\r\n}\r\n\r\n.register__password-title[_ngcontent-%COMP%] {\r\n    display: block;\r\n}\r\n\r\n.register__btn[_ngcontent-%COMP%] {\r\n    padding: 10px 15px;\r\n    background-color:var(--bs-purple);\r\n    border-color: var(--bs-purple);\r\n    color: var(--bs-white);\r\n    width: 100%;\r\n}\r\n\r\n.register__banner[_ngcontent-%COMP%] {\r\n    background-repeat: no-repeat;\r\n    width: 50%;\r\n    position: absolute;\r\n    left: 0px;\r\n    height: 100%;\r\n}\r\n\r\n.register__img[_ngcontent-%COMP%] {\r\n    max-height: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.register__text[_ngcontent-%COMP%] {\r\n    margin-top:20px;\r\n}\r\n\r\n.employer__register[_ngcontent-%COMP%] {\r\n    padding: 10px 15px;\r\n    margin-top:20px;\r\n    width: 100%;\r\n    display: block;\r\n    background-color: var(--bs-white);\r\n    border-color: var(--bs-purple);\r\n    color: var(--bs-purple);\r\n}\r\n\r\n.employer__register[_ngcontent-%COMP%]:hover {\r\n    background-color: var(--bs-purple);\r\n    color: var(--bs-white);\r\n}\r\n\r\n.tos-and-security[_ngcontent-%COMP%] {\r\n    margin-top:30px;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlZ2lzdGVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxVQUFVOztBQUVkOztBQUVBO0lBQ0ksb0JBQW9CO0lBQ3BCLGtCQUFrQjtJQUNsQixjQUFjO0lBQ2QsaUJBQWlCO0lBQ2pCLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSx1QkFBdUI7SUFDdkIscUJBQXFCO0lBQ3JCLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxjQUFjO0lBQ2Qsa0JBQWtCO0lBQ2xCLFVBQVU7SUFDVixTQUFTO0lBQ1QsdUJBQXVCO0FBQzNCOztBQUVBO0lBQ0ksNEJBQTRCO0lBQzVCLFdBQVc7SUFDWCxVQUFVO0lBQ1YseUJBQXlCO0lBQ3pCLGlCQUFpQjtJQUNqQixlQUFlO0FBQ25COztBQUVBO0lBQ0ksOEJBQThCO0lBQzlCLFVBQVU7QUFDZDs7QUFFQTtJQUNJLHFCQUFxQjtJQUNyQixjQUFjO0lBQ2QsaUJBQWlCO0lBQ2pCLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLGVBQWU7SUFDZixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSx5QkFBeUI7QUFDN0I7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLFlBQVk7SUFDWixpQ0FBaUM7SUFDakMsNENBQTRDO0lBQzVDLGNBQWM7SUFDZCxlQUFlO0FBQ25COztBQUVBO0lBQ0ksdUJBQXVCO0FBQzNCOztBQUVBO0lBQ0ksWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsdUJBQXVCO0lBQ3ZCLHlCQUF5QjtJQUN6QixvQkFBb0I7QUFDeEI7O0FBRUE7SUFDSSxjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksY0FBYztBQUNsQjs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixpQ0FBaUM7SUFDakMsOEJBQThCO0lBQzlCLHNCQUFzQjtJQUN0QixXQUFXO0FBQ2Y7O0FBRUE7SUFDSSw0QkFBNEI7SUFDNUIsVUFBVTtJQUNWLGtCQUFrQjtJQUNsQixTQUFTO0lBQ1QsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixlQUFlO0lBQ2YsV0FBVztJQUNYLGNBQWM7SUFDZCxpQ0FBaUM7SUFDakMsOEJBQThCO0lBQzlCLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLGtDQUFrQztJQUNsQyxzQkFBc0I7QUFDMUI7O0FBRUE7SUFDSSxlQUFlO0FBQ25CIiwiZmlsZSI6InJlZ2lzdGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIqIHtcclxuICAgIHBhZGRpbmc6IDA7XHJcblxyXG59XHJcblxyXG4uZXJyb3Ige1xyXG4gICAgY29sb3I6IHZhcigtLWJzLXJlZCk7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIG1hcmdpbi1sZWZ0OiAzMHB4O1xyXG4gICAgZm9udC1zaXplOjE0cHg7XHJcbn1cclxuXHJcbi5saW5rIHtcclxuICAgIGNvbG9yOiB2YXIoLS1icy1wdXJwbGUpO1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG4gICAgZm9udC1zaXplOjE2cHg7XHJcbn1cclxuXHJcbi5pY29uIHtcclxuICAgIGZvbnQtc2l6ZToxNXB4O1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbGVmdDogMTVweDtcclxuICAgIHRvcDogNTBweDtcclxuICAgIGNvbG9yOiB2YXIoLS1icy1wdXJwbGUpO1xyXG59XHJcblxyXG4uaW5wdXQge1xyXG4gICAgcGFkZGluZzogMTBweCAyMHB4IDEwcHggNDBweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgb3V0bGluZTogMDtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkICNkZWUyZTY7XHJcbiAgICBib3JkZXItcmFkaXVzOjNweDtcclxuICAgIG1hcmdpbi10b3A6MTBweDtcclxufVxyXG5cclxuLmlucHV0OmZvY3VzIHtcclxuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tYnMtcHVycGxlKTtcclxuICAgIG91dGxpbmU6IDA7XHJcbn1cclxuXHJcbi5pbnN0cnVjdGlvbiB7XHJcbiAgICBjb2xvcjogdmFyKC0tYnMtZ3JheSk7XHJcbiAgICBmb250LXNpemU6MTJweDtcclxuICAgIG1hcmdpbi1sZWZ0OiA0MHB4O1xyXG4gICAgbWFyZ2luLXRvcDogMTBweDtcclxufVxyXG5cclxuLnBhc3N3b3JkLWVycm9yIHtcclxuICAgIG1hcmdpbi10b3A6IC0xNHB4O1xyXG59XHJcblxyXG4uaW5wdXQtYmxvY2sge1xyXG4gICAgbWFyZ2luLXRvcDozMHB4O1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcblxyXG4ucmVnaXN0ZXJfX3BhZ2Uge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2YyZjNmNztcclxufVxyXG5cclxuLnJlZ2lzdGVyLWZvcm0ge1xyXG4gICAgcGFkZGluZzogNTBweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XHJcbiAgICB6LWluZGV4OiAxMDA7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1icy13aGl0ZSk7XHJcbiAgICBib3gtc2hhZG93OiAwcHggMHB4IDE2cHggcmdiYSg0Nyw0Nyw0NywwLjEyKTtcclxuICAgIG1hcmdpbjogMCA1MHB4O1xyXG4gICAgbWFyZ2luLXRvcDo1MHB4O1xyXG59XHJcblxyXG4ucmVnaXN0ZXJfX3RpdGxlIHtcclxuICAgIGNvbG9yOiB2YXIoLS1icy1wdXJwbGUpO1xyXG59XHJcblxyXG4ucmVnaXN0ZXJfX2Rlc2NyaXB0aW9uIHtcclxuICAgIG9wYWNpdHk6IDAuNjtcclxufVxyXG5cclxuLnJlZ2lzdGVyX19jb2x1bW4ge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmMmYzZjc7XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogMjBweDtcclxufVxyXG5cclxuLnJlZ2lzdGVyX191c2VyLXRpdGxlIHtcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG59XHJcblxyXG4ucmVnaXN0ZXJfX3Bhc3N3b3JkLXRpdGxlIHtcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG59XHJcblxyXG4ucmVnaXN0ZXJfX2J0biB7XHJcbiAgICBwYWRkaW5nOiAxMHB4IDE1cHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOnZhcigtLWJzLXB1cnBsZSk7XHJcbiAgICBib3JkZXItY29sb3I6IHZhcigtLWJzLXB1cnBsZSk7XHJcbiAgICBjb2xvcjogdmFyKC0tYnMtd2hpdGUpO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5yZWdpc3Rlcl9fYmFubmVyIHtcclxuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgICB3aWR0aDogNTAlO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbGVmdDogMHB4O1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcblxyXG4ucmVnaXN0ZXJfX2ltZyB7XHJcbiAgICBtYXgtaGVpZ2h0OiAxMDAlO1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcblxyXG4ucmVnaXN0ZXJfX3RleHQge1xyXG4gICAgbWFyZ2luLXRvcDoyMHB4O1xyXG59XHJcblxyXG4uZW1wbG95ZXJfX3JlZ2lzdGVyIHtcclxuICAgIHBhZGRpbmc6IDEwcHggMTVweDtcclxuICAgIG1hcmdpbi10b3A6MjBweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1icy13aGl0ZSk7XHJcbiAgICBib3JkZXItY29sb3I6IHZhcigtLWJzLXB1cnBsZSk7XHJcbiAgICBjb2xvcjogdmFyKC0tYnMtcHVycGxlKTtcclxufVxyXG5cclxuLmVtcGxveWVyX19yZWdpc3Rlcjpob3ZlciB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1icy1wdXJwbGUpO1xyXG4gICAgY29sb3I6IHZhcigtLWJzLXdoaXRlKTtcclxufVxyXG5cclxuLnRvcy1hbmQtc2VjdXJpdHkge1xyXG4gICAgbWFyZ2luLXRvcDozMHB4O1xyXG59Il19 */"] });
+
+
+/***/ }),
+
+/***/ 6955:
+/*!********************************************************!*\
+  !*** ./src/app/website/security/security.component.ts ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "SecurityComponent": () => (/* binding */ SecurityComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 3184);
+
+class SecurityComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+SecurityComponent.ɵfac = function SecurityComponent_Factory(t) { return new (t || SecurityComponent)(); };
+SecurityComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SecurityComponent, selectors: [["app-security"]], decls: 72, vars: 0, consts: [[1, "container-fluid"], [1, "security__page"], [1, "security__document"], [1, "big-title"], [1, "title"], [1, "description"]], template: function SecurityComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "h1", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "\u0110I\u1EC0U KHO\u1EA2N S\u1EEC D\u1EE4NG D\u1ECACH V\u1EE4 V\u1EDAI \u1EE8NG VI\u00CAN");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "1. \u0110I\u1EC0U KHO\u1EA2N CHUNG");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, " B\u1EB1ng c\u00E1ch truy c\u1EADp ho\u1EB7c s\u1EED d\u1EE5ng trang web WorkSearching.vn, c\u00E1c d\u1ECBch v\u1EE5, ho\u1EB7c b\u1EA5t k\u1EF3 \u1EE9ng d\u1EE5ng n\u00E0o do WorkSearching.,JSC (\"WorkSearching\u201D) cung c\u1EA5p (g\u1ECDi chung l\u00E0 \"D\u1ECBch v\u1EE5\"), d\u00F9 truy c\u1EADp b\u1EB1ng c\u00E1ch n\u00E0o, b\u1EA1n \u0111\u1ED3ng \u00FD ch\u1ECBu s\u1EF1 r\u00E0ng bu\u1ED9c c\u1EE7a c\u00E1c \u0111i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng n\u00E0y (\"\u0110i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng\"). D\u1ECBch v\u1EE5 do WorkSearching s\u1EDF h\u1EEFu ho\u1EB7c ki\u1EC3m so\u00E1t. C\u00E1c \u0110i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng n\u00E0y \u1EA3nh h\u01B0\u1EDFng \u0111\u1EBFn quy\u1EC1n v\u00E0 ngh\u0129a v\u1EE5 ph\u00E1p l\u00FD c\u1EE7a b\u1EA1n. N\u1EBFu b\u1EA1n kh\u00F4ng \u0111\u1ED3ng \u00FD ch\u1ECBu s\u1EF1 r\u00E0ng bu\u1ED9c c\u1EE7a t\u1EA5t c\u1EA3 c\u00E1c \u0110i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng n\u00E0y, b\u1EA1n kh\u00F4ng truy c\u1EADp hay s\u1EED d\u1EE5ng D\u1ECBch v\u1EE5. N\u1EBFu B\u1EA1n c\u00F3 b\u1EA5t k\u1EF3 c\u00E2u h\u1ECFi n\u00E0o li\u00EAn quan \u0111\u1EBFn \u0110i\u1EC1u Kho\u1EA3n n\u00E0y, vui l\u00F2ng li\u00EAn h\u1EC7 ch\u00FAng t\u00F4i t\u1EA1i email: dohuuhailong@gmail.com. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " Ch\u00FAng t\u00F4i c\u00F3 th\u1EC3 c\u1EADp nh\u1EADt \u0110i\u1EC1u Kho\u1EA3n n\u00E0y theo th\u1EDDi gian v\u00EC c\u00E1c l\u00FD do ph\u00E1p l\u00FD ho\u1EB7c theo quy \u0111\u1ECBnh ho\u1EB7c \u0111\u1EC3 cho ph\u00E9p ho\u1EA1t \u0111\u1ED9ng th\u00EDch h\u1EE3p c\u1EE7a trang web WorkSearching.vn. M\u1ECDi thay \u0111\u1ED5i s\u1EBD \u0111\u01B0\u1EE3c th\u00F4ng b\u00E1o t\u1EDBi b\u1EA1n b\u1EB1ng m\u1ED9t th\u00F4ng b\u00E1o ph\u00F9 h\u1EE3p tr\u00EAn trang web c\u1EE7a ch\u00FAng t\u00F4i. Nh\u1EEFng thay \u0111\u1ED5i n\u00E0y s\u1EBD \u00E1p d\u1EE5ng cho vi\u1EC7c s\u1EED d\u1EE5ng trang web WorkSearching.vn. Sau khi ch\u00FAng t\u00F4i \u0111\u00E3 th\u00F4ng b\u00E1o \u0111\u1EBFn b\u1EA1n, N\u1EBFu b\u1EA1n kh\u00F4ng mu\u1ED1n ch\u1EA5p nh\u1EADn \u0110i\u1EC1u Kho\u1EA3n m\u1EDBi, b\u1EA1n kh\u00F4ng n\u00EAn ti\u1EBFp t\u1EE5c s\u1EED d\u1EE5ng trang web WorkSearching.vn. N\u1EBFu b\u1EA1n ti\u1EBFp t\u1EE5c s\u1EED d\u1EE5ng trang web WorkSearching.vn k\u1EC3 t\u1EEB ng\u00E0y s\u1EF1 thay \u0111\u1ED5i c\u00F3 hi\u1EC7u l\u1EF1c, vi\u1EC7c s\u1EED d\u1EE5ng trang web WorkSearching.vn th\u1EC3 hi\u1EC7n b\u1EA1n \u0111\u1ED3ng \u00FD b\u1ECB r\u00E0ng bu\u1ED9c b\u1EDFi \u0110i\u1EC1u Kho\u1EA3n m\u1EDBi. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "2. \u0110\u1ECANH NGH\u0128A V\u00C0 GI\u1EA2I TH\u00CDCH");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, " 1. \u201CC\u01A1 s\u1EDF d\u1EEF li\u1EC7u WorkSearching.vn\u201D ho\u1EB7c \u201CC\u00E1c c\u01A1 s\u1EDF d\u1EEF li\u1EC7u WorkSearching.vn\u201D bao g\u1ED3m t\u1EA5t c\u1EA3 c\u00E1c b\u00E0i qu\u1EA3ng c\u00E1o vi\u1EC7c l\u00E0m \u0111\u0103ng tr\u00EAn c\u00E1c trang web WorkSearching.vn v\u00E0/ho\u1EB7c t\u1EA5t c\u1EA3 th\u00F4ng tin c\u1EE7a c\u00E1c \u1EE9ng vi\u00EAn v\u00E0/ho\u1EB7c c\u00E1c nh\u00E0 tuy\u1EC3n d\u1EE5ng \u0111\u01B0\u1EE3c \u0111\u0103ng k\u00FD v\u1EDBi WorkSearching.vn. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, " 2. \u201CC\u01A1 s\u1EDF d\u1EEF li\u1EC7u H\u1ED3 s\u01A1 WorkSearching.vn\u201D ho\u1EB7c \u201CC\u00E1c c\u01A1 s\u1EDF d\u1EEF li\u1EC7u H\u1ED3 s\u01A1\u201D l\u00E0 h\u1ED3 s\u01A1 \u1EE9ng vi\u00EAn \u0111\u01B0\u1EE3c kh\u1EDFi t\u1EA1o v\u00E0/ho\u1EB7c \u0111\u01B0\u1EE3c \u0111\u0103ng t\u1EA1i c\u00E1c c\u01A1 s\u1EDF d\u1EEF li\u1EC7u WorkSearching.vn. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, " 3. \u201CD\u1ECBch v\u1EE5 WorkSearching.vn\u201D l\u00E0 b\u1EA5t k\u1EF3 d\u1ECBch v\u1EE5 n\u00E0o \u0111\u01B0\u1EE3c cung c\u1EA5p b\u1EDFi WorkSearching. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, " 4. \u201CH\u1ED3 s\u01A1 c\u00E1 nh\u00E2n\u201D l\u00E0 c\u00E1c th\u00F4ng tin, CV c\u00E1 nh\u00E2n \u0111\u01B0\u1EE3c t\u1EA1o b\u1EDFi Ng\u01B0\u1EDDi d\u00F9ng. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, " 5.\u201CV\u0103n b\u1EA3n\u201D bao g\u1ED3m t\u1EA5t c\u1EA3 v\u0103n b\u1EA3n tr\u00EAn m\u1ECDi trang c\u1EE7a trang web WorkSearching.vn, cho d\u00F9 l\u00E0 t\u00E0i li\u1EC7u c\u00F3 x\u00E1c \u0111\u1ECBnh t\u00E1c gi\u1EA3, c\u00E1c n\u1ED9i dung t\u00ECm ki\u1EBFm c\u00F3 \u0111\u1ECBnh h\u01B0\u1EDBng hay th\u00F4ng tin h\u01B0\u1EDBng d\u1EABn. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, " 6. \u201CNg\u01B0\u1EDDi d\u00F9ng\u201D \u0111\u1EC1 c\u1EADp \u0111\u1EBFn b\u1EA5t k\u1EF3 c\u00E1 nh\u00E2n ho\u1EB7c t\u1ED5 ch\u1EE9c n\u00E0o s\u1EED d\u1EE5ng b\u1EA5t k\u1EF3 kh\u00EDa c\u1EA1nh n\u00E0o c\u1EE7a trang web WorkSearching.vn v\u00E0/ho\u1EB7c c\u00E1c D\u1ECBch v\u1EE5 WorkSearching.vn. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, " 7. \u201CN\u1ED9i dung Ng\u01B0\u1EDDi d\u00F9ng\u201D l\u00E0 t\u1EA5t c\u1EA3 th\u00F4ng tin, d\u1EEF li\u1EC7u, v\u0103n b\u1EA3n, ph\u1EA7n m\u1EC1m, \u00E2m nh\u1EA1c, \u00E2m thanh, h\u00ECnh \u1EA3nh, \u0111\u1ED3 h\u1ECDa, video, qu\u1EA3ng c\u00E1o, tin nh\u1EAFn ho\u1EB7c c\u00E1c t\u00E0i li\u1EC7u kh\u00E1c \u0111\u01B0\u1EE3c g\u1EEDi, \u0111\u0103ng ho\u1EB7c bi\u1EC3u th\u1ECB b\u1EDFi Ng\u01B0\u1EDDi d\u00F9ng tr\u00EAn ho\u1EB7c th\u00F4ng qua trang web WorkSearching.vn. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "3. \u0110\u0102NG K\u00DD");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, " \u0110\u1EC3 s\u1EED d\u1EE5ng D\u1ECBch v\u1EE5 b\u1EA1n ph\u1EA3i t\u1EA1o m\u1ED9t t\u00E0i kho\u1EA3n theo y\u00EAu c\u1EA7u c\u1EE7a WorkSearching, b\u1EA1n cam k\u1EBFt r\u1EB1ng vi\u1EC7c s\u1EED d\u1EE5ng t\u00E0i kho\u1EA3n ph\u1EA3i tu\u00E2n th\u1EE7 c\u00E1c quy \u0111\u1ECBnh c\u1EE7a WorkSearching, \u0111\u1ED3ng th\u1EDDi t\u1EA5t c\u1EA3 c\u00E1c th\u00F4ng tin b\u1EA1n cung c\u1EA5p cho ch\u00FAng t\u00F4i l\u00E0 \u0111\u00FAng, ch\u00EDnh x\u00E1c, \u0111\u1EA7y \u0111\u1EE7 v\u1EDBi t\u1EA1i th\u1EDDi \u0111i\u1EC3m \u0111\u01B0\u1EE3c y\u00EAu c\u1EA7u. M\u1ECDi quy\u1EC1n l\u1EE3i v\u00E0 ngh\u0129a v\u1EE5 c\u1EE7a b\u1EA1n s\u1EBD c\u0103n c\u1EE9 tr\u00EAn th\u00F4ng tin t\u00E0i kho\u1EA3n b\u1EA1n \u0111\u00E3 \u0111\u0103ng k\u00FD, do \u0111\u00F3 n\u1EBFu c\u00F3 b\u1EA5t k\u1EF3 th\u00F4ng tin sai l\u1EC7ch n\u00E0o ch\u00FAng t\u00F4i s\u1EBD kh\u00F4ng ch\u1ECBu tr\u00E1ch nhi\u1EC7m trong tr\u01B0\u1EDDng h\u1EE3p th\u00F4ng tin \u0111\u00F3 l\u00E0m \u1EA3nh h\u01B0\u1EDFng ho\u1EB7c h\u1EA1n ch\u1EBF quy\u1EC1n l\u1EE3i c\u1EE7a b\u1EA1n. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "4. M\u1EACT KH\u1EA8U V\u00C0 B\u1EA2O M\u1EACT");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, " 1. Khi b\u1EA1n \u0111\u0103ng k\u00FD s\u1EED d\u1EE5ng trang web WorkSearching.vn b\u1EA1n s\u1EBD \u0111\u01B0\u1EE3c y\u00EAu c\u1EA7u kh\u1EDFi t\u1EA1o m\u1EADt kh\u1EA9u. \u0110\u1EC3 tr\u00E1nh vi\u1EC7c gian l\u1EADn, b\u1EA1n ph\u1EA3i gi\u1EEF m\u1EADt kh\u1EA9u n\u00E0y b\u1EA3o m\u1EADt v\u00E0 kh\u00F4ng \u0111\u01B0\u1EE3c ti\u1EBFt l\u1ED9 ho\u1EB7c chia s\u1EBB v\u1EDBi b\u1EA5t k\u1EF3 ng\u01B0\u1EDDi n\u00E0o.N\u1EBFu b\u1EA1n bi\u1EBFt ho\u1EB7c nghi ng\u1EDD ng\u01B0\u1EDDi kh\u00E1c bi\u1EBFt m\u1EADt kh\u1EA9u c\u1EE7a b\u1EA1n, b\u1EA1n n\u00EAn th\u00F4ng b\u00E1o v\u1EDBi ch\u00FAng t\u00F4i ngay l\u1EADp t\u1EE9c b\u1EB1ng c\u00E1ch li\u00EAn h\u1EC7 v\u1EDBi ch\u00FAng t\u00F4i t\u1EA1i email dohuuhailong@gmail.com ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](36, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, " 2. N\u1EBFu WorkSearching.vn c\u00F3 l\u00FD do \u0111\u1EC3 tin r\u1EB1ng c\u00F3 kh\u1EA3 n\u0103ng c\u00F3 h\u00E0nh vi vi ph\u1EA1m b\u1EA3o m\u1EADt ho\u1EB7c s\u1EED d\u1EE5ng kh\u00F4ng \u0111\u00FAng m\u1EE5c \u0111\u00EDch trang web WorkSearching.vn, ch\u00FAng t\u00F4i c\u00F3 th\u1EC3 y\u00EAu c\u1EA7u b\u1EA1n thay \u0111\u1ED5i m\u1EADt kh\u1EA9u ho\u1EB7c ch\u00FAng t\u00F4i c\u00F3 th\u1EC3 t\u1EA1m d\u1EEBng t\u00E0i kho\u1EA3n c\u1EE7a b\u1EA1n. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](38, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, " 3. Tr\u01B0\u1EDDng h\u1EE3p b\u1EA1n m\u1EA5t M\u1EADt kh\u1EA9u ho\u1EB7c ho\u1EB7c s\u1EED d\u1EE5ng kh\u00F4ng \u0111\u00FAng m\u1EE5c \u0111\u00EDch trang web WorkSearching.vn: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](40, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](41, " - B\u1EA1n ph\u1EA3i ch\u1ECBu t\u1EA5t c\u1EA3 s\u1EF1 m\u1EA5t m\u00E1t ho\u1EB7c thi\u1EC7t h\u1EA1i ph\u00E1t sinh ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](42, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, " - B\u1EA1n ch\u1ECBu tr\u00E1ch nhi\u1EC7m s\u1EBD b\u1ED3i th\u01B0\u1EDDng ho\u00E0n to\u00E0n cho WorkSearching trong tr\u01B0\u1EDDng h\u1EE3p WorkSearching c\u00F3 x\u1EA3y ra m\u1EA5t m\u00E1t ho\u1EB7c thi\u1EC7t h\u1EA1i. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, "5. QUY\u1EC0N TRUY C\u1EACP V\u00C0 THU TH\u1EACP TH\u00D4NG TIN");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](47, " Khi s\u1EED d\u1EE5ng trang web WorkSearching.vn, b\u1EA1n th\u1EEBa nh\u1EADn r\u1EB1ng ch\u00FAng t\u00F4i c\u00F3 quy\u1EC1n thu th\u1EADp c\u00E1c th\u00F4ng tin sau c\u1EE7a b\u1EA1n: Th\u00F4ng tin c\u00E1 nh\u00E2n: bao g\u1ED3m c\u00E1c th\u00F4ng tin b\u1EA1n cung c\u1EA5p cho ch\u00FAng t\u00F4i \u0111\u1EC3 t\u1EA1o h\u1ED3 s\u01A1 nh\u01B0 t\u00EAn, s\u1ED1 \u0111i\u1EC7n tho\u1EA1i, \u0111\u1ECBa ch\u1EC9 email;\u2026 Th\u00F4ng tin chung: nh\u01B0 c\u00E1c th\u00F4ng tin v\u1EC1 kinh nghi\u1EC7m l\u00E0m vi\u1EC7c, \u0111\u1ECBnh h\u01B0\u1EDBng ngh\u1EC1 nghi\u1EC7p, m\u1EE5c ti\u00EAu c\u00F4ng vi\u1EC7c; tr\u00ECnh \u0111\u1ED9 n\u0103ng l\u1EF1c; thu nh\u1EADp;\u2026 B\u1EA1n th\u1EEBa nh\u1EADn v\u00E0 \u0111\u1ED3ng \u00FD m\u1ED9t m\u00ECnh ch\u1ECBu tr\u00E1ch nhi\u1EC7m v\u1EC1 h\u00ECnh th\u1EE9c, n\u1ED9i dung v\u00E0 t\u00EDnh x\u00E1c th\u1EF1c c\u1EE7a b\u1EA5t k\u1EF3 h\u1ED3 s\u01A1 ho\u0103c t\u00E0i li\u1EC7u n\u00E0o do b\u1EA1n \u0111\u0103ng t\u1EA3i tr\u00EAn trang web WorkSearching.vn, \u0111\u1ED3ng th\u1EDDi \u0111\u1ED3ng \u00FD m\u1ED9t m\u00ECnh ch\u1ECBu tr\u00E1ch nhi\u1EC7m cho b\u1EA5t k\u1EF3 h\u1EC7 qu\u1EA3 n\u00E0o ph\u00E1t sinh t\u1EEB vi\u1EC7c \u0111\u0103ng t\u1EA3i n\u00E0y. WorkSearching c\u00F3 quy\u1EC1n \u0111\u1EC1 xu\u1EA5t \u0111\u1EBFn b\u1EA1n d\u1ECBch v\u1EE5 v\u00E0 s\u1EA3n ph\u1EA9m c\u1EE7a b\u00EAn th\u1EE9 ba d\u1EF1a tr\u00EAn c\u00E1c m\u1EE5c ph\u00F9 h\u1EE3p m\u00E0 b\u1EA1n x\u00E1c \u0111\u1ECBnh trong khi \u0111\u0103ng k\u00FD v\u00E0 b\u1EA5t k\u1EF3 l\u00FAc n\u00E0o sau \u0111\u00F3 ho\u1EB7c khi b\u1EA1n \u0111\u00E3 \u0111\u1ED3ng \u00FD ti\u1EBFp nh\u1EADn, c\u00E1c \u0111\u1EC1 xu\u1EA5t n\u00E0y s\u1EBD \u0111\u01B0\u1EE3c th\u1EF1c hi\u1EC7n b\u1EDFi WorkSearching ho\u1EB7c c\u00E1c b\u00EAn th\u1EE9 ba. WorkSearching \u0111\u01B0\u1EE3c quy\u1EC1n t\u00F9y \u00FD tu\u00E2n theo c\u00E1c y\u00EAu c\u1EA7u ph\u00E1p l\u00FD, c\u00E1c y\u00EAu c\u1EA7u t\u1EEB c\u01A1 quan thi h\u00E0nh \u00E1n ho\u1EB7c y\u00EAu c\u1EA7u c\u1EE7a c\u01A1 quan qu\u1EA3n l\u00FD, th\u1EADm ch\u00ED s\u1EF1 tu\u00E2n th\u1EE7 n\u00E0y c\u00F3 th\u1EC3 bao g\u1ED3m vi\u1EC7c c\u00F4ng b\u1ED1 m\u1ED9t s\u1ED1 th\u00F4ng tin Ng\u01B0\u1EDDi d\u00F9ng nh\u1EA5t \u0111\u1ECBnh. Ngo\u00E0i ra, b\u00EAn th\u1EE9 ba \u0111\u01B0\u1EE3c ph\u00E9p gi\u1EEF l\u1EA1i c\u00E1c b\u1EA3n sao l\u01B0u tr\u1EEF th\u00F4ng tin Ng\u01B0\u1EDDi d\u00F9ng. B\u1EA1n hi\u1EC3u v\u00E0 th\u1EEBa nh\u1EADn r\u1EB1ng t\u1EA5t c\u1EA3 c\u00E1c th\u00F4ng tin do b\u1EA1n cung c\u1EA5p, Th\u00F4ng tin c\u00E1 nh\u00E2n, h\u1ED3 s\u01A1 v\u00E0/ho\u1EB7c th\u00F4ng tin t\u00E0i kho\u1EA3n c\u1EE7a b\u1EA1n, s\u1EBD \u0111\u01B0\u1EE3c c\u00F4ng b\u1ED1 cho c\u00E1c Nh\u00E0 tuy\u1EC3n d\u1EE5ng ti\u1EC1m n\u0103ng tr\u00EAn WorkSearching. WorkSearching t\u00F4n tr\u1ECDng tuy\u1EC7t \u0111\u1ED1i quy\u1EC1n b\u1EA3o m\u1EADt th\u00F4ng tin c\u1EE7a \u1EE9ng vi\u00EAn. N\u1EBFu kh\u00F4ng mu\u1ED1n h\u1ED3 s\u01A1 c\u00E1 nh\u00E2n c\u1EE7a m\u00ECnh \u0111\u01B0\u1EE3c c\u00F4ng khai, b\u1EA1n vui l\u00F2ng t\u1EAFt t\u00EDnh n\u0103ng t\u00ECm vi\u1EC7c & t\u00EDnh n\u0103ng cho ph\u00E9p nh\u00E0 tuy\u1EC3n d\u1EE5ng xem h\u1ED3 s\u01A1 \u0111\u1EC3 tr\u00E1nh b\u1ECB l\u00E0m phi\u1EC1n. B\u1EA1n hi\u1EC3u v\u00E0 th\u1EEBa nh\u1EADn r\u1EB1ng b\u1EA1n kh\u00F4ng c\u00F3 c\u00E1c quy\u1EC1n s\u1EDF h\u1EEFu trong t\u00E0i kho\u1EA3n c\u1EE7a b\u1EA1n v\u00E0 n\u1EBFu b\u1EA1n h\u1EE7y b\u1ECF t\u00E0i kho\u1EA3n tr\u00EAn trang web WorkSearching.vn ho\u1EB7c t\u00E0i kho\u1EA3n c\u1EE7a b\u1EA1n b\u1ECB ch\u1EA5m d\u1EE9t, t\u1EA5t c\u1EA3 c\u00E1c th\u00F4ng tin t\u00E0i kho\u1EA3n c\u1EE7a b\u1EA1n t\u1EA1i trang web WorkSearching.vn, bao g\u1ED3m s\u01A1 y\u1EBFu l\u00FD l\u1ECBch, Th\u00F4ng tin c\u00E1 nh\u00E2n, th\u01B0 xin vi\u1EC7c, c\u00E1c c\u00F4ng vi\u1EC7c \u0111\u00E3 l\u01B0u, s\u1EBD \u0111\u01B0\u1EE3c \u0111\u00E1nh d\u1EA5u l\u00E0 b\u1ECB x\u00F3a v\u00E0 c\u00F3 th\u1EC3 b\u1ECB x\u00F3a kh\u1ECFi C\u01A1 s\u1EDF d\u1EEF li\u1EC7u WorkSearching v\u00E0 s\u1EBD \u0111\u01B0\u1EE3c g\u1EE1 b\u1ECF t\u1EEB b\u1EA5t k\u1EF3 khu v\u1EF1c chung n\u00E0o tr\u00EAn trang web WorkSearching.vn. Th\u00F4ng tin c\u00F3 th\u1EC3 ti\u1EBFp t\u1EE5c \u0111\u01B0\u1EE3c hi\u1EC3n th\u1ECB trong m\u1ED9t kho\u1EA3ng th\u1EDDi gian v\u00EC c\u00E1c tr\u1EDF ng\u1EA1i trong khi truy\u1EC1n t\u00EDn hi\u1EC7u x\u00F3a th\u00F4ng qua c\u00E1c m\u00E1y ch\u1EE7 c\u1EE7a WorkSearching.vn ho\u1EB7c do y\u00EAu c\u1EA7u c\u1EE7a c\u00E1c c\u01A1 quan ch\u1EE9c n\u0103ng li\u00EAn quan. Ngo\u00E0i ra, c\u00E1c b\u00EAn th\u1EE9 ba \u0111\u01B0\u1EE3c ph\u00E9p gi\u1EEF l\u1EA1i b\u1EA3n sao th\u00F4ng tin c\u1EE7a b\u1EA1n. WorkSearching c\u00F3 quy\u1EC1n x\u1ECFa t\u00E0i kho\u1EA3n v\u00E0 t\u1EA5t c\u1EA3 th\u00F4ng tin c\u1EE7a b\u1EA1n sau m\u1ED9t th\u1EDDi gian d\u00E0i kh\u00F4ng ho\u1EA1t \u0111\u1ED9ng. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](49, "6. TUY\u00CAN B\u1ED0 V\u1EC0 QUY\u1EC0N S\u1EDE H\u1EEEU TR\u00CD TU\u1EC6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](51, " B\u1EA1n tuy\u00EAn b\u1ED1 v\u00E0 \u0111\u1EA3m b\u1EA3o r\u1EB1ng: (i) b\u1EA1n s\u1EDF h\u1EEFu N\u1ED9i dung m\u00E0 b\u1EA1n \u0111\u0103ng l\u00EAn ho\u1EB7c th\u00F4ng qua D\u1ECBch v\u1EE5 hay n\u00F3i c\u00E1ch kh\u00E1c, b\u1EA1n c\u00F3 quy\u1EC1n c\u1EA5p c\u00E1c quy\u1EC1n v\u00E0 gi\u1EA5y ph\u00E9p \u0111\u01B0\u1EE3c quy \u0111\u1ECBnh trong c\u00E1c \u0110i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng n\u00E0y; (ii) vi\u1EC7c \u0111\u0103ng v\u00E0 s\u1EED d\u1EE5ng N\u1ED9i dung tr\u00EAn ho\u1EB7c th\u00F4ng qua D\u1ECBch v\u1EE5 kh\u00F4ng vi ph\u1EA1m, chi\u1EBFm \u0111o\u1EA1t hay x\u00E2m ph\u1EA1m c\u00E1c quy\u1EC1n c\u1EE7a b\u1EA5t k\u1EF3 b\u00EAn th\u1EE9 ba n\u00E0o, bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF quy\u1EC1n ri\u00EAng t\u01B0, quy\u1EC1n c\u00F4ng khai, b\u1EA3n quy\u1EC1n, nh\u00E3n hi\u1EC7u th\u01B0\u01A1ng m\u1EA1i v\u00E0/ho\u1EB7c quy\u1EC1n s\u1EDF h\u1EEFu tr\u00ED tu\u1EC7 kh\u00E1c; (iii) b\u1EA1n \u0111\u1ED3ng \u00FD thanh to\u00E1n t\u1EA5t c\u1EA3 ti\u1EC1n b\u1EA3n quy\u1EC1n t\u00E1c gi\u1EA3, ph\u00ED v\u00E0 b\u1EA5t k\u1EF3 kho\u1EA3n ti\u1EC1n n\u00E0o kh\u00E1c c\u00F2n n\u1EE3 do N\u1ED9i dung m\u00E0 b\u1EA1n \u0111\u0103ng l\u00EAn ho\u1EB7c th\u00F4ng qua D\u1ECBch v\u1EE5; v\u00E0 (iv) b\u1EA1n c\u00F3 quy\u1EC1n v\u00E0 n\u0103ng l\u1EF1c ph\u00E1p l\u00FD \u0111\u1EC3 tham gia v\u00E0o c\u00E1c \u0110i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng n\u00E0y trong quy\u1EC1n h\u1EA1n c\u1EE7a b\u1EA1n. D\u1ECBch v\u1EE5 ch\u1EE9a n\u1ED9i dung m\u00E0 WorkSearching s\u1EDF h\u1EEFu ho\u1EB7c c\u1EA5p ph\u00E9p (\"N\u1ED9i dung WorkSearching\"). N\u1ED9i dung WorkSearching \u0111\u01B0\u1EE3c b\u1EA3o v\u1EC7 b\u1EDFi b\u1EA3n quy\u1EC1n, nh\u00E3n hi\u1EC7u th\u01B0\u01A1ng m\u1EA1i, b\u1EB1ng s\u00E1ng ch\u1EBF, b\u00ED m\u1EADt th\u01B0\u01A1ng m\u1EA1i v\u00E0 c\u00E1c lu\u1EADt kh\u00E1c, \u0111\u1ED3ng th\u1EDDi gi\u1EEFa b\u1EA1n v\u00E0 WorkSearching, WorkSearching s\u1EDF h\u1EEFu v\u00E0 n\u1EAFm gi\u1EEF t\u1EA5t c\u1EA3 c\u00E1c quy\u1EC1n v\u1EC1 D\u1ECBch v\u1EE5 v\u00E0 N\u1ED9i dung WorkSearching. B\u1EA1n kh\u00F4ng \u0111\u01B0\u1EE3c x\u00F3a, thay \u0111\u1ED5i ho\u1EB7c che gi\u1EA5u b\u1EA5t k\u1EF3 th\u00F4ng b\u00E1o n\u00E0o v\u1EC1 b\u1EA3n quy\u1EC1n, nh\u00E3n hi\u1EC7u th\u01B0\u01A1ng m\u1EA1i, nh\u00E3n hi\u1EC7u d\u1ECBch v\u1EE5 hay quy\u1EC1n s\u1EDF h\u1EEFu kh\u00E1c \u0111\u01B0\u1EE3c k\u1EBFt h\u1EE3p v\u1EDBi hay \u0111i k\u00E8m N\u1ED9i dung WorkSearching v\u00E0 b\u1EA1n kh\u00F4ng \u0111\u01B0\u1EE3c sao ch\u00E9p, s\u1EEDa \u0111\u1ED5i, \u0111i\u1EC1u ch\u1EC9nh, chu\u1EA9n b\u1ECB c\u00E1c s\u1EA3n ph\u1EA9m ph\u00E1i sinh d\u1EF1a tr\u00EAn, th\u1EF1c hi\u1EC7n, hi\u1EC3n th\u1ECB, xu\u1EA5t b\u1EA3n, ph\u00E2n ph\u1ED1i, truy\u1EC1n \u0111i, ph\u00E1t, b\u00E1n, c\u1EA5p ph\u00E9p ho\u1EB7c khai th\u00E1c N\u1ED9i dung WorkSearching. Logo v\u00E0 t\u00EAn WorkSearching l\u00E0 c\u00E1c nh\u00E3n hi\u1EC7u th\u01B0\u01A1ng m\u1EA1i c\u1EE7a WorkSearching v\u00E0 kh\u00F4ng \u0111\u01B0\u1EE3c sao ch\u00E9p, gi\u1EA3 m\u1EA1o hay s\u1EED d\u1EE5ng to\u00E0n b\u1ED9 ho\u1EB7c m\u1ED9t ph\u1EA7n khi ch\u01B0a c\u00F3 s\u1EF1 cho ph\u00E9p tr\u01B0\u1EDBc b\u1EB1ng v\u0103n b\u1EA3n c\u1EE7a WorkSearching. Ngo\u00E0i ra, t\u1EA5t c\u1EA3 c\u00E1c ti\u00EAu \u0111\u1EC1 trang, \u0111\u1ED3 h\u1ECDa t\u00F9y ch\u1EC9nh, bi\u1EC3u t\u01B0\u1EE3ng n\u00FAt v\u00E0 t\u1EADp l\u1EC7nh \u0111\u1EC1u l\u00E0 nh\u00E3n hi\u1EC7u d\u1ECBch v\u1EE5, nh\u00E3n hi\u1EC7u th\u01B0\u01A1ng m\u1EA1i v\u00E0/ho\u1EB7c bao b\u00EC th\u01B0\u01A1ng m\u1EA1i c\u1EE7a WorkSearching v\u00E0 kh\u00F4ng \u0111\u01B0\u1EE3c sao ch\u00E9p, gi\u1EA3 m\u1EA1o hay s\u1EED d\u1EE5ng to\u00E0n b\u1ED9 ho\u1EB7c m\u1ED9t ph\u1EA7n khi ch\u01B0a c\u00F3 s\u1EF1 cho ph\u00E9p tr\u01B0\u1EDBc b\u1EB1ng v\u0103n b\u1EA3n c\u1EE7a WorkSearching. M\u1EB7c d\u00F9 m\u1EE5c \u0111\u00EDch c\u1EE7a WorkSearching l\u00E0 cung c\u1EA5p D\u1ECBch v\u1EE5 nhi\u1EC1u nh\u1EA5t c\u00F3 th\u1EC3 nh\u01B0ng s\u1EBD c\u00F3 tr\u01B0\u1EDDng h\u1EE3p D\u1ECBch v\u1EE5 c\u00F3 th\u1EC3 b\u1ECB gi\u00E1n \u0111o\u1EA1n, bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF vi\u1EC7c gi\u00E1n \u0111o\u1EA1n \u0111\u1EC3 b\u1EA3o tr\u00EC ho\u1EB7c n\u00E2ng c\u1EA5p theo l\u1ECBch tr\u00ECnh, \u0111\u1EC3 s\u1EEDa ch\u1EEFa kh\u1EA9n c\u1EA5p hay do l\u1ED7i c\u1EE7a thi\u1EBFt b\u1ECB v\u00E0/ho\u1EB7c li\u00EAn k\u1EBFt vi\u1EC5n th\u00F4ng. Ngo\u00E0i ra, WorkSearching c\u00F3 quy\u1EC1n x\u00F3a b\u1EA5t k\u1EF3 N\u1ED9i dung n\u00E0o kh\u1ECFi D\u1ECBch v\u1EE5 v\u00EC b\u1EA5t k\u1EF3 l\u00FD do g\u00EC m\u00E0 theo nh\u1EADn \u0111\u1ECBnh c\u1EE7a m\u00ECnh, l\u00E0 vi ph\u1EA1m \u0110i\u1EC1u Kho\u1EA3n n\u00E0y, vi ph\u1EA1m ph\u00E1p lu\u1EADt, quy t\u1EAFc ho\u1EB7c quy \u0111\u1ECBnh, c\u00F3 t\u00EDnh ch\u1EA5t l\u0103ng m\u1EA1, g\u00E2y r\u1ED1i, x\u00FAc ph\u1EA1m ho\u1EB7c b\u1EA5t h\u1EE3p ph\u00E1p, ho\u1EB7c vi ph\u1EA1m c\u00E1c quy\u1EC1n, ho\u1EB7c nguy h\u1EA1i ho\u1EB7c \u0111e d\u1ECDa s\u1EF1 an to\u00E0n c\u1EE7a Ng\u01B0\u1EDDi d\u1EE7ng c\u1EE7a b\u1EA5t k\u1EF3 trang web n\u00E0o thu\u1ED9c WorkSearching.vn. WorkSearching c\u00F3 quy\u1EC1n tr\u1EE5c xu\u1EA5t ng\u01B0\u1EDDi d\u00F9ng v\u00E0 ng\u0103n ch\u1EB7n quy\u1EC1n truy c\u1EADp sau \u0111\u00F3 c\u1EE7a h\u1ECD t\u1EDBi trang web WorkSearching.vn v\u00E0/ho\u1EB7c s\u1EED d\u1EE5ng c\u00E1c d\u1ECBch v\u1EE5 WorkSearching khi vi ph\u1EA1m \u0110i\u1EC1u Kho\u1EA3n n\u00E0y ho\u1EB7c vi ph\u1EA1m ph\u00E1p lu\u1EADt, quy t\u1EAFc ho\u1EB7c quy \u0111\u1ECBnh. WorkSearching \u0111\u01B0\u1EE3c ph\u00E9p th\u1EF1c hi\u1EC7n b\u1EA5t k\u1EF3 h\u00E0nh \u0111\u1ED9ng n\u00E0o li\u00EAn quan \u0111\u1EBFn N\u1ED9i dung Ng\u01B0\u1EDDi d\u00F9ng khi t\u1EF1 x\u00E9t th\u1EA5y c\u1EA7n thi\u1EBFt ho\u1EB7c th\u00EDch h\u1EE3p n\u1EBFu WorkSearching tin r\u1EB1ng N\u1ED9i dung Ng\u01B0\u1EDDi d\u00F9ng c\u00F3 th\u1EC3 t\u1EA1o ra tr\u00E1ch nhi\u1EC7m ph\u00E1p l\u00FD cho WorkSearching, g\u00E2y thi\u1EC7t h\u1EA1i \u0111\u1EBFn th\u01B0\u01A1ng hi\u1EC7u WorkSearching ho\u1EB7c h\u00ECnh \u1EA3nh c\u00F4ng c\u1ED9ng, ho\u1EB7c d\u1EABn \u0111\u1EBFn vi\u1EC7c WorkSearching \u0111\u1EC3 m\u1EA5t ng\u01B0\u1EDDi d\u00F9ng. N\u1ED9i dung b\u1ECB x\u00F3a kh\u1ECFi D\u1ECBch v\u1EE5 c\u00F3 th\u1EC3 ti\u1EBFp t\u1EE5c \u0111\u01B0\u1EE3c WorkSearching l\u01B0u tr\u1EEF, bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF vi\u1EC7c l\u01B0u tr\u1EEF \u0111\u1EC3 tu\u00E2n th\u1EE7 m\u1ED9t s\u1ED1 ngh\u0129a v\u1EE5 ph\u00E1p l\u00FD nh\u1EA5t \u0111\u1ECBnh nh\u01B0ng c\u00F3 th\u1EC3 kh\u00F4ng truy xu\u1EA5t \u0111\u01B0\u1EE3c n\u1EBFu kh\u00F4ng c\u00F3 l\u1EC7nh h\u1EE3p l\u1EC7 c\u1EE7a t\u00F2a \u00E1n. WorkSearching s\u1EBD kh\u00F4ng ch\u1ECBu tr\u00E1ch nhi\u1EC7m ph\u00E1p l\u00FD v\u1EDBi b\u1EA1n v\u1EC1 b\u1EA5t k\u1EF3 s\u1EEDa \u0111\u1ED5i, t\u1EA1m ng\u1EEBng hay gi\u00E1n \u0111o\u1EA1n D\u1ECBch v\u1EE5 n\u00E0o ho\u1EB7c vi\u1EC7c m\u1EA5t m\u00E1t b\u1EA5t k\u1EF3 N\u1ED9i dung n\u00E0o. B\u1EA1n c\u0169ng x\u00E1c nh\u1EADn r\u1EB1ng Internet c\u00F3 th\u1EC3 kh\u00F4ng an to\u00E0n v\u00E0 r\u1EB1ng vi\u1EC7c g\u1EEDi N\u1ED9i dung ho\u1EB7c th\u00F4ng tin kh\u00E1c c\u00F3 th\u1EC3 kh\u00F4ng an to\u00E0n. WorkSearching s\u1EBD kh\u00F4ng ch\u1ECBu tr\u00E1ch nhi\u1EC7m v\u1EDBi b\u1EA5t c\u1EE9 th\u00F4ng tin \u0111\u0103ng t\u1EA3i c\u1EE7a b\u00EAn th\u1EE9 ba n\u00E0o, cho d\u00F9 v\u1EDBi l\u00FD do n\u00E0o, do b\u1EA5t c\u1EE9 t\u1ED5 ch\u1EE9c n\u00E0o \u0111\u0103ng t\u1EA3i n\u1ED9i dung tr\u00EAn WorkSearching. Tuy nhi\u00EAn, WorkSearching s\u1EBD c\u1ED1 g\u1EAFng s\u1EED d\u1EE5ng m\u1ECDi bi\u1EC7n ph\u00E1p ki\u1EC3m so\u00E1t v\u00E0 h\u1EA1n ch\u1EBF t\u1ED1i \u0111a c\u00E1c tr\u01B0\u1EDDng h\u1EE3p tin tuy\u1EC3n d\u1EE5ng l\u1EEBa \u0111\u1EA3o, th\u00F4ng tin kh\u00F4ng \u0111\u00FAng\u2026.\u0111\u1EC3 b\u1EA3o v\u1EC7 Ng\u01B0\u1EDDi D\u00F9ng. WorkSearching kh\u00F4ng \u0111\u1EA1i di\u1EC7n ho\u1EB7c \u0111\u1EA3m b\u1EA3o t\u00EDnh trung th\u1EF1c, ch\u00EDnh x\u00E1c, ho\u1EB7c \u0111\u1ED9 tin c\u1EADy c\u1EE7a N\u1ED9i dung Ng\u01B0\u1EDDi d\u00F9ng, c\u00E1c s\u1EA3n ph\u1EA9m ph\u00E1i sinh t\u1EEB N\u1ED9i dung Ng\u01B0\u1EDDi d\u00F9ng, ho\u1EB7c b\u1EA5t k\u1EF3 th\u00F4ng tin li\u00EAn l\u1EA1c kh\u00E1c \u0111\u01B0\u1EE3c \u0111\u0103ng b\u1EDFi Ng\u01B0\u1EDDi d\u00F9ng c\u0169ng nh\u01B0 kh\u00F4ng x\u00E1c nh\u1EADn b\u1EA5t k\u1EF3 \u00FD ki\u1EBFn n\u00E0o \u0111\u01B0\u1EE3c th\u1EC3 hi\u1EC7n b\u1EDFi Ng\u01B0\u1EDDi d\u00F9ng. B\u1EA1n th\u1EEBa nh\u1EADn r\u1EB1ng vi\u1EC7c tin t\u01B0\u1EDFng n\u00E0o v\u00E0o t\u00E0i li\u1EC7u \u0111\u01B0\u1EE3c \u0111\u0103ng b\u1EDFi Ng\u01B0\u1EDDi d\u00F9ng kh\u00E1c l\u00E0 r\u1EE7i ro c\u1EE7a ri\u00EAng b\u1EA1n. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](53, "7. TUY\u00CAN B\u1ED0 MI\u1EC4N TR\u1EEA TR\u00C1CH NHI\u1EC6M");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](55, " WorkSearching kh\u00F4ng tuy\u00EAn b\u1ED1 hay \u0111\u1EA3m b\u1EA3o r\u1EB1ng d\u1ECBch v\u1EE5 s\u1EBD kh\u00F4ng b\u1ECB l\u1ED7i hay kh\u00F4ng b\u1ECB gi\u00E1n \u0111o\u1EA1n; r\u1EB1ng c\u00E1c l\u1ED7i s\u1EBD \u0111\u01B0\u1EE3c kh\u1EAFc ph\u1EE5c; ho\u1EB7c r\u1EB1ng d\u1ECBch v\u1EE5 ho\u1EB7c m\u00E1y ch\u1EE7 cung c\u1EA5p d\u1ECBch v\u1EE5 kh\u00F4ng b\u1ECB nhi\u1EC5m b\u1EA5t k\u1EF3 th\u00E0nh ph\u1EA7n c\u00F3 h\u1EA1i n\u00E0o, bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF vi-r\u00FAt. WorkSearching kh\u00F4ng \u0111\u01B0a ra b\u1EA5t k\u1EF3 tuy\u00EAn b\u1ED1 hay \u0111\u1EA3m b\u1EA3o n\u00E0o r\u1EB1ng th\u00F4ng tin (bao g\u1ED3m m\u1ECDi h\u01B0\u1EDBng d\u1EABn) v\u1EC1 d\u1ECBch v\u1EE5 ch\u00EDnh x\u00E1c, \u0111\u1EA7y \u0111\u1EE7 ho\u1EB7c h\u1EEFu \u00EDch. B\u1EA1n x\u00E1c nh\u1EADn r\u1EB1ng b\u1EA1n t\u1EF1 ch\u1ECBu r\u1EE7i ro khi s\u1EED d\u1EE5ng d\u1ECBch v\u1EE5. WorkSearching kh\u00F4ng \u0111\u1EA3m b\u1EA3o r\u1EB1ng vi\u1EC7c b\u1EA1n s\u1EED d\u1EE5ng d\u1ECBch v\u1EE5 l\u00E0 h\u1EE3p ph\u00E1p trong b\u1EA5t k\u1EF3 khu v\u1EF1c ph\u00E1p l\u00FD c\u1EE5 th\u1EC3 n\u00E0o v\u00E0 WorkSearching t\u1EEB ch\u1ED1i \u0111\u01B0a ra c\u00E1c b\u1EA3o \u0111\u1EA3m \u0111\u00F3 m\u1ED9t c\u00E1ch c\u1EE5 th\u1EC3. M\u1ED9t s\u1ED1 khu v\u1EF1c ph\u00E1p l\u00FD gi\u1EDBi h\u1EA1n ho\u1EB7c kh\u00F4ng cho ph\u00E9p tuy\u00EAn b\u1ED1 mi\u1EC5n tr\u1EEB tr\u00E1ch nhi\u1EC7m v\u1EC1 b\u1EA3o \u0111\u1EA3m ng\u1EE5 \u00FD hay c\u00E1c b\u1EA3o \u0111\u1EA3m kh\u00E1c, v\u00EC v\u1EADy tuy\u00EAn b\u1ED1 mi\u1EC5n tr\u1EEB tr\u00E1ch nhi\u1EC7m tr\u00EAn c\u00F3 th\u1EC3 kh\u00F4ng \u00E1p d\u1EE5ng cho b\u1EA1n trong ph\u1EA1m vi lu\u1EADt ph\u00E1p c\u1EE7a khu v\u1EF1c ph\u00E1p l\u00FD \u0111\u00F3 \u00E1p d\u1EE5ng cho b\u1EA1n v\u00E0 c\u00E1c \u0111i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng n\u00E0y. B\u1EB1ng c\u00E1ch truy c\u1EADp hay s\u1EED d\u1EE5ng d\u1ECBch v\u1EE5, b\u1EA1n tuy\u00EAn b\u1ED1 v\u00E0 b\u1EA3o \u0111\u1EA3m r\u1EB1ng ho\u1EA1t \u0111\u1ED9ng c\u1EE7a m\u00ECnh l\u00E0 h\u1EE3p ph\u00E1p trong m\u1ECDi khu v\u1EF1c ph\u00E1p l\u00FD n\u01A1i b\u1EA1n truy c\u1EADp hay s\u1EED d\u1EE5ng d\u1ECBch v\u1EE5. WorkSearching kh\u00F4ng x\u00E1c nh\u1EADn n\u1ED9i dung v\u00E0 t\u1EEB ch\u1ED1i c\u1EE5 th\u1EC3 b\u1EA5t k\u1EF3 tr\u00E1ch nhi\u1EC7m hay tr\u00E1ch nhi\u1EC7m ph\u00E1p l\u00FD n\u00E0o \u0111\u1ED1i v\u1EDBi b\u1EA5t k\u1EF3 c\u00E1 nh\u00E2n hay t\u1ED5 ch\u1EE9c n\u00E0o v\u1EC1 m\u1ECDi m\u1EA5t m\u00E1t, thi\u1EC7t h\u1EA1i (cho d\u00F9 th\u1EF1c s\u1EF1, do h\u1EADu qu\u1EA3, do tr\u1EEBng ph\u1EA1t ho\u1EB7c b\u1EA5t k\u1EF3 \u0111i\u1EC1u g\u00EC kh\u00E1c), th\u01B0\u01A1ng t\u00EDch, khi\u1EBFu n\u1EA1i, tr\u00E1ch nhi\u1EC7m ph\u00E1p l\u00FD hay nguy\u00EAn nh\u00E2n kh\u00E1c d\u01B0\u1EDBi m\u1ECDi h\u00ECnh th\u1EE9c ho\u1EB7c \u0111\u1EB7c \u0111i\u1EC3m d\u1EF1a tr\u00EAn ho\u1EB7c do b\u1EA5t k\u1EF3 n\u1ED9i dung n\u00E0o. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](56, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](57, "8. GI\u1EDAI H\u1EA0N TR\u00C1CH NHI\u1EC6M PH\u00C1P L\u00DD");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](58, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](59, " Trong m\u1ECDi t\u00ECnh hu\u1ED1ng, WorkSearching s\u1EBD kh\u00F4ng ch\u1ECBu tr\u00E1ch nhi\u1EC7m ph\u00E1p l\u00FD v\u1EDBi b\u1EA1n v\u1EC1 b\u1EA5t k\u1EF3 m\u1EA5t m\u00E1t hay thi\u1EC7t h\u1EA1i n\u00E0o d\u01B0\u1EDBi m\u1ECDi h\u00ECnh th\u1EE9c (bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF b\u1EA5t k\u1EF3 m\u1EA5t m\u00E1t hay thi\u1EC7t h\u1EA1i tr\u1EF1c ti\u1EBFp, gi\u00E1n ti\u1EBFp, kinh t\u1EBF, c\u1EA3nh b\u00E1o, \u0111\u1EB7c bi\u1EC7t, do tr\u1EEBng ph\u1EA1t, ng\u1EABu nhi\u00EAn ho\u1EB7c do h\u1EADu qu\u1EA3 n\u00E0o) c\u00F3 li\u00EAn quan tr\u1EF1c ti\u1EBFp ho\u1EB7c gi\u00E1n ti\u1EBFp \u0111\u1EBFn: (a) d\u1ECBch v\u1EE5; (b) n\u1ED9i dung WorkSearching; (c) n\u1ED9i dung ng\u01B0\u1EDDi d\u00F9ng; (d) vi\u1EC7c b\u1EA1n s\u1EED d\u1EE5ng, kh\u00F4ng th\u1EC3 s\u1EED d\u1EE5ng ho\u1EB7c hi\u1EC7u qu\u1EA3 c\u1EE7a d\u1ECBch v\u1EE5; (e) m\u1ECDi h\u00E0nh \u0111\u1ED9ng \u0111\u01B0\u1EE3c th\u1EF1c hi\u1EC7n c\u00F3 li\u00EAn quan \u0111\u1EBFn vi\u1EC7c \u0111i\u1EC1u tra c\u1EE7a WorkSearching ho\u1EB7c c\u01A1 quan th\u1EF1c thi ph\u00E1p lu\u1EADt v\u1EC1 vi\u1EC7c s\u1EED d\u1EE5ng d\u1ECBch v\u1EE5 c\u1EE7a b\u1EA1n ho\u1EB7c b\u1EA5t k\u1EF3 b\u00EAn n\u00E0o kh\u00E1c; (f) b\u1EA5t k\u1EF3 h\u00E0nh \u0111\u1ED9ng n\u00E0o \u0111\u01B0\u1EE3c th\u1EF1c hi\u1EC7n c\u00F3 li\u00EAn quan \u0111\u1EBFn ch\u1EE7 s\u1EDF h\u1EEFu b\u1EA3n quy\u1EC1n ho\u1EB7c quy\u1EC1n s\u1EDF h\u1EEFu tr\u00ED tu\u1EC7 kh\u00E1c; (g) m\u1ECDi l\u1ED7i ho\u1EB7c thi\u1EBFu s\u00F3t trong ho\u1EA1t \u0111\u1ED9ng c\u1EE7a d\u1ECBch v\u1EE5; ho\u1EB7c (h) m\u1ECDi thi\u1EC7t h\u1EA1i \u0111\u1ED1i v\u1EDBi m\u1ECDi m\u00E1y t\u00EDnh, thi\u1EBFt b\u1ECB di \u0111\u1ED9ng, thi\u1EBFt b\u1ECB ho\u1EB7c c\u00F4ng ngh\u1EC7 kh\u00E1c c\u1EE7a ng\u01B0\u1EDDi d\u00F9ng, bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF thi\u1EC7t h\u1EA1i do b\u1EA5t k\u1EF3 h\u00E0nh vi vi ph\u1EA1m b\u1EA3o m\u1EADt n\u00E0o ho\u1EB7c do b\u1EA5t k\u1EF3 vi-r\u00FAt, l\u1ED7i, gi\u1EA3 m\u1EA1o, gian l\u1EADn, l\u1ED7i, thi\u1EBFu s\u00F3t, gi\u00E1n \u0111o\u1EA1n, khi\u1EBFm khuy\u1EBFt, tr\u00EC ho\u00E3n qu\u00E1 tr\u00ECnh ho\u1EA1t \u0111\u1ED9ng ho\u1EB7c truy\u1EC1n \u0111i, l\u1ED7i m\u1EA1ng hay d\u00F2ng m\u00E1y t\u00EDnh, m\u1ECDi s\u1EF1 c\u1ED1 k\u1EF9 thu\u1EADt kh\u00E1c ho\u1EB7c tr\u1EE5c tr\u1EB7c kh\u00E1c, bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF thi\u1EC7t h\u1EA1i do m\u1EA5t l\u1EE3i nhu\u1EADn, m\u1EA5t t\u00EDn nhi\u1EC7m, m\u1EA5t d\u1EEF li\u1EC7u, ng\u1EEBng vi\u1EC7c, \u0111\u1ED9 ch\u00EDnh x\u00E1c c\u1EE7a k\u1EBFt qu\u1EA3 ho\u1EB7c l\u1ED7i hay tr\u1EE5c tr\u1EB7c m\u00E1y t\u00EDnh, ngay c\u1EA3 khi c\u00F3 th\u1EC3 d\u1EF1 \u0111o\u00E1n \u0111\u01B0\u1EE3c ho\u1EB7c WorkSearching \u0111\u00E3 \u0111\u01B0\u1EE3c th\u00F4ng b\u00E1o hay l\u1EBD ra ph\u1EA3i bi\u1EBFt v\u1EC1 kh\u1EA3 n\u0103ng x\u1EA3y ra c\u00E1c thi\u1EC7t h\u1EA1i \u0111\u00F3, cho d\u00F9 theo h\u1EE3p \u0111\u1ED3ng, do s\u01A1 \u00FD, tr\u00E1ch nhi\u1EC7m ph\u00E1p l\u00FD nghi\u00EAm ng\u1EB7t ho\u1EB7c sai l\u1EA7m c\u00E1 nh\u00E2n (bao g\u1ED3m, nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF nguy\u00EAn nh\u00E2n m\u1ED9t ph\u1EA7n ho\u1EB7c to\u00E0n b\u1ED9 do s\u01A1 \u00FD, thi\u00EAn tai, l\u1ED7i vi\u1EC5n th\u00F4ng, l\u1EA5y c\u1EAFp hay h\u1EE7y ho\u1EA1i d\u1ECBch v\u1EE5). Trong m\u1ECDi tr\u01B0\u1EDDng h\u1EE3p, WorkSearching kh\u00F4ng ch\u1ECBu tr\u00E1ch nhi\u1EC7m ph\u00E1p l\u00FD v\u1EDBi b\u1EA1n ho\u1EB7c b\u1EA5t k\u1EF3 ai kh\u00E1c v\u1EC1 m\u1EA5t m\u00E1t, thi\u1EC7t h\u1EA1i ho\u1EB7c th\u01B0\u01A1ng t\u00EDch, bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF th\u01B0\u01A1ng t\u00EDch ca\u0301 nh\u00E2n ho\u0103\u0323c t\u01B0\u0309 vong. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](61, "9. GI\u1EA2I QUY\u1EBET TRANH CH\u1EA4P");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](62, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](63, " B\u1EA5t k\u1EF3 tranh ch\u1EA5p ph\u00E1t sinh trong qu\u00E1 tr\u00ECnh s\u1EED d\u1EE5ng d\u1ECBch v\u1EE5 c\u1EE7a WorkSearching s\u1EBD \u0111\u01B0\u1EE3c gi\u1EA3i quy\u1EBFt theo ph\u00E1p lu\u1EADt hi\u1EC7n h\u00E0nh c\u1EE7a n\u01B0\u1EDBc C\u1ED9ng h\u00F2a x\u00E3 h\u1ED9i ch\u1EE7 ngh\u0129a Vi\u1EC7t Nam. B\u1EA5t k\u1EF3 khi\u1EBFu n\u1EA1i n\u00E0o ph\u00E1t sinh trong qu\u00E1 s\u1EED d\u1EE5ng s\u1EA3n ph\u1EA9m ph\u1EA3i \u0111\u01B0\u1EE3c g\u1EEDi \u0111\u1EBFn WorkSearching ngay sau khi x\u1EA3y ra s\u1EF1 ki\u1EC7n ph\u00E1t sinh khi\u1EBFu n\u1EA1i: \u0110\u1ECBa ch\u1EC9 li\u00EAn l\u1EA1c: V\u0103n ph\u00F2ng WorkSearching, S\u1ED1 11E, ng\u00E1ch 206/2, ng\u00F5 206, \u0111\u01B0\u1EDDng C\u1ED5 Linh, ph\u01B0\u1EDDng Long Bi\u00EAn, qu\u1EADn Long Bi\u00EAn, H\u00E0 N\u1ED9i \u0110i\u1EC7n tho\u1EA1i: 0852220900 Email: dohuuhailong@gmail.com WorkSearching s\u1EBD c\u0103n c\u1EE9 t\u1EEBng tr\u01B0\u1EDDng h\u1EE3p c\u1EE5 th\u1EC3 \u0111\u1EC3 c\u00F3 ph\u01B0\u01A1ng \u00E1n gi\u1EA3i quy\u1EBFt cho ph\u00F9 h\u1EE3p. Khi th\u1EF1c hi\u1EC7n quy\u1EC1n khi\u1EBFu n\u1EA1i, ng\u01B0\u1EDDi khi\u1EBFu n\u1EA1i c\u00F3 ngh\u0129a v\u1EE5 cung c\u1EA5p c\u00E1c gi\u1EA5y t\u1EDD, b\u1EB1ng ch\u1EE9ng, c\u0103n c\u1EE9 c\u00F3 li\u00EAn quan \u0111\u1EBFn vi\u1EC7c khi\u1EBFu n\u1EA1i v\u00E0 ph\u1EA3i ch\u1ECBu tr\u00E1ch nhi\u1EC7m v\u1EC1 n\u1ED9i dung khi\u1EBFu n\u1EA1i, gi\u1EA5y t\u1EDD, b\u1EB1ng ch\u1EE9ng, c\u0103n c\u1EE9 do m\u00ECnh cung c\u1EA5p theo quy \u0111\u1ECBnh ph\u00E1p lu\u1EADt. WorkSearching ch\u1EC9 h\u1ED7 tr\u1EE3, gi\u1EA3i quy\u1EBFt khi\u1EBFu n\u1EA1i, t\u1ED1 c\u00E1o c\u1EE7a Ng\u01B0\u1EDDi D\u00F9ng trong tr\u01B0\u1EDDng h\u1EE3p b\u1EA1n \u0111\u00E3 ghi \u0111\u1EA7y \u0111\u1EE7, trung th\u1EF1c v\u00E0 ch\u00EDnh x\u00E1c th\u00F4ng tin khi \u0111\u0103ng k\u00FD t\u00E0i kho\u1EA3n. \u0110\u1ED1i v\u1EDBi tranh ch\u1EA5p gi\u1EEFa Ng\u01B0\u1EDDi D\u00F9ng v\u1EDBi nhau, ho\u1EB7c tranh ch\u1EA5p v\u1EDBi B\u00EAn Th\u1EE9 Ba, c\u00F3 th\u1EC3 WorkSearching s\u1EBD g\u1EEDi th\u00F4ng tin li\u00EAn h\u1EC7 cho c\u00E1c \u0111\u1ED1i t\u01B0\u1EE3ng tranh ch\u1EA5p \u0111\u1EC3 c\u00E1c b\u00EAn t\u1EF1 gi\u1EA3i quy\u1EBFt ho\u1EB7c WorkSearching s\u1EBD c\u0103n c\u1EE9 v\u00E0o t\u00ECnh h\u00ECnh th\u1EF1c t\u1EBF \u0111\u1EC3 gi\u1EA3i quy\u1EBFt. Theo \u0111\u00F3, WorkSearching s\u1EBD b\u1EA3o v\u1EC7 quy\u1EC1n l\u1EE3i t\u1ED1i \u0111a c\u00F3 th\u1EC3 cho Ng\u01B0\u1EDDi D\u00F9ng h\u1EE3p ph\u00E1p v\u00E0 ch\u00EDnh \u0111\u00E1ng. Ng\u01B0\u1EDDi D\u00F9ng \u0111\u1ED3ng \u00FD b\u1EA3o v\u1EC7, b\u1ED3i ho\u00E0n v\u00E0 lo\u1EA1i tr\u1EEB WorkSearching kh\u1ECFi nh\u1EEFng ngh\u0129a v\u1EE5 ph\u00E1p l\u00FD, t\u1ED1 t\u1EE5ng, t\u1ED5n th\u1EA5t, chi ph\u00ED bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u00E1n ph\u00ED, chi ph\u00ED lu\u1EADt s\u01B0, chuy\u00EAn gia t\u01B0 v\u1EA5n c\u00F3 li\u00EAn quan \u0111\u1EBFn vi\u1EC7c gi\u1EA3i quy\u1EBFt ho\u1EB7c ph\u00E1t sinh t\u1EEB s\u1EF1 vi ph\u1EA1m c\u1EE7a Ng\u01B0\u1EDDi D\u00F9ng trong qu\u00E1 tr\u00ECnh s\u1EED d\u1EE5ng s\u1EA3n ph\u1EA9m. N\u1EBFu tranh ch\u1EA5p kh\u00F4ng \u0111\u01B0\u1EE3c gi\u1EA3i quy\u1EBFt trong v\u00F2ng s\u00E1u m\u01B0\u01A1i (60) ng\u00E0y k\u1EC3 t\u1EEB ng\u00E0y m\u1ED9t B\u00EAn th\u00F4ng b\u00E1o cho B\u00EAn c\u00F2n l\u1EA1i b\u1EB1ng v\u0103n b\u1EA3n v\u1EC1 vi\u1EC7c ph\u00E1t sinh tranh ch\u1EA5p th\u00EC m\u1ED9t trong c\u00E1c B\u00EAn c\u00F3 quy\u1EC1n \u0111\u01B0a v\u1EE5 vi\u1EC7c ra gi\u1EA3i quy\u1EBFt t\u1EA1i t\u00F2a \u00E1n c\u00F3 th\u1EA9m quy\u1EC1n t\u1EA1i TP H\u00E0 N\u1ED9i theo quy \u0111\u1ECBnh c\u1EE7a ph\u00E1p lu\u1EADt, B\u00EAn thua ki\u1EC7n s\u1EBD ph\u1EA3i ch\u1ECBu to\u00E0n b\u1ED9 c\u00E1c chi ph\u00ED t\u1ED1 t\u1EE5ng t\u1EA1i t\u00F2a \u00E1n. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](64, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](65, "10. HI\u1EC6U L\u1EF0C TH\u1ECEA THU\u1EACN C\u1EE6A H\u1EE2P \u0110\u1ED2NG");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](66, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](67, " C\u00E1c \u0111i\u1EC1u kho\u1EA3n quy \u0111\u1ECBnh t\u1EA1i Quy \u0111\u1ECBnh s\u1EED d\u1EE5ng n\u00E0y c\u00F3 th\u1EC3 \u0111\u01B0\u1EE3c c\u1EADp nh\u1EADt, ch\u1EC9nh s\u1EEDa b\u1EA5t c\u1EE9 l\u00FAc n\u00E0o m\u00E0 kh\u00F4ng c\u1EA7n ph\u1EA3i th\u00F4ng b\u00E1o tr\u01B0\u1EDBc t\u1EDBi ng\u01B0\u1EDDi s\u1EED d\u1EE5ng. WorkSearching s\u1EBD c\u00F4ng b\u1ED1 r\u00F5 tr\u00EAn Website, v\u1EC1 nh\u1EEFng thay \u0111\u1ED5i, b\u1ED5 sung \u0111\u00F3. Trong tr\u01B0\u1EDDng h\u1EE3p m\u1ED9t ho\u1EB7c m\u1ED9t s\u1ED1 \u0111i\u1EC1u kho\u1EA3n Quy \u0111\u1ECBnh s\u1EED d\u1EE5ng n\u00E0y xung \u0111\u1ED9t v\u1EDBi c\u00E1c quy \u0111\u1ECBnh c\u1EE7a lu\u1EADt ph\u00E1p v\u00E0 b\u1ECB T\u00F2a \u00E1n tuy\u00EAn l\u00E0 v\u00F4 hi\u1EC7u, \u0111i\u1EC1u kho\u1EA3n \u0111\u00F3 s\u1EBD \u0111\u01B0\u1EE3c ch\u1EC9nh s\u1EEDa cho ph\u00F9 h\u1EE3p v\u1EDBi quy \u0111\u1ECBnh ph\u00E1p lu\u1EADt hi\u1EC7n h\u00E0nh, v\u00E0 ph\u1EA7n c\u00F2n l\u1EA1i c\u1EE7a Quy \u0111\u1ECBnh s\u1EED d\u1EE5ng v\u1EABn gi\u1EEF nguy\u00EAn gi\u00E1 tr\u1ECB. Th\u1ECFa thu\u1EADn n\u00E0y c\u00F3 gi\u00E1 tr\u1ECB nh\u01B0 H\u1EE3p \u0110\u1ED3ng. Ng\u01B0\u1EDDi D\u00F9ng hi\u1EC3u r\u1EB1ng, \u0111\u00E2y l\u00E0 h\u1EE3p \u0111\u1ED3ng \u0111i\u1EC7n t\u1EED, Gi\u00E1 tr\u1ECB ph\u00E1p l\u00FD c\u1EE7a h\u1EE3p \u0111\u1ED3ng \u0111i\u1EC7n t\u1EED kh\u00F4ng th\u1EC3 b\u1ECB ph\u1EE7 nh\u1EADn ch\u1EC9 v\u00EC h\u1EE3p \u0111\u1ED3ng \u0111\u00F3 \u0111\u01B0\u1EE3c th\u1EC3 hi\u1EC7n d\u01B0\u1EDBi d\u1EA1ng th\u00F4ng \u0111i\u1EC7p d\u1EEF li\u1EC7u theo Ph\u00E1p Lu\u1EADt v\u1EC1 Giao D\u1ECBch \u0110i\u1EC7n T\u1EED. B\u1EB1ng c\u00E1ch nh\u1EA5n v\u00E0o n\u00FAt \u201CT\u00F4i \u0111\u1ED3ng \u00FD\u201D, Ng\u01B0\u1EDDi D\u00F9ng ho\u00E0n to\u00E0n \u0111\u1ED3ng \u00FD v\u00E0 \u0111\u00E3 hi\u1EC3u c\u00E1c \u0111i\u1EC1u kho\u1EA3n trong H\u1EE3p \u0110\u1ED3ng n\u00E0y v\u00E0 H\u1EE3p \u0110\u1ED3ng c\u00F3 hi\u1EC7u l\u1EF1c k\u1EC1 t\u1EEB th\u1EDDi \u0111i\u1EC3m n\u00E0y. N\u1EBFu vi ph\u1EA1m c\u00E1c \u0110i\u1EC1u kho\u1EA3n n\u00E0y, b\u1EA1n \u0111\u1ED3ng \u00FD ch\u1ECBu ho\u00E0n to\u00E0n tr\u00E1ch nhi\u1EC7m v\u00E0 b\u1ED3i th\u01B0\u1EDDng thi\u1EC7t h\u1EA1i (N\u1EBFu c\u00F3) v\u1EDBi WorkSearching. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](68, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](69, "TH\u00D4NG TIN LI\u00CAN L\u1EA0C");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](70, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](71, " N\u1EBFu b\u1EA1n c\u00F3 c\u00E2u h\u1ECFi v\u1EC1 \u0110i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng n\u00E0y, vui l\u00F2ng g\u1EEDi email t\u1EDBi \u0111\u1ECBa ch\u1EC9 dohuuhailong@gmail.com \u0111\u1EC3 \u0111\u01B0\u1EE3c gi\u1EA3i \u0111\u00E1p nhanh nh\u1EA5t. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()();
+    } }, styles: [".security__page[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background-color: #f2f3f7;\r\n}\r\n.security__document[_ngcontent-%COMP%] {\r\n    width: 70%;\r\n    padding: 50px;\r\n    box-shadow: 0px 0px 16px rgba(47,47,47,0.12);\r\n    background-color: var(--bs-white);\r\n    margin:50px 0;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlY3VyaXR5LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLG1CQUFtQjtJQUNuQix5QkFBeUI7QUFDN0I7QUFDQTtJQUNJLFVBQVU7SUFDVixhQUFhO0lBQ2IsNENBQTRDO0lBQzVDLGlDQUFpQztJQUNqQyxhQUFhO0FBQ2pCIiwiZmlsZSI6InNlY3VyaXR5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2VjdXJpdHlfX3BhZ2Uge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmMmYzZjc7XHJcbn1cclxuLnNlY3VyaXR5X19kb2N1bWVudCB7XHJcbiAgICB3aWR0aDogNzAlO1xyXG4gICAgcGFkZGluZzogNTBweDtcclxuICAgIGJveC1zaGFkb3c6IDBweCAwcHggMTZweCByZ2JhKDQ3LDQ3LDQ3LDAuMTIpO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYnMtd2hpdGUpO1xyXG4gICAgbWFyZ2luOjUwcHggMDtcclxufVxyXG4iXX0= */"] });
+
+
+/***/ }),
+
+/***/ 3787:
+/*!**********************************************************************!*\
+  !*** ./src/app/website/term-of-service/term-of-service.component.ts ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "TermOfServiceComponent": () => (/* binding */ TermOfServiceComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 3184);
+
+class TermOfServiceComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+TermOfServiceComponent.ɵfac = function TermOfServiceComponent_Factory(t) { return new (t || TermOfServiceComponent)(); };
+TermOfServiceComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: TermOfServiceComponent, selectors: [["app-term-of-service"]], decls: 72, vars: 0, consts: [[1, "container-fluid"], [1, "tos__page"], [1, "tos__document"], [1, "big-title"], [1, "title"], [1, "description"]], template: function TermOfServiceComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "h1", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "\u0110I\u1EC0U KHO\u1EA2N S\u1EEC D\u1EE4NG D\u1ECACH V\u1EE4 V\u1EDAI \u1EE8NG VI\u00CAN");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "1. \u0110I\u1EC0U KHO\u1EA2N CHUNG");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, " B\u1EB1ng c\u00E1ch truy c\u1EADp ho\u1EB7c s\u1EED d\u1EE5ng trang web WorkSearching.vn, c\u00E1c d\u1ECBch v\u1EE5, ho\u1EB7c b\u1EA5t k\u1EF3 \u1EE9ng d\u1EE5ng n\u00E0o do WorkSearching.,JSC (\"WorkSearching\u201D) cung c\u1EA5p (g\u1ECDi chung l\u00E0 \"D\u1ECBch v\u1EE5\"), d\u00F9 truy c\u1EADp b\u1EB1ng c\u00E1ch n\u00E0o, b\u1EA1n \u0111\u1ED3ng \u00FD ch\u1ECBu s\u1EF1 r\u00E0ng bu\u1ED9c c\u1EE7a c\u00E1c \u0111i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng n\u00E0y (\"\u0110i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng\"). D\u1ECBch v\u1EE5 do WorkSearching s\u1EDF h\u1EEFu ho\u1EB7c ki\u1EC3m so\u00E1t. C\u00E1c \u0110i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng n\u00E0y \u1EA3nh h\u01B0\u1EDFng \u0111\u1EBFn quy\u1EC1n v\u00E0 ngh\u0129a v\u1EE5 ph\u00E1p l\u00FD c\u1EE7a b\u1EA1n. N\u1EBFu b\u1EA1n kh\u00F4ng \u0111\u1ED3ng \u00FD ch\u1ECBu s\u1EF1 r\u00E0ng bu\u1ED9c c\u1EE7a t\u1EA5t c\u1EA3 c\u00E1c \u0110i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng n\u00E0y, b\u1EA1n kh\u00F4ng truy c\u1EADp hay s\u1EED d\u1EE5ng D\u1ECBch v\u1EE5. N\u1EBFu B\u1EA1n c\u00F3 b\u1EA5t k\u1EF3 c\u00E2u h\u1ECFi n\u00E0o li\u00EAn quan \u0111\u1EBFn \u0110i\u1EC1u Kho\u1EA3n n\u00E0y, vui l\u00F2ng li\u00EAn h\u1EC7 ch\u00FAng t\u00F4i t\u1EA1i email: dohuuhailong@gmail.com. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " Ch\u00FAng t\u00F4i c\u00F3 th\u1EC3 c\u1EADp nh\u1EADt \u0110i\u1EC1u Kho\u1EA3n n\u00E0y theo th\u1EDDi gian v\u00EC c\u00E1c l\u00FD do ph\u00E1p l\u00FD ho\u1EB7c theo quy \u0111\u1ECBnh ho\u1EB7c \u0111\u1EC3 cho ph\u00E9p ho\u1EA1t \u0111\u1ED9ng th\u00EDch h\u1EE3p c\u1EE7a trang web WorkSearching.vn. M\u1ECDi thay \u0111\u1ED5i s\u1EBD \u0111\u01B0\u1EE3c th\u00F4ng b\u00E1o t\u1EDBi b\u1EA1n b\u1EB1ng m\u1ED9t th\u00F4ng b\u00E1o ph\u00F9 h\u1EE3p tr\u00EAn trang web c\u1EE7a ch\u00FAng t\u00F4i. Nh\u1EEFng thay \u0111\u1ED5i n\u00E0y s\u1EBD \u00E1p d\u1EE5ng cho vi\u1EC7c s\u1EED d\u1EE5ng trang web WorkSearching.vn. Sau khi ch\u00FAng t\u00F4i \u0111\u00E3 th\u00F4ng b\u00E1o \u0111\u1EBFn b\u1EA1n, N\u1EBFu b\u1EA1n kh\u00F4ng mu\u1ED1n ch\u1EA5p nh\u1EADn \u0110i\u1EC1u Kho\u1EA3n m\u1EDBi, b\u1EA1n kh\u00F4ng n\u00EAn ti\u1EBFp t\u1EE5c s\u1EED d\u1EE5ng trang web WorkSearching.vn. N\u1EBFu b\u1EA1n ti\u1EBFp t\u1EE5c s\u1EED d\u1EE5ng trang web WorkSearching.vn k\u1EC3 t\u1EEB ng\u00E0y s\u1EF1 thay \u0111\u1ED5i c\u00F3 hi\u1EC7u l\u1EF1c, vi\u1EC7c s\u1EED d\u1EE5ng trang web WorkSearching.vn th\u1EC3 hi\u1EC7n b\u1EA1n \u0111\u1ED3ng \u00FD b\u1ECB r\u00E0ng bu\u1ED9c b\u1EDFi \u0110i\u1EC1u Kho\u1EA3n m\u1EDBi. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "2. \u0110\u1ECANH NGH\u0128A V\u00C0 GI\u1EA2I TH\u00CDCH");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, " 1. \u201CC\u01A1 s\u1EDF d\u1EEF li\u1EC7u WorkSearching.vn\u201D ho\u1EB7c \u201CC\u00E1c c\u01A1 s\u1EDF d\u1EEF li\u1EC7u WorkSearching.vn\u201D bao g\u1ED3m t\u1EA5t c\u1EA3 c\u00E1c b\u00E0i qu\u1EA3ng c\u00E1o vi\u1EC7c l\u00E0m \u0111\u0103ng tr\u00EAn c\u00E1c trang web WorkSearching.vn v\u00E0/ho\u1EB7c t\u1EA5t c\u1EA3 th\u00F4ng tin c\u1EE7a c\u00E1c \u1EE9ng vi\u00EAn v\u00E0/ho\u1EB7c c\u00E1c nh\u00E0 tuy\u1EC3n d\u1EE5ng \u0111\u01B0\u1EE3c \u0111\u0103ng k\u00FD v\u1EDBi WorkSearching.vn. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, " 2. \u201CC\u01A1 s\u1EDF d\u1EEF li\u1EC7u H\u1ED3 s\u01A1 WorkSearching.vn\u201D ho\u1EB7c \u201CC\u00E1c c\u01A1 s\u1EDF d\u1EEF li\u1EC7u H\u1ED3 s\u01A1\u201D l\u00E0 h\u1ED3 s\u01A1 \u1EE9ng vi\u00EAn \u0111\u01B0\u1EE3c kh\u1EDFi t\u1EA1o v\u00E0/ho\u1EB7c \u0111\u01B0\u1EE3c \u0111\u0103ng t\u1EA1i c\u00E1c c\u01A1 s\u1EDF d\u1EEF li\u1EC7u WorkSearching.vn. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, " 3. \u201CD\u1ECBch v\u1EE5 WorkSearching.vn\u201D l\u00E0 b\u1EA5t k\u1EF3 d\u1ECBch v\u1EE5 n\u00E0o \u0111\u01B0\u1EE3c cung c\u1EA5p b\u1EDFi WorkSearching. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, " 4. \u201CH\u1ED3 s\u01A1 c\u00E1 nh\u00E2n\u201D l\u00E0 c\u00E1c th\u00F4ng tin, CV c\u00E1 nh\u00E2n \u0111\u01B0\u1EE3c t\u1EA1o b\u1EDFi Ng\u01B0\u1EDDi d\u00F9ng. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, " 5.\u201CV\u0103n b\u1EA3n\u201D bao g\u1ED3m t\u1EA5t c\u1EA3 v\u0103n b\u1EA3n tr\u00EAn m\u1ECDi trang c\u1EE7a trang web WorkSearching.vn, cho d\u00F9 l\u00E0 t\u00E0i li\u1EC7u c\u00F3 x\u00E1c \u0111\u1ECBnh t\u00E1c gi\u1EA3, c\u00E1c n\u1ED9i dung t\u00ECm ki\u1EBFm c\u00F3 \u0111\u1ECBnh h\u01B0\u1EDBng hay th\u00F4ng tin h\u01B0\u1EDBng d\u1EABn. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, " 6. \u201CNg\u01B0\u1EDDi d\u00F9ng\u201D \u0111\u1EC1 c\u1EADp \u0111\u1EBFn b\u1EA5t k\u1EF3 c\u00E1 nh\u00E2n ho\u1EB7c t\u1ED5 ch\u1EE9c n\u00E0o s\u1EED d\u1EE5ng b\u1EA5t k\u1EF3 kh\u00EDa c\u1EA1nh n\u00E0o c\u1EE7a trang web WorkSearching.vn v\u00E0/ho\u1EB7c c\u00E1c D\u1ECBch v\u1EE5 WorkSearching.vn. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, " 7. \u201CN\u1ED9i dung Ng\u01B0\u1EDDi d\u00F9ng\u201D l\u00E0 t\u1EA5t c\u1EA3 th\u00F4ng tin, d\u1EEF li\u1EC7u, v\u0103n b\u1EA3n, ph\u1EA7n m\u1EC1m, \u00E2m nh\u1EA1c, \u00E2m thanh, h\u00ECnh \u1EA3nh, \u0111\u1ED3 h\u1ECDa, video, qu\u1EA3ng c\u00E1o, tin nh\u1EAFn ho\u1EB7c c\u00E1c t\u00E0i li\u1EC7u kh\u00E1c \u0111\u01B0\u1EE3c g\u1EEDi, \u0111\u0103ng ho\u1EB7c bi\u1EC3u th\u1ECB b\u1EDFi Ng\u01B0\u1EDDi d\u00F9ng tr\u00EAn ho\u1EB7c th\u00F4ng qua trang web WorkSearching.vn. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "3. \u0110\u0102NG K\u00DD");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, " \u0110\u1EC3 s\u1EED d\u1EE5ng D\u1ECBch v\u1EE5 b\u1EA1n ph\u1EA3i t\u1EA1o m\u1ED9t t\u00E0i kho\u1EA3n theo y\u00EAu c\u1EA7u c\u1EE7a WorkSearching, b\u1EA1n cam k\u1EBFt r\u1EB1ng vi\u1EC7c s\u1EED d\u1EE5ng t\u00E0i kho\u1EA3n ph\u1EA3i tu\u00E2n th\u1EE7 c\u00E1c quy \u0111\u1ECBnh c\u1EE7a WorkSearching, \u0111\u1ED3ng th\u1EDDi t\u1EA5t c\u1EA3 c\u00E1c th\u00F4ng tin b\u1EA1n cung c\u1EA5p cho ch\u00FAng t\u00F4i l\u00E0 \u0111\u00FAng, ch\u00EDnh x\u00E1c, \u0111\u1EA7y \u0111\u1EE7 v\u1EDBi t\u1EA1i th\u1EDDi \u0111i\u1EC3m \u0111\u01B0\u1EE3c y\u00EAu c\u1EA7u. M\u1ECDi quy\u1EC1n l\u1EE3i v\u00E0 ngh\u0129a v\u1EE5 c\u1EE7a b\u1EA1n s\u1EBD c\u0103n c\u1EE9 tr\u00EAn th\u00F4ng tin t\u00E0i kho\u1EA3n b\u1EA1n \u0111\u00E3 \u0111\u0103ng k\u00FD, do \u0111\u00F3 n\u1EBFu c\u00F3 b\u1EA5t k\u1EF3 th\u00F4ng tin sai l\u1EC7ch n\u00E0o ch\u00FAng t\u00F4i s\u1EBD kh\u00F4ng ch\u1ECBu tr\u00E1ch nhi\u1EC7m trong tr\u01B0\u1EDDng h\u1EE3p th\u00F4ng tin \u0111\u00F3 l\u00E0m \u1EA3nh h\u01B0\u1EDFng ho\u1EB7c h\u1EA1n ch\u1EBF quy\u1EC1n l\u1EE3i c\u1EE7a b\u1EA1n. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "4. M\u1EACT KH\u1EA8U V\u00C0 B\u1EA2O M\u1EACT");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, " 1. Khi b\u1EA1n \u0111\u0103ng k\u00FD s\u1EED d\u1EE5ng trang web WorkSearching.vn b\u1EA1n s\u1EBD \u0111\u01B0\u1EE3c y\u00EAu c\u1EA7u kh\u1EDFi t\u1EA1o m\u1EADt kh\u1EA9u. \u0110\u1EC3 tr\u00E1nh vi\u1EC7c gian l\u1EADn, b\u1EA1n ph\u1EA3i gi\u1EEF m\u1EADt kh\u1EA9u n\u00E0y b\u1EA3o m\u1EADt v\u00E0 kh\u00F4ng \u0111\u01B0\u1EE3c ti\u1EBFt l\u1ED9 ho\u1EB7c chia s\u1EBB v\u1EDBi b\u1EA5t k\u1EF3 ng\u01B0\u1EDDi n\u00E0o.N\u1EBFu b\u1EA1n bi\u1EBFt ho\u1EB7c nghi ng\u1EDD ng\u01B0\u1EDDi kh\u00E1c bi\u1EBFt m\u1EADt kh\u1EA9u c\u1EE7a b\u1EA1n, b\u1EA1n n\u00EAn th\u00F4ng b\u00E1o v\u1EDBi ch\u00FAng t\u00F4i ngay l\u1EADp t\u1EE9c b\u1EB1ng c\u00E1ch li\u00EAn h\u1EC7 v\u1EDBi ch\u00FAng t\u00F4i t\u1EA1i email dohuuhailong@gmail.com ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](36, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, " 2. N\u1EBFu WorkSearching.vn c\u00F3 l\u00FD do \u0111\u1EC3 tin r\u1EB1ng c\u00F3 kh\u1EA3 n\u0103ng c\u00F3 h\u00E0nh vi vi ph\u1EA1m b\u1EA3o m\u1EADt ho\u1EB7c s\u1EED d\u1EE5ng kh\u00F4ng \u0111\u00FAng m\u1EE5c \u0111\u00EDch trang web WorkSearching.vn, ch\u00FAng t\u00F4i c\u00F3 th\u1EC3 y\u00EAu c\u1EA7u b\u1EA1n thay \u0111\u1ED5i m\u1EADt kh\u1EA9u ho\u1EB7c ch\u00FAng t\u00F4i c\u00F3 th\u1EC3 t\u1EA1m d\u1EEBng t\u00E0i kho\u1EA3n c\u1EE7a b\u1EA1n. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](38, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, " 3. Tr\u01B0\u1EDDng h\u1EE3p b\u1EA1n m\u1EA5t M\u1EADt kh\u1EA9u ho\u1EB7c ho\u1EB7c s\u1EED d\u1EE5ng kh\u00F4ng \u0111\u00FAng m\u1EE5c \u0111\u00EDch trang web WorkSearching.vn: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](40, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](41, " - B\u1EA1n ph\u1EA3i ch\u1ECBu t\u1EA5t c\u1EA3 s\u1EF1 m\u1EA5t m\u00E1t ho\u1EB7c thi\u1EC7t h\u1EA1i ph\u00E1t sinh ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](42, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, " - B\u1EA1n ch\u1ECBu tr\u00E1ch nhi\u1EC7m s\u1EBD b\u1ED3i th\u01B0\u1EDDng ho\u00E0n to\u00E0n cho WorkSearching trong tr\u01B0\u1EDDng h\u1EE3p WorkSearching c\u00F3 x\u1EA3y ra m\u1EA5t m\u00E1t ho\u1EB7c thi\u1EC7t h\u1EA1i. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, "5. QUY\u1EC0N TRUY C\u1EACP V\u00C0 THU TH\u1EACP TH\u00D4NG TIN");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](47, " Khi s\u1EED d\u1EE5ng trang web WorkSearching.vn, b\u1EA1n th\u1EEBa nh\u1EADn r\u1EB1ng ch\u00FAng t\u00F4i c\u00F3 quy\u1EC1n thu th\u1EADp c\u00E1c th\u00F4ng tin sau c\u1EE7a b\u1EA1n: Th\u00F4ng tin c\u00E1 nh\u00E2n: bao g\u1ED3m c\u00E1c th\u00F4ng tin b\u1EA1n cung c\u1EA5p cho ch\u00FAng t\u00F4i \u0111\u1EC3 t\u1EA1o h\u1ED3 s\u01A1 nh\u01B0 t\u00EAn, s\u1ED1 \u0111i\u1EC7n tho\u1EA1i, \u0111\u1ECBa ch\u1EC9 email;\u2026 Th\u00F4ng tin chung: nh\u01B0 c\u00E1c th\u00F4ng tin v\u1EC1 kinh nghi\u1EC7m l\u00E0m vi\u1EC7c, \u0111\u1ECBnh h\u01B0\u1EDBng ngh\u1EC1 nghi\u1EC7p, m\u1EE5c ti\u00EAu c\u00F4ng vi\u1EC7c; tr\u00ECnh \u0111\u1ED9 n\u0103ng l\u1EF1c; thu nh\u1EADp;\u2026 B\u1EA1n th\u1EEBa nh\u1EADn v\u00E0 \u0111\u1ED3ng \u00FD m\u1ED9t m\u00ECnh ch\u1ECBu tr\u00E1ch nhi\u1EC7m v\u1EC1 h\u00ECnh th\u1EE9c, n\u1ED9i dung v\u00E0 t\u00EDnh x\u00E1c th\u1EF1c c\u1EE7a b\u1EA5t k\u1EF3 h\u1ED3 s\u01A1 ho\u0103c t\u00E0i li\u1EC7u n\u00E0o do b\u1EA1n \u0111\u0103ng t\u1EA3i tr\u00EAn trang web WorkSearching.vn, \u0111\u1ED3ng th\u1EDDi \u0111\u1ED3ng \u00FD m\u1ED9t m\u00ECnh ch\u1ECBu tr\u00E1ch nhi\u1EC7m cho b\u1EA5t k\u1EF3 h\u1EC7 qu\u1EA3 n\u00E0o ph\u00E1t sinh t\u1EEB vi\u1EC7c \u0111\u0103ng t\u1EA3i n\u00E0y. WorkSearching c\u00F3 quy\u1EC1n \u0111\u1EC1 xu\u1EA5t \u0111\u1EBFn b\u1EA1n d\u1ECBch v\u1EE5 v\u00E0 s\u1EA3n ph\u1EA9m c\u1EE7a b\u00EAn th\u1EE9 ba d\u1EF1a tr\u00EAn c\u00E1c m\u1EE5c ph\u00F9 h\u1EE3p m\u00E0 b\u1EA1n x\u00E1c \u0111\u1ECBnh trong khi \u0111\u0103ng k\u00FD v\u00E0 b\u1EA5t k\u1EF3 l\u00FAc n\u00E0o sau \u0111\u00F3 ho\u1EB7c khi b\u1EA1n \u0111\u00E3 \u0111\u1ED3ng \u00FD ti\u1EBFp nh\u1EADn, c\u00E1c \u0111\u1EC1 xu\u1EA5t n\u00E0y s\u1EBD \u0111\u01B0\u1EE3c th\u1EF1c hi\u1EC7n b\u1EDFi WorkSearching ho\u1EB7c c\u00E1c b\u00EAn th\u1EE9 ba. WorkSearching \u0111\u01B0\u1EE3c quy\u1EC1n t\u00F9y \u00FD tu\u00E2n theo c\u00E1c y\u00EAu c\u1EA7u ph\u00E1p l\u00FD, c\u00E1c y\u00EAu c\u1EA7u t\u1EEB c\u01A1 quan thi h\u00E0nh \u00E1n ho\u1EB7c y\u00EAu c\u1EA7u c\u1EE7a c\u01A1 quan qu\u1EA3n l\u00FD, th\u1EADm ch\u00ED s\u1EF1 tu\u00E2n th\u1EE7 n\u00E0y c\u00F3 th\u1EC3 bao g\u1ED3m vi\u1EC7c c\u00F4ng b\u1ED1 m\u1ED9t s\u1ED1 th\u00F4ng tin Ng\u01B0\u1EDDi d\u00F9ng nh\u1EA5t \u0111\u1ECBnh. Ngo\u00E0i ra, b\u00EAn th\u1EE9 ba \u0111\u01B0\u1EE3c ph\u00E9p gi\u1EEF l\u1EA1i c\u00E1c b\u1EA3n sao l\u01B0u tr\u1EEF th\u00F4ng tin Ng\u01B0\u1EDDi d\u00F9ng. B\u1EA1n hi\u1EC3u v\u00E0 th\u1EEBa nh\u1EADn r\u1EB1ng t\u1EA5t c\u1EA3 c\u00E1c th\u00F4ng tin do b\u1EA1n cung c\u1EA5p, Th\u00F4ng tin c\u00E1 nh\u00E2n, h\u1ED3 s\u01A1 v\u00E0/ho\u1EB7c th\u00F4ng tin t\u00E0i kho\u1EA3n c\u1EE7a b\u1EA1n, s\u1EBD \u0111\u01B0\u1EE3c c\u00F4ng b\u1ED1 cho c\u00E1c Nh\u00E0 tuy\u1EC3n d\u1EE5ng ti\u1EC1m n\u0103ng tr\u00EAn WorkSearching. WorkSearching t\u00F4n tr\u1ECDng tuy\u1EC7t \u0111\u1ED1i quy\u1EC1n b\u1EA3o m\u1EADt th\u00F4ng tin c\u1EE7a \u1EE9ng vi\u00EAn. N\u1EBFu kh\u00F4ng mu\u1ED1n h\u1ED3 s\u01A1 c\u00E1 nh\u00E2n c\u1EE7a m\u00ECnh \u0111\u01B0\u1EE3c c\u00F4ng khai, b\u1EA1n vui l\u00F2ng t\u1EAFt t\u00EDnh n\u0103ng t\u00ECm vi\u1EC7c & t\u00EDnh n\u0103ng cho ph\u00E9p nh\u00E0 tuy\u1EC3n d\u1EE5ng xem h\u1ED3 s\u01A1 \u0111\u1EC3 tr\u00E1nh b\u1ECB l\u00E0m phi\u1EC1n. B\u1EA1n hi\u1EC3u v\u00E0 th\u1EEBa nh\u1EADn r\u1EB1ng b\u1EA1n kh\u00F4ng c\u00F3 c\u00E1c quy\u1EC1n s\u1EDF h\u1EEFu trong t\u00E0i kho\u1EA3n c\u1EE7a b\u1EA1n v\u00E0 n\u1EBFu b\u1EA1n h\u1EE7y b\u1ECF t\u00E0i kho\u1EA3n tr\u00EAn trang web WorkSearching.vn ho\u1EB7c t\u00E0i kho\u1EA3n c\u1EE7a b\u1EA1n b\u1ECB ch\u1EA5m d\u1EE9t, t\u1EA5t c\u1EA3 c\u00E1c th\u00F4ng tin t\u00E0i kho\u1EA3n c\u1EE7a b\u1EA1n t\u1EA1i trang web WorkSearching.vn, bao g\u1ED3m s\u01A1 y\u1EBFu l\u00FD l\u1ECBch, Th\u00F4ng tin c\u00E1 nh\u00E2n, th\u01B0 xin vi\u1EC7c, c\u00E1c c\u00F4ng vi\u1EC7c \u0111\u00E3 l\u01B0u, s\u1EBD \u0111\u01B0\u1EE3c \u0111\u00E1nh d\u1EA5u l\u00E0 b\u1ECB x\u00F3a v\u00E0 c\u00F3 th\u1EC3 b\u1ECB x\u00F3a kh\u1ECFi C\u01A1 s\u1EDF d\u1EEF li\u1EC7u WorkSearching v\u00E0 s\u1EBD \u0111\u01B0\u1EE3c g\u1EE1 b\u1ECF t\u1EEB b\u1EA5t k\u1EF3 khu v\u1EF1c chung n\u00E0o tr\u00EAn trang web WorkSearching.vn. Th\u00F4ng tin c\u00F3 th\u1EC3 ti\u1EBFp t\u1EE5c \u0111\u01B0\u1EE3c hi\u1EC3n th\u1ECB trong m\u1ED9t kho\u1EA3ng th\u1EDDi gian v\u00EC c\u00E1c tr\u1EDF ng\u1EA1i trong khi truy\u1EC1n t\u00EDn hi\u1EC7u x\u00F3a th\u00F4ng qua c\u00E1c m\u00E1y ch\u1EE7 c\u1EE7a WorkSearching.vn ho\u1EB7c do y\u00EAu c\u1EA7u c\u1EE7a c\u00E1c c\u01A1 quan ch\u1EE9c n\u0103ng li\u00EAn quan. Ngo\u00E0i ra, c\u00E1c b\u00EAn th\u1EE9 ba \u0111\u01B0\u1EE3c ph\u00E9p gi\u1EEF l\u1EA1i b\u1EA3n sao th\u00F4ng tin c\u1EE7a b\u1EA1n. WorkSearching c\u00F3 quy\u1EC1n x\u1ECFa t\u00E0i kho\u1EA3n v\u00E0 t\u1EA5t c\u1EA3 th\u00F4ng tin c\u1EE7a b\u1EA1n sau m\u1ED9t th\u1EDDi gian d\u00E0i kh\u00F4ng ho\u1EA1t \u0111\u1ED9ng. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](49, "6. TUY\u00CAN B\u1ED0 V\u1EC0 QUY\u1EC0N S\u1EDE H\u1EEEU TR\u00CD TU\u1EC6");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](51, " B\u1EA1n tuy\u00EAn b\u1ED1 v\u00E0 \u0111\u1EA3m b\u1EA3o r\u1EB1ng: (i) b\u1EA1n s\u1EDF h\u1EEFu N\u1ED9i dung m\u00E0 b\u1EA1n \u0111\u0103ng l\u00EAn ho\u1EB7c th\u00F4ng qua D\u1ECBch v\u1EE5 hay n\u00F3i c\u00E1ch kh\u00E1c, b\u1EA1n c\u00F3 quy\u1EC1n c\u1EA5p c\u00E1c quy\u1EC1n v\u00E0 gi\u1EA5y ph\u00E9p \u0111\u01B0\u1EE3c quy \u0111\u1ECBnh trong c\u00E1c \u0110i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng n\u00E0y; (ii) vi\u1EC7c \u0111\u0103ng v\u00E0 s\u1EED d\u1EE5ng N\u1ED9i dung tr\u00EAn ho\u1EB7c th\u00F4ng qua D\u1ECBch v\u1EE5 kh\u00F4ng vi ph\u1EA1m, chi\u1EBFm \u0111o\u1EA1t hay x\u00E2m ph\u1EA1m c\u00E1c quy\u1EC1n c\u1EE7a b\u1EA5t k\u1EF3 b\u00EAn th\u1EE9 ba n\u00E0o, bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF quy\u1EC1n ri\u00EAng t\u01B0, quy\u1EC1n c\u00F4ng khai, b\u1EA3n quy\u1EC1n, nh\u00E3n hi\u1EC7u th\u01B0\u01A1ng m\u1EA1i v\u00E0/ho\u1EB7c quy\u1EC1n s\u1EDF h\u1EEFu tr\u00ED tu\u1EC7 kh\u00E1c; (iii) b\u1EA1n \u0111\u1ED3ng \u00FD thanh to\u00E1n t\u1EA5t c\u1EA3 ti\u1EC1n b\u1EA3n quy\u1EC1n t\u00E1c gi\u1EA3, ph\u00ED v\u00E0 b\u1EA5t k\u1EF3 kho\u1EA3n ti\u1EC1n n\u00E0o kh\u00E1c c\u00F2n n\u1EE3 do N\u1ED9i dung m\u00E0 b\u1EA1n \u0111\u0103ng l\u00EAn ho\u1EB7c th\u00F4ng qua D\u1ECBch v\u1EE5; v\u00E0 (iv) b\u1EA1n c\u00F3 quy\u1EC1n v\u00E0 n\u0103ng l\u1EF1c ph\u00E1p l\u00FD \u0111\u1EC3 tham gia v\u00E0o c\u00E1c \u0110i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng n\u00E0y trong quy\u1EC1n h\u1EA1n c\u1EE7a b\u1EA1n. D\u1ECBch v\u1EE5 ch\u1EE9a n\u1ED9i dung m\u00E0 WorkSearching s\u1EDF h\u1EEFu ho\u1EB7c c\u1EA5p ph\u00E9p (\"N\u1ED9i dung WorkSearching\"). N\u1ED9i dung WorkSearching \u0111\u01B0\u1EE3c b\u1EA3o v\u1EC7 b\u1EDFi b\u1EA3n quy\u1EC1n, nh\u00E3n hi\u1EC7u th\u01B0\u01A1ng m\u1EA1i, b\u1EB1ng s\u00E1ng ch\u1EBF, b\u00ED m\u1EADt th\u01B0\u01A1ng m\u1EA1i v\u00E0 c\u00E1c lu\u1EADt kh\u00E1c, \u0111\u1ED3ng th\u1EDDi gi\u1EEFa b\u1EA1n v\u00E0 WorkSearching, WorkSearching s\u1EDF h\u1EEFu v\u00E0 n\u1EAFm gi\u1EEF t\u1EA5t c\u1EA3 c\u00E1c quy\u1EC1n v\u1EC1 D\u1ECBch v\u1EE5 v\u00E0 N\u1ED9i dung WorkSearching. B\u1EA1n kh\u00F4ng \u0111\u01B0\u1EE3c x\u00F3a, thay \u0111\u1ED5i ho\u1EB7c che gi\u1EA5u b\u1EA5t k\u1EF3 th\u00F4ng b\u00E1o n\u00E0o v\u1EC1 b\u1EA3n quy\u1EC1n, nh\u00E3n hi\u1EC7u th\u01B0\u01A1ng m\u1EA1i, nh\u00E3n hi\u1EC7u d\u1ECBch v\u1EE5 hay quy\u1EC1n s\u1EDF h\u1EEFu kh\u00E1c \u0111\u01B0\u1EE3c k\u1EBFt h\u1EE3p v\u1EDBi hay \u0111i k\u00E8m N\u1ED9i dung WorkSearching v\u00E0 b\u1EA1n kh\u00F4ng \u0111\u01B0\u1EE3c sao ch\u00E9p, s\u1EEDa \u0111\u1ED5i, \u0111i\u1EC1u ch\u1EC9nh, chu\u1EA9n b\u1ECB c\u00E1c s\u1EA3n ph\u1EA9m ph\u00E1i sinh d\u1EF1a tr\u00EAn, th\u1EF1c hi\u1EC7n, hi\u1EC3n th\u1ECB, xu\u1EA5t b\u1EA3n, ph\u00E2n ph\u1ED1i, truy\u1EC1n \u0111i, ph\u00E1t, b\u00E1n, c\u1EA5p ph\u00E9p ho\u1EB7c khai th\u00E1c N\u1ED9i dung WorkSearching. Logo v\u00E0 t\u00EAn WorkSearching l\u00E0 c\u00E1c nh\u00E3n hi\u1EC7u th\u01B0\u01A1ng m\u1EA1i c\u1EE7a WorkSearching v\u00E0 kh\u00F4ng \u0111\u01B0\u1EE3c sao ch\u00E9p, gi\u1EA3 m\u1EA1o hay s\u1EED d\u1EE5ng to\u00E0n b\u1ED9 ho\u1EB7c m\u1ED9t ph\u1EA7n khi ch\u01B0a c\u00F3 s\u1EF1 cho ph\u00E9p tr\u01B0\u1EDBc b\u1EB1ng v\u0103n b\u1EA3n c\u1EE7a WorkSearching. Ngo\u00E0i ra, t\u1EA5t c\u1EA3 c\u00E1c ti\u00EAu \u0111\u1EC1 trang, \u0111\u1ED3 h\u1ECDa t\u00F9y ch\u1EC9nh, bi\u1EC3u t\u01B0\u1EE3ng n\u00FAt v\u00E0 t\u1EADp l\u1EC7nh \u0111\u1EC1u l\u00E0 nh\u00E3n hi\u1EC7u d\u1ECBch v\u1EE5, nh\u00E3n hi\u1EC7u th\u01B0\u01A1ng m\u1EA1i v\u00E0/ho\u1EB7c bao b\u00EC th\u01B0\u01A1ng m\u1EA1i c\u1EE7a WorkSearching v\u00E0 kh\u00F4ng \u0111\u01B0\u1EE3c sao ch\u00E9p, gi\u1EA3 m\u1EA1o hay s\u1EED d\u1EE5ng to\u00E0n b\u1ED9 ho\u1EB7c m\u1ED9t ph\u1EA7n khi ch\u01B0a c\u00F3 s\u1EF1 cho ph\u00E9p tr\u01B0\u1EDBc b\u1EB1ng v\u0103n b\u1EA3n c\u1EE7a WorkSearching. M\u1EB7c d\u00F9 m\u1EE5c \u0111\u00EDch c\u1EE7a WorkSearching l\u00E0 cung c\u1EA5p D\u1ECBch v\u1EE5 nhi\u1EC1u nh\u1EA5t c\u00F3 th\u1EC3 nh\u01B0ng s\u1EBD c\u00F3 tr\u01B0\u1EDDng h\u1EE3p D\u1ECBch v\u1EE5 c\u00F3 th\u1EC3 b\u1ECB gi\u00E1n \u0111o\u1EA1n, bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF vi\u1EC7c gi\u00E1n \u0111o\u1EA1n \u0111\u1EC3 b\u1EA3o tr\u00EC ho\u1EB7c n\u00E2ng c\u1EA5p theo l\u1ECBch tr\u00ECnh, \u0111\u1EC3 s\u1EEDa ch\u1EEFa kh\u1EA9n c\u1EA5p hay do l\u1ED7i c\u1EE7a thi\u1EBFt b\u1ECB v\u00E0/ho\u1EB7c li\u00EAn k\u1EBFt vi\u1EC5n th\u00F4ng. Ngo\u00E0i ra, WorkSearching c\u00F3 quy\u1EC1n x\u00F3a b\u1EA5t k\u1EF3 N\u1ED9i dung n\u00E0o kh\u1ECFi D\u1ECBch v\u1EE5 v\u00EC b\u1EA5t k\u1EF3 l\u00FD do g\u00EC m\u00E0 theo nh\u1EADn \u0111\u1ECBnh c\u1EE7a m\u00ECnh, l\u00E0 vi ph\u1EA1m \u0110i\u1EC1u Kho\u1EA3n n\u00E0y, vi ph\u1EA1m ph\u00E1p lu\u1EADt, quy t\u1EAFc ho\u1EB7c quy \u0111\u1ECBnh, c\u00F3 t\u00EDnh ch\u1EA5t l\u0103ng m\u1EA1, g\u00E2y r\u1ED1i, x\u00FAc ph\u1EA1m ho\u1EB7c b\u1EA5t h\u1EE3p ph\u00E1p, ho\u1EB7c vi ph\u1EA1m c\u00E1c quy\u1EC1n, ho\u1EB7c nguy h\u1EA1i ho\u1EB7c \u0111e d\u1ECDa s\u1EF1 an to\u00E0n c\u1EE7a Ng\u01B0\u1EDDi d\u1EE7ng c\u1EE7a b\u1EA5t k\u1EF3 trang web n\u00E0o thu\u1ED9c WorkSearching.vn. WorkSearching c\u00F3 quy\u1EC1n tr\u1EE5c xu\u1EA5t ng\u01B0\u1EDDi d\u00F9ng v\u00E0 ng\u0103n ch\u1EB7n quy\u1EC1n truy c\u1EADp sau \u0111\u00F3 c\u1EE7a h\u1ECD t\u1EDBi trang web WorkSearching.vn v\u00E0/ho\u1EB7c s\u1EED d\u1EE5ng c\u00E1c d\u1ECBch v\u1EE5 WorkSearching khi vi ph\u1EA1m \u0110i\u1EC1u Kho\u1EA3n n\u00E0y ho\u1EB7c vi ph\u1EA1m ph\u00E1p lu\u1EADt, quy t\u1EAFc ho\u1EB7c quy \u0111\u1ECBnh. WorkSearching \u0111\u01B0\u1EE3c ph\u00E9p th\u1EF1c hi\u1EC7n b\u1EA5t k\u1EF3 h\u00E0nh \u0111\u1ED9ng n\u00E0o li\u00EAn quan \u0111\u1EBFn N\u1ED9i dung Ng\u01B0\u1EDDi d\u00F9ng khi t\u1EF1 x\u00E9t th\u1EA5y c\u1EA7n thi\u1EBFt ho\u1EB7c th\u00EDch h\u1EE3p n\u1EBFu WorkSearching tin r\u1EB1ng N\u1ED9i dung Ng\u01B0\u1EDDi d\u00F9ng c\u00F3 th\u1EC3 t\u1EA1o ra tr\u00E1ch nhi\u1EC7m ph\u00E1p l\u00FD cho WorkSearching, g\u00E2y thi\u1EC7t h\u1EA1i \u0111\u1EBFn th\u01B0\u01A1ng hi\u1EC7u WorkSearching ho\u1EB7c h\u00ECnh \u1EA3nh c\u00F4ng c\u1ED9ng, ho\u1EB7c d\u1EABn \u0111\u1EBFn vi\u1EC7c WorkSearching \u0111\u1EC3 m\u1EA5t ng\u01B0\u1EDDi d\u00F9ng. N\u1ED9i dung b\u1ECB x\u00F3a kh\u1ECFi D\u1ECBch v\u1EE5 c\u00F3 th\u1EC3 ti\u1EBFp t\u1EE5c \u0111\u01B0\u1EE3c WorkSearching l\u01B0u tr\u1EEF, bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF vi\u1EC7c l\u01B0u tr\u1EEF \u0111\u1EC3 tu\u00E2n th\u1EE7 m\u1ED9t s\u1ED1 ngh\u0129a v\u1EE5 ph\u00E1p l\u00FD nh\u1EA5t \u0111\u1ECBnh nh\u01B0ng c\u00F3 th\u1EC3 kh\u00F4ng truy xu\u1EA5t \u0111\u01B0\u1EE3c n\u1EBFu kh\u00F4ng c\u00F3 l\u1EC7nh h\u1EE3p l\u1EC7 c\u1EE7a t\u00F2a \u00E1n. WorkSearching s\u1EBD kh\u00F4ng ch\u1ECBu tr\u00E1ch nhi\u1EC7m ph\u00E1p l\u00FD v\u1EDBi b\u1EA1n v\u1EC1 b\u1EA5t k\u1EF3 s\u1EEDa \u0111\u1ED5i, t\u1EA1m ng\u1EEBng hay gi\u00E1n \u0111o\u1EA1n D\u1ECBch v\u1EE5 n\u00E0o ho\u1EB7c vi\u1EC7c m\u1EA5t m\u00E1t b\u1EA5t k\u1EF3 N\u1ED9i dung n\u00E0o. B\u1EA1n c\u0169ng x\u00E1c nh\u1EADn r\u1EB1ng Internet c\u00F3 th\u1EC3 kh\u00F4ng an to\u00E0n v\u00E0 r\u1EB1ng vi\u1EC7c g\u1EEDi N\u1ED9i dung ho\u1EB7c th\u00F4ng tin kh\u00E1c c\u00F3 th\u1EC3 kh\u00F4ng an to\u00E0n. WorkSearching s\u1EBD kh\u00F4ng ch\u1ECBu tr\u00E1ch nhi\u1EC7m v\u1EDBi b\u1EA5t c\u1EE9 th\u00F4ng tin \u0111\u0103ng t\u1EA3i c\u1EE7a b\u00EAn th\u1EE9 ba n\u00E0o, cho d\u00F9 v\u1EDBi l\u00FD do n\u00E0o, do b\u1EA5t c\u1EE9 t\u1ED5 ch\u1EE9c n\u00E0o \u0111\u0103ng t\u1EA3i n\u1ED9i dung tr\u00EAn WorkSearching. Tuy nhi\u00EAn, WorkSearching s\u1EBD c\u1ED1 g\u1EAFng s\u1EED d\u1EE5ng m\u1ECDi bi\u1EC7n ph\u00E1p ki\u1EC3m so\u00E1t v\u00E0 h\u1EA1n ch\u1EBF t\u1ED1i \u0111a c\u00E1c tr\u01B0\u1EDDng h\u1EE3p tin tuy\u1EC3n d\u1EE5ng l\u1EEBa \u0111\u1EA3o, th\u00F4ng tin kh\u00F4ng \u0111\u00FAng\u2026.\u0111\u1EC3 b\u1EA3o v\u1EC7 Ng\u01B0\u1EDDi D\u00F9ng. WorkSearching kh\u00F4ng \u0111\u1EA1i di\u1EC7n ho\u1EB7c \u0111\u1EA3m b\u1EA3o t\u00EDnh trung th\u1EF1c, ch\u00EDnh x\u00E1c, ho\u1EB7c \u0111\u1ED9 tin c\u1EADy c\u1EE7a N\u1ED9i dung Ng\u01B0\u1EDDi d\u00F9ng, c\u00E1c s\u1EA3n ph\u1EA9m ph\u00E1i sinh t\u1EEB N\u1ED9i dung Ng\u01B0\u1EDDi d\u00F9ng, ho\u1EB7c b\u1EA5t k\u1EF3 th\u00F4ng tin li\u00EAn l\u1EA1c kh\u00E1c \u0111\u01B0\u1EE3c \u0111\u0103ng b\u1EDFi Ng\u01B0\u1EDDi d\u00F9ng c\u0169ng nh\u01B0 kh\u00F4ng x\u00E1c nh\u1EADn b\u1EA5t k\u1EF3 \u00FD ki\u1EBFn n\u00E0o \u0111\u01B0\u1EE3c th\u1EC3 hi\u1EC7n b\u1EDFi Ng\u01B0\u1EDDi d\u00F9ng. B\u1EA1n th\u1EEBa nh\u1EADn r\u1EB1ng vi\u1EC7c tin t\u01B0\u1EDFng n\u00E0o v\u00E0o t\u00E0i li\u1EC7u \u0111\u01B0\u1EE3c \u0111\u0103ng b\u1EDFi Ng\u01B0\u1EDDi d\u00F9ng kh\u00E1c l\u00E0 r\u1EE7i ro c\u1EE7a ri\u00EAng b\u1EA1n. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](53, "7. TUY\u00CAN B\u1ED0 MI\u1EC4N TR\u1EEA TR\u00C1CH NHI\u1EC6M");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](55, " WorkSearching kh\u00F4ng tuy\u00EAn b\u1ED1 hay \u0111\u1EA3m b\u1EA3o r\u1EB1ng d\u1ECBch v\u1EE5 s\u1EBD kh\u00F4ng b\u1ECB l\u1ED7i hay kh\u00F4ng b\u1ECB gi\u00E1n \u0111o\u1EA1n; r\u1EB1ng c\u00E1c l\u1ED7i s\u1EBD \u0111\u01B0\u1EE3c kh\u1EAFc ph\u1EE5c; ho\u1EB7c r\u1EB1ng d\u1ECBch v\u1EE5 ho\u1EB7c m\u00E1y ch\u1EE7 cung c\u1EA5p d\u1ECBch v\u1EE5 kh\u00F4ng b\u1ECB nhi\u1EC5m b\u1EA5t k\u1EF3 th\u00E0nh ph\u1EA7n c\u00F3 h\u1EA1i n\u00E0o, bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF vi-r\u00FAt. WorkSearching kh\u00F4ng \u0111\u01B0a ra b\u1EA5t k\u1EF3 tuy\u00EAn b\u1ED1 hay \u0111\u1EA3m b\u1EA3o n\u00E0o r\u1EB1ng th\u00F4ng tin (bao g\u1ED3m m\u1ECDi h\u01B0\u1EDBng d\u1EABn) v\u1EC1 d\u1ECBch v\u1EE5 ch\u00EDnh x\u00E1c, \u0111\u1EA7y \u0111\u1EE7 ho\u1EB7c h\u1EEFu \u00EDch. B\u1EA1n x\u00E1c nh\u1EADn r\u1EB1ng b\u1EA1n t\u1EF1 ch\u1ECBu r\u1EE7i ro khi s\u1EED d\u1EE5ng d\u1ECBch v\u1EE5. WorkSearching kh\u00F4ng \u0111\u1EA3m b\u1EA3o r\u1EB1ng vi\u1EC7c b\u1EA1n s\u1EED d\u1EE5ng d\u1ECBch v\u1EE5 l\u00E0 h\u1EE3p ph\u00E1p trong b\u1EA5t k\u1EF3 khu v\u1EF1c ph\u00E1p l\u00FD c\u1EE5 th\u1EC3 n\u00E0o v\u00E0 WorkSearching t\u1EEB ch\u1ED1i \u0111\u01B0a ra c\u00E1c b\u1EA3o \u0111\u1EA3m \u0111\u00F3 m\u1ED9t c\u00E1ch c\u1EE5 th\u1EC3. M\u1ED9t s\u1ED1 khu v\u1EF1c ph\u00E1p l\u00FD gi\u1EDBi h\u1EA1n ho\u1EB7c kh\u00F4ng cho ph\u00E9p tuy\u00EAn b\u1ED1 mi\u1EC5n tr\u1EEB tr\u00E1ch nhi\u1EC7m v\u1EC1 b\u1EA3o \u0111\u1EA3m ng\u1EE5 \u00FD hay c\u00E1c b\u1EA3o \u0111\u1EA3m kh\u00E1c, v\u00EC v\u1EADy tuy\u00EAn b\u1ED1 mi\u1EC5n tr\u1EEB tr\u00E1ch nhi\u1EC7m tr\u00EAn c\u00F3 th\u1EC3 kh\u00F4ng \u00E1p d\u1EE5ng cho b\u1EA1n trong ph\u1EA1m vi lu\u1EADt ph\u00E1p c\u1EE7a khu v\u1EF1c ph\u00E1p l\u00FD \u0111\u00F3 \u00E1p d\u1EE5ng cho b\u1EA1n v\u00E0 c\u00E1c \u0111i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng n\u00E0y. B\u1EB1ng c\u00E1ch truy c\u1EADp hay s\u1EED d\u1EE5ng d\u1ECBch v\u1EE5, b\u1EA1n tuy\u00EAn b\u1ED1 v\u00E0 b\u1EA3o \u0111\u1EA3m r\u1EB1ng ho\u1EA1t \u0111\u1ED9ng c\u1EE7a m\u00ECnh l\u00E0 h\u1EE3p ph\u00E1p trong m\u1ECDi khu v\u1EF1c ph\u00E1p l\u00FD n\u01A1i b\u1EA1n truy c\u1EADp hay s\u1EED d\u1EE5ng d\u1ECBch v\u1EE5. WorkSearching kh\u00F4ng x\u00E1c nh\u1EADn n\u1ED9i dung v\u00E0 t\u1EEB ch\u1ED1i c\u1EE5 th\u1EC3 b\u1EA5t k\u1EF3 tr\u00E1ch nhi\u1EC7m hay tr\u00E1ch nhi\u1EC7m ph\u00E1p l\u00FD n\u00E0o \u0111\u1ED1i v\u1EDBi b\u1EA5t k\u1EF3 c\u00E1 nh\u00E2n hay t\u1ED5 ch\u1EE9c n\u00E0o v\u1EC1 m\u1ECDi m\u1EA5t m\u00E1t, thi\u1EC7t h\u1EA1i (cho d\u00F9 th\u1EF1c s\u1EF1, do h\u1EADu qu\u1EA3, do tr\u1EEBng ph\u1EA1t ho\u1EB7c b\u1EA5t k\u1EF3 \u0111i\u1EC1u g\u00EC kh\u00E1c), th\u01B0\u01A1ng t\u00EDch, khi\u1EBFu n\u1EA1i, tr\u00E1ch nhi\u1EC7m ph\u00E1p l\u00FD hay nguy\u00EAn nh\u00E2n kh\u00E1c d\u01B0\u1EDBi m\u1ECDi h\u00ECnh th\u1EE9c ho\u1EB7c \u0111\u1EB7c \u0111i\u1EC3m d\u1EF1a tr\u00EAn ho\u1EB7c do b\u1EA5t k\u1EF3 n\u1ED9i dung n\u00E0o. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](56, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](57, "8. GI\u1EDAI H\u1EA0N TR\u00C1CH NHI\u1EC6M PH\u00C1P L\u00DD");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](58, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](59, " Trong m\u1ECDi t\u00ECnh hu\u1ED1ng, WorkSearching s\u1EBD kh\u00F4ng ch\u1ECBu tr\u00E1ch nhi\u1EC7m ph\u00E1p l\u00FD v\u1EDBi b\u1EA1n v\u1EC1 b\u1EA5t k\u1EF3 m\u1EA5t m\u00E1t hay thi\u1EC7t h\u1EA1i n\u00E0o d\u01B0\u1EDBi m\u1ECDi h\u00ECnh th\u1EE9c (bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF b\u1EA5t k\u1EF3 m\u1EA5t m\u00E1t hay thi\u1EC7t h\u1EA1i tr\u1EF1c ti\u1EBFp, gi\u00E1n ti\u1EBFp, kinh t\u1EBF, c\u1EA3nh b\u00E1o, \u0111\u1EB7c bi\u1EC7t, do tr\u1EEBng ph\u1EA1t, ng\u1EABu nhi\u00EAn ho\u1EB7c do h\u1EADu qu\u1EA3 n\u00E0o) c\u00F3 li\u00EAn quan tr\u1EF1c ti\u1EBFp ho\u1EB7c gi\u00E1n ti\u1EBFp \u0111\u1EBFn: (a) d\u1ECBch v\u1EE5; (b) n\u1ED9i dung WorkSearching; (c) n\u1ED9i dung ng\u01B0\u1EDDi d\u00F9ng; (d) vi\u1EC7c b\u1EA1n s\u1EED d\u1EE5ng, kh\u00F4ng th\u1EC3 s\u1EED d\u1EE5ng ho\u1EB7c hi\u1EC7u qu\u1EA3 c\u1EE7a d\u1ECBch v\u1EE5; (e) m\u1ECDi h\u00E0nh \u0111\u1ED9ng \u0111\u01B0\u1EE3c th\u1EF1c hi\u1EC7n c\u00F3 li\u00EAn quan \u0111\u1EBFn vi\u1EC7c \u0111i\u1EC1u tra c\u1EE7a WorkSearching ho\u1EB7c c\u01A1 quan th\u1EF1c thi ph\u00E1p lu\u1EADt v\u1EC1 vi\u1EC7c s\u1EED d\u1EE5ng d\u1ECBch v\u1EE5 c\u1EE7a b\u1EA1n ho\u1EB7c b\u1EA5t k\u1EF3 b\u00EAn n\u00E0o kh\u00E1c; (f) b\u1EA5t k\u1EF3 h\u00E0nh \u0111\u1ED9ng n\u00E0o \u0111\u01B0\u1EE3c th\u1EF1c hi\u1EC7n c\u00F3 li\u00EAn quan \u0111\u1EBFn ch\u1EE7 s\u1EDF h\u1EEFu b\u1EA3n quy\u1EC1n ho\u1EB7c quy\u1EC1n s\u1EDF h\u1EEFu tr\u00ED tu\u1EC7 kh\u00E1c; (g) m\u1ECDi l\u1ED7i ho\u1EB7c thi\u1EBFu s\u00F3t trong ho\u1EA1t \u0111\u1ED9ng c\u1EE7a d\u1ECBch v\u1EE5; ho\u1EB7c (h) m\u1ECDi thi\u1EC7t h\u1EA1i \u0111\u1ED1i v\u1EDBi m\u1ECDi m\u00E1y t\u00EDnh, thi\u1EBFt b\u1ECB di \u0111\u1ED9ng, thi\u1EBFt b\u1ECB ho\u1EB7c c\u00F4ng ngh\u1EC7 kh\u00E1c c\u1EE7a ng\u01B0\u1EDDi d\u00F9ng, bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF thi\u1EC7t h\u1EA1i do b\u1EA5t k\u1EF3 h\u00E0nh vi vi ph\u1EA1m b\u1EA3o m\u1EADt n\u00E0o ho\u1EB7c do b\u1EA5t k\u1EF3 vi-r\u00FAt, l\u1ED7i, gi\u1EA3 m\u1EA1o, gian l\u1EADn, l\u1ED7i, thi\u1EBFu s\u00F3t, gi\u00E1n \u0111o\u1EA1n, khi\u1EBFm khuy\u1EBFt, tr\u00EC ho\u00E3n qu\u00E1 tr\u00ECnh ho\u1EA1t \u0111\u1ED9ng ho\u1EB7c truy\u1EC1n \u0111i, l\u1ED7i m\u1EA1ng hay d\u00F2ng m\u00E1y t\u00EDnh, m\u1ECDi s\u1EF1 c\u1ED1 k\u1EF9 thu\u1EADt kh\u00E1c ho\u1EB7c tr\u1EE5c tr\u1EB7c kh\u00E1c, bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF thi\u1EC7t h\u1EA1i do m\u1EA5t l\u1EE3i nhu\u1EADn, m\u1EA5t t\u00EDn nhi\u1EC7m, m\u1EA5t d\u1EEF li\u1EC7u, ng\u1EEBng vi\u1EC7c, \u0111\u1ED9 ch\u00EDnh x\u00E1c c\u1EE7a k\u1EBFt qu\u1EA3 ho\u1EB7c l\u1ED7i hay tr\u1EE5c tr\u1EB7c m\u00E1y t\u00EDnh, ngay c\u1EA3 khi c\u00F3 th\u1EC3 d\u1EF1 \u0111o\u00E1n \u0111\u01B0\u1EE3c ho\u1EB7c WorkSearching \u0111\u00E3 \u0111\u01B0\u1EE3c th\u00F4ng b\u00E1o hay l\u1EBD ra ph\u1EA3i bi\u1EBFt v\u1EC1 kh\u1EA3 n\u0103ng x\u1EA3y ra c\u00E1c thi\u1EC7t h\u1EA1i \u0111\u00F3, cho d\u00F9 theo h\u1EE3p \u0111\u1ED3ng, do s\u01A1 \u00FD, tr\u00E1ch nhi\u1EC7m ph\u00E1p l\u00FD nghi\u00EAm ng\u1EB7t ho\u1EB7c sai l\u1EA7m c\u00E1 nh\u00E2n (bao g\u1ED3m, nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF nguy\u00EAn nh\u00E2n m\u1ED9t ph\u1EA7n ho\u1EB7c to\u00E0n b\u1ED9 do s\u01A1 \u00FD, thi\u00EAn tai, l\u1ED7i vi\u1EC5n th\u00F4ng, l\u1EA5y c\u1EAFp hay h\u1EE7y ho\u1EA1i d\u1ECBch v\u1EE5). Trong m\u1ECDi tr\u01B0\u1EDDng h\u1EE3p, WorkSearching kh\u00F4ng ch\u1ECBu tr\u00E1ch nhi\u1EC7m ph\u00E1p l\u00FD v\u1EDBi b\u1EA1n ho\u1EB7c b\u1EA5t k\u1EF3 ai kh\u00E1c v\u1EC1 m\u1EA5t m\u00E1t, thi\u1EC7t h\u1EA1i ho\u1EB7c th\u01B0\u01A1ng t\u00EDch, bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u1EDF th\u01B0\u01A1ng t\u00EDch ca\u0301 nh\u00E2n ho\u0103\u0323c t\u01B0\u0309 vong. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](61, "9. GI\u1EA2I QUY\u1EBET TRANH CH\u1EA4P");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](62, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](63, " B\u1EA5t k\u1EF3 tranh ch\u1EA5p ph\u00E1t sinh trong qu\u00E1 tr\u00ECnh s\u1EED d\u1EE5ng d\u1ECBch v\u1EE5 c\u1EE7a WorkSearching s\u1EBD \u0111\u01B0\u1EE3c gi\u1EA3i quy\u1EBFt theo ph\u00E1p lu\u1EADt hi\u1EC7n h\u00E0nh c\u1EE7a n\u01B0\u1EDBc C\u1ED9ng h\u00F2a x\u00E3 h\u1ED9i ch\u1EE7 ngh\u0129a Vi\u1EC7t Nam. B\u1EA5t k\u1EF3 khi\u1EBFu n\u1EA1i n\u00E0o ph\u00E1t sinh trong qu\u00E1 s\u1EED d\u1EE5ng s\u1EA3n ph\u1EA9m ph\u1EA3i \u0111\u01B0\u1EE3c g\u1EEDi \u0111\u1EBFn WorkSearching ngay sau khi x\u1EA3y ra s\u1EF1 ki\u1EC7n ph\u00E1t sinh khi\u1EBFu n\u1EA1i: \u0110\u1ECBa ch\u1EC9 li\u00EAn l\u1EA1c: V\u0103n ph\u00F2ng WorkSearching, S\u1ED1 11E, ng\u00E1ch 206/2, ng\u00F5 206, \u0111\u01B0\u1EDDng C\u1ED5 Linh, ph\u01B0\u1EDDng Long Bi\u00EAn, qu\u1EADn Long Bi\u00EAn, H\u00E0 N\u1ED9i \u0110i\u1EC7n tho\u1EA1i: 0852220900 Email: dohuuhailong@gmail.com WorkSearching s\u1EBD c\u0103n c\u1EE9 t\u1EEBng tr\u01B0\u1EDDng h\u1EE3p c\u1EE5 th\u1EC3 \u0111\u1EC3 c\u00F3 ph\u01B0\u01A1ng \u00E1n gi\u1EA3i quy\u1EBFt cho ph\u00F9 h\u1EE3p. Khi th\u1EF1c hi\u1EC7n quy\u1EC1n khi\u1EBFu n\u1EA1i, ng\u01B0\u1EDDi khi\u1EBFu n\u1EA1i c\u00F3 ngh\u0129a v\u1EE5 cung c\u1EA5p c\u00E1c gi\u1EA5y t\u1EDD, b\u1EB1ng ch\u1EE9ng, c\u0103n c\u1EE9 c\u00F3 li\u00EAn quan \u0111\u1EBFn vi\u1EC7c khi\u1EBFu n\u1EA1i v\u00E0 ph\u1EA3i ch\u1ECBu tr\u00E1ch nhi\u1EC7m v\u1EC1 n\u1ED9i dung khi\u1EBFu n\u1EA1i, gi\u1EA5y t\u1EDD, b\u1EB1ng ch\u1EE9ng, c\u0103n c\u1EE9 do m\u00ECnh cung c\u1EA5p theo quy \u0111\u1ECBnh ph\u00E1p lu\u1EADt. WorkSearching ch\u1EC9 h\u1ED7 tr\u1EE3, gi\u1EA3i quy\u1EBFt khi\u1EBFu n\u1EA1i, t\u1ED1 c\u00E1o c\u1EE7a Ng\u01B0\u1EDDi D\u00F9ng trong tr\u01B0\u1EDDng h\u1EE3p b\u1EA1n \u0111\u00E3 ghi \u0111\u1EA7y \u0111\u1EE7, trung th\u1EF1c v\u00E0 ch\u00EDnh x\u00E1c th\u00F4ng tin khi \u0111\u0103ng k\u00FD t\u00E0i kho\u1EA3n. \u0110\u1ED1i v\u1EDBi tranh ch\u1EA5p gi\u1EEFa Ng\u01B0\u1EDDi D\u00F9ng v\u1EDBi nhau, ho\u1EB7c tranh ch\u1EA5p v\u1EDBi B\u00EAn Th\u1EE9 Ba, c\u00F3 th\u1EC3 WorkSearching s\u1EBD g\u1EEDi th\u00F4ng tin li\u00EAn h\u1EC7 cho c\u00E1c \u0111\u1ED1i t\u01B0\u1EE3ng tranh ch\u1EA5p \u0111\u1EC3 c\u00E1c b\u00EAn t\u1EF1 gi\u1EA3i quy\u1EBFt ho\u1EB7c WorkSearching s\u1EBD c\u0103n c\u1EE9 v\u00E0o t\u00ECnh h\u00ECnh th\u1EF1c t\u1EBF \u0111\u1EC3 gi\u1EA3i quy\u1EBFt. Theo \u0111\u00F3, WorkSearching s\u1EBD b\u1EA3o v\u1EC7 quy\u1EC1n l\u1EE3i t\u1ED1i \u0111a c\u00F3 th\u1EC3 cho Ng\u01B0\u1EDDi D\u00F9ng h\u1EE3p ph\u00E1p v\u00E0 ch\u00EDnh \u0111\u00E1ng. Ng\u01B0\u1EDDi D\u00F9ng \u0111\u1ED3ng \u00FD b\u1EA3o v\u1EC7, b\u1ED3i ho\u00E0n v\u00E0 lo\u1EA1i tr\u1EEB WorkSearching kh\u1ECFi nh\u1EEFng ngh\u0129a v\u1EE5 ph\u00E1p l\u00FD, t\u1ED1 t\u1EE5ng, t\u1ED5n th\u1EA5t, chi ph\u00ED bao g\u1ED3m nh\u01B0ng kh\u00F4ng gi\u1EDBi h\u1EA1n \u00E1n ph\u00ED, chi ph\u00ED lu\u1EADt s\u01B0, chuy\u00EAn gia t\u01B0 v\u1EA5n c\u00F3 li\u00EAn quan \u0111\u1EBFn vi\u1EC7c gi\u1EA3i quy\u1EBFt ho\u1EB7c ph\u00E1t sinh t\u1EEB s\u1EF1 vi ph\u1EA1m c\u1EE7a Ng\u01B0\u1EDDi D\u00F9ng trong qu\u00E1 tr\u00ECnh s\u1EED d\u1EE5ng s\u1EA3n ph\u1EA9m. N\u1EBFu tranh ch\u1EA5p kh\u00F4ng \u0111\u01B0\u1EE3c gi\u1EA3i quy\u1EBFt trong v\u00F2ng s\u00E1u m\u01B0\u01A1i (60) ng\u00E0y k\u1EC3 t\u1EEB ng\u00E0y m\u1ED9t B\u00EAn th\u00F4ng b\u00E1o cho B\u00EAn c\u00F2n l\u1EA1i b\u1EB1ng v\u0103n b\u1EA3n v\u1EC1 vi\u1EC7c ph\u00E1t sinh tranh ch\u1EA5p th\u00EC m\u1ED9t trong c\u00E1c B\u00EAn c\u00F3 quy\u1EC1n \u0111\u01B0a v\u1EE5 vi\u1EC7c ra gi\u1EA3i quy\u1EBFt t\u1EA1i t\u00F2a \u00E1n c\u00F3 th\u1EA9m quy\u1EC1n t\u1EA1i TP H\u00E0 N\u1ED9i theo quy \u0111\u1ECBnh c\u1EE7a ph\u00E1p lu\u1EADt, B\u00EAn thua ki\u1EC7n s\u1EBD ph\u1EA3i ch\u1ECBu to\u00E0n b\u1ED9 c\u00E1c chi ph\u00ED t\u1ED1 t\u1EE5ng t\u1EA1i t\u00F2a \u00E1n. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](64, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](65, "10. HI\u1EC6U L\u1EF0C TH\u1ECEA THU\u1EACN C\u1EE6A H\u1EE2P \u0110\u1ED2NG");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](66, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](67, " C\u00E1c \u0111i\u1EC1u kho\u1EA3n quy \u0111\u1ECBnh t\u1EA1i Quy \u0111\u1ECBnh s\u1EED d\u1EE5ng n\u00E0y c\u00F3 th\u1EC3 \u0111\u01B0\u1EE3c c\u1EADp nh\u1EADt, ch\u1EC9nh s\u1EEDa b\u1EA5t c\u1EE9 l\u00FAc n\u00E0o m\u00E0 kh\u00F4ng c\u1EA7n ph\u1EA3i th\u00F4ng b\u00E1o tr\u01B0\u1EDBc t\u1EDBi ng\u01B0\u1EDDi s\u1EED d\u1EE5ng. WorkSearching s\u1EBD c\u00F4ng b\u1ED1 r\u00F5 tr\u00EAn Website, v\u1EC1 nh\u1EEFng thay \u0111\u1ED5i, b\u1ED5 sung \u0111\u00F3. Trong tr\u01B0\u1EDDng h\u1EE3p m\u1ED9t ho\u1EB7c m\u1ED9t s\u1ED1 \u0111i\u1EC1u kho\u1EA3n Quy \u0111\u1ECBnh s\u1EED d\u1EE5ng n\u00E0y xung \u0111\u1ED9t v\u1EDBi c\u00E1c quy \u0111\u1ECBnh c\u1EE7a lu\u1EADt ph\u00E1p v\u00E0 b\u1ECB T\u00F2a \u00E1n tuy\u00EAn l\u00E0 v\u00F4 hi\u1EC7u, \u0111i\u1EC1u kho\u1EA3n \u0111\u00F3 s\u1EBD \u0111\u01B0\u1EE3c ch\u1EC9nh s\u1EEDa cho ph\u00F9 h\u1EE3p v\u1EDBi quy \u0111\u1ECBnh ph\u00E1p lu\u1EADt hi\u1EC7n h\u00E0nh, v\u00E0 ph\u1EA7n c\u00F2n l\u1EA1i c\u1EE7a Quy \u0111\u1ECBnh s\u1EED d\u1EE5ng v\u1EABn gi\u1EEF nguy\u00EAn gi\u00E1 tr\u1ECB. Th\u1ECFa thu\u1EADn n\u00E0y c\u00F3 gi\u00E1 tr\u1ECB nh\u01B0 H\u1EE3p \u0110\u1ED3ng. Ng\u01B0\u1EDDi D\u00F9ng hi\u1EC3u r\u1EB1ng, \u0111\u00E2y l\u00E0 h\u1EE3p \u0111\u1ED3ng \u0111i\u1EC7n t\u1EED, Gi\u00E1 tr\u1ECB ph\u00E1p l\u00FD c\u1EE7a h\u1EE3p \u0111\u1ED3ng \u0111i\u1EC7n t\u1EED kh\u00F4ng th\u1EC3 b\u1ECB ph\u1EE7 nh\u1EADn ch\u1EC9 v\u00EC h\u1EE3p \u0111\u1ED3ng \u0111\u00F3 \u0111\u01B0\u1EE3c th\u1EC3 hi\u1EC7n d\u01B0\u1EDBi d\u1EA1ng th\u00F4ng \u0111i\u1EC7p d\u1EEF li\u1EC7u theo Ph\u00E1p Lu\u1EADt v\u1EC1 Giao D\u1ECBch \u0110i\u1EC7n T\u1EED. B\u1EB1ng c\u00E1ch nh\u1EA5n v\u00E0o n\u00FAt \u201CT\u00F4i \u0111\u1ED3ng \u00FD\u201D, Ng\u01B0\u1EDDi D\u00F9ng ho\u00E0n to\u00E0n \u0111\u1ED3ng \u00FD v\u00E0 \u0111\u00E3 hi\u1EC3u c\u00E1c \u0111i\u1EC1u kho\u1EA3n trong H\u1EE3p \u0110\u1ED3ng n\u00E0y v\u00E0 H\u1EE3p \u0110\u1ED3ng c\u00F3 hi\u1EC7u l\u1EF1c k\u1EC1 t\u1EEB th\u1EDDi \u0111i\u1EC3m n\u00E0y. N\u1EBFu vi ph\u1EA1m c\u00E1c \u0110i\u1EC1u kho\u1EA3n n\u00E0y, b\u1EA1n \u0111\u1ED3ng \u00FD ch\u1ECBu ho\u00E0n to\u00E0n tr\u00E1ch nhi\u1EC7m v\u00E0 b\u1ED3i th\u01B0\u1EDDng thi\u1EC7t h\u1EA1i (N\u1EBFu c\u00F3) v\u1EDBi WorkSearching. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](68, "h2", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](69, "TH\u00D4NG TIN LI\u00CAN L\u1EA0C");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](70, "p", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](71, " N\u1EBFu b\u1EA1n c\u00F3 c\u00E2u h\u1ECFi v\u1EC1 \u0110i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng n\u00E0y, vui l\u00F2ng g\u1EEDi email t\u1EDBi \u0111\u1ECBa ch\u1EC9 dohuuhailong@gmail.com \u0111\u1EC3 \u0111\u01B0\u1EE3c gi\u1EA3i \u0111\u00E1p nhanh nh\u1EA5t. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()();
+    } }, styles: [".tos__page[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background-color: #f2f3f7;\r\n}\r\n.tos__document[_ngcontent-%COMP%] {\r\n    width: 70%;\r\n    padding: 50px;\r\n    box-shadow: 0px 0px 16px rgba(47,47,47,0.12);\r\n    background-color: var(--bs-white);\r\n    margin:50px 0;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRlcm0tb2Ytc2VydmljZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksYUFBYTtJQUNiLHVCQUF1QjtJQUN2QixtQkFBbUI7SUFDbkIseUJBQXlCO0FBQzdCO0FBQ0E7SUFDSSxVQUFVO0lBQ1YsYUFBYTtJQUNiLDRDQUE0QztJQUM1QyxpQ0FBaUM7SUFDakMsYUFBYTtBQUNqQiIsImZpbGUiOiJ0ZXJtLW9mLXNlcnZpY2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50b3NfX3BhZ2Uge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmMmYzZjc7XHJcbn1cclxuLnRvc19fZG9jdW1lbnQge1xyXG4gICAgd2lkdGg6IDcwJTtcclxuICAgIHBhZGRpbmc6IDUwcHg7XHJcbiAgICBib3gtc2hhZG93OiAwcHggMHB4IDE2cHggcmdiYSg0Nyw0Nyw0NywwLjEyKTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWJzLXdoaXRlKTtcclxuICAgIG1hcmdpbjo1MHB4IDA7XHJcbn1cclxuIl19 */"] });
+
+
+/***/ }),
+
+/***/ 2340:
+/*!*****************************************!*\
+  !*** ./src/environments/environment.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "environment": () => (/* binding */ environment)
+/* harmony export */ });
+// This file can be replaced during build by using the `fileReplacements` array.
+// `ng build` replaces `environment.ts` with `environment.prod.ts`.
+// The list of file replacements can be found in `angular.json`.
+const environment = {
+    production: false
+};
+/*
+ * For easier debugging in development mode, you can import the following file
+ * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
+ *
+ * This import should be commented out in production mode because it will have a negative impact
+ * on performance if an error is thrown.
+ */
+// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+
+
+/***/ }),
+
+/***/ 4431:
+/*!*********************!*\
+  !*** ./src/main.ts ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ 318);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app/app.module */ 6747);
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./environments/environment */ 2340);
+
+
+
+
+if (_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.production) {
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.enableProdMode)();
+}
+_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__.platformBrowser().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_0__.AppModule)
+    .catch(err => console.error(err));
+
+
+/***/ })
+
+},
+/******/ __webpack_require__ => { // webpackRuntimeModules
+/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+/******/ __webpack_require__.O(0, ["vendor"], () => (__webpack_exec__(8202), __webpack_exec__(4431)));
+/******/ var __webpack_exports__ = __webpack_require__.O();
+/******/ }
+]);
+//# sourceMappingURL=main.js.map
