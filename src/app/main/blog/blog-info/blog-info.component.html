@@ -1,0 +1,23 @@
+<div class="container-xxl">
+    <div class="blog__avatar-holder">
+        <img src="{{server + blog.avatar}}" alt="" class="blog__avatar">
+    </div>
+    <div class="blog-info">
+        <div class="row">
+            <div class="col-9 col">
+                <h2 class="blog__title">{{blog.name}}</h2>
+                <div class="blog__menu">
+                    <div class="blog__time">{{blog.modified_at| date: 'dd/MM/yyyy'}}</div>
+                    <div class="splitter"></div>
+                    <div class="breadcrumb"></div>
+                </div>
+                <div class="blog__description ck-content" [innerHTML]="blog.description">
+
+                </div>
+            </div>
+            <div class="col-3 col">
+                <div class="sub">sub</div>
+            </div>
+        </div>
+    </div>
+</div>

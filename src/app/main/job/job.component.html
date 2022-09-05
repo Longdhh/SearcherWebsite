@@ -1,76 +1,78 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-xxl">
-      <a class="navbar-brand" routerLink="/home">
-        <img src="../../../assets/logo/logo.png" alt="" class="logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <form class="filter-job" [formGroup]="jobForm">
-            <div class="d-flex search-box">
-                <div class="search-input">
-                    <i class="fa-solid fa-magnifying-glass icon"></i>
-                    <input formControlName="name" class="form-control me-2 search-bar" type="search" placeholder="Tìm kiếm việc làm" aria-label="Search">
-                </div>
-                <!-- <div class="divider"></div>
+<nav class="navbar navbar-expand navbar-light bg-light">
+  <div class="container-xxl">
+    <a class="navbar-brand" routerLink="/home">
+      <img src="../../../assets/logo/logo.png" alt="" class="logo">
+    </a>
+    <div class="collapse navbar-collapse" style="margin-left: 0px;" id="navbarSupportedContent">
+      <form class="filter-job" [formGroup]="jobForm">
+        <div class="d-flex search-box">
+          <div class="search-input">
+            <i class="fa-solid fa-magnifying-glass icon"></i>
+            <input formControlName="name" class="form-control me-2 search-bar" type="search"
+              placeholder="Tìm kiếm việc làm" aria-label="Search">
+          </div>
+          <!-- <div class="divider"></div>
                 <div class="location-select">
                 <i class="fa-solid fa-location-dot icon"></i>
                 <select class="select-input">
                     <option [value]="item.id" *ngFor="let item of provinceList">{{item.name}}</option>
                 </select>
                 </div> -->
-            </div>
-        </form>
-        <button class="btn btn-search" (click)="getJobList()">Tìm kiếm</button>
-      </div>
-      <div class="header__navbar-user" *ngIf="user!==null">
-        <img src="{{imgUrl + user.avatar}}" alt="" class="header__navbar-user-img">
-        <span class="header__navbar-user-name">{{user.name}}</span>
-        <ul class="header__navbar-user-menu">
-          <li class="header__navbar-user-item">
-            <a routerLink="/main/account">Tài khoản của tôi</a>
-          </li>
-          <li class="header__navbar-user-item">
-            <a routerLink="/main/registed-job">Các công việc đã ứng tuyển</a>
-          </li>
-          <li class="header__navbar-user-item header__navbar-user-item--seperate">
-            <a (click)="logout()" style="cursor: pointer">Đăng xuất</a>
-          </li>
-        </ul>
-      </div>
-      <div class="header__navbar-user" *ngIf="user==null || user==undefined">
-        <a class="btn btn-purple" routerLink="/home">Đăng nhập</a>
+        </div>
+      </form>
+      <button class="btn btn-search" (click)="getJobList()" i18n>Tìm kiếm</button>
+    </div>
+    <div class="header__navbar-user" *ngIf="user!==null">
+      <img src="{{imgUrl + user.avatar}}" alt="" class="header__navbar-user-img">
+      <span class="header__navbar-user-name">{{user.name}}</span>
+      <ul class="header__navbar-user-menu">
+        <li class="header__navbar-user-item">
+          <a routerLink="/main/account" i18n>Tài khoản của tôi</a>
+        </li>
+        <li class="header__navbar-user-item">
+          <a routerLink="/main/registed-job" i18n>Các công việc đã ứng tuyển</a>
+        </li>
+        <li class="header__navbar-user-item header__navbar-user-item--seperate">
+          <a (click)="logout()" style="cursor: pointer" i18n>Đăng xuất</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="job">
+  <div class="container-xxl">
+    <div class="header">
+      <div class="container-xl">
+        <h1 class="title" i18n>Việc làm</h1>
+        <p i18n>Tìm kiếm những việc làm phù hợp với bản thân</p>
       </div>
     </div>
-  </nav>
-<div class="job">
-    <div class="container-xl">
-        <div class="row">
-            <div class="col-12">
-                <div class="job__list">
-                    <div class="job__item" *ngFor="let item of jobList, let i = index">
-                        <div class="thumbnail-holder">
-                          <img src="{{imgUrl + jobCompanyList[i].avatar}}" class="thumbnail">
-                        </div>
-                        <div class="job__info">
-                            <h5 (click)="navigateToJob(item.job_id)" class="job__title">{{item.name}}</h5>
-                            <div class="salary">{{jobSalaryList[i].name}}</div>
-                            <h6 style="cursor: pointer"routerLink="/main/company/company-info/{{this.jobCompanyList[i].Id}}">{{jobCompanyList[i].name}}</h6>
-                            <p>{{jobProvinceList[i].name}}</p>
-                            <p>Ngày hết hạn: {{item.job_end_date| date: 'dd/MM/yyyy'}}</p>
-                        </div>
-                    </div>
-                </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="job__list">
+          <div class="job__item" *ngFor="let item of jobList, let i = index">
+            <div class="thumbnail-holder">
+              <img src="{{imgUrl + jobCompanyList[i].avatar}}" class="thumbnail">
             </div>
-        </div>
-        <div class="pagination">
-            <div class="col-md-12">
-              <pagination [boundaryLinks]="true" [itemsPerPage]="pageSize" (pageChanged)="pageChanged($event)"
-                [totalItems]="totalRow" [(ngModel)]="pageIndex" class="pagination-sm" previousText="&lsaquo;"
-                nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+            <div class="job__info">
+              <h5 (click)="navigateToJob(item.job_id)" class="job__title">{{item.name}}</h5>
+              <div class="salary">{{jobSalaryList[i].name}}</div>
+              <h6 style="cursor: pointer" routerLink="/main/company/company-info/{{this.jobCompanyList[i].Id}}">
+                {{jobCompanyList[i].name}}</h6>
+              <p>{{jobProvinceList[i].name}}</p>
+              <p class="salary-mobile">{{jobSalaryList[i].name}}</p>
+              <p i18n>Ngày hết hạn: {{item.job_end_date| date: 'dd/MM/yyyy'}}</p>
             </div>
           </div>
+        </div>
+      </div>
     </div>
+    <div class="pagination">
+      <div class="col-md-12">
+        <pagination [boundaryLinks]="true" [itemsPerPage]="pageSize" (pageChanged)="pageChanged($event)"
+          [totalItems]="totalRow" [(ngModel)]="pageIndex" class="pagination-sm" previousText="&lsaquo;"
+          nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+      </div>
+    </div>
+  </div>
 </div>

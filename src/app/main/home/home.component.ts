@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 import { SystemConstants } from 'src/app/common/system.constants';
 import { LoggedInUser } from 'src/app/domain/loggedin.user';
 import { SharedService } from 'src/app/services/shared.service';
@@ -16,10 +16,13 @@ export class HomeComponent implements AfterViewInit {
   jobList: any=[];
   categoryList: any=[];
   bannerList: any=[];
+  blogList: any=[];
   user: LoggedInUser;
   imgUrl = SystemConstants.BASE_SERVER;
   
-  constructor(private service: SharedService, private router: Router) { }
+  constructor(private service: SharedService, private titleService: Title) {
+    this.titleService.setTitle("Tìm việc làm nhanh chóng với JobOfferer")
+  }
 
   ngOnInit(): void {
     this.getData();
@@ -46,6 +49,9 @@ export class HomeComponent implements AfterViewInit {
           company => this.companyList.find(c => c.Id === company.Id)
         )
       })
+    })
+    this.service.get('/blog/get-all-active?keyword=').subscribe((response: any) => {
+      this.blogList = response
     })
   }
 }

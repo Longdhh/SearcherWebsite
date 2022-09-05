@@ -12,8 +12,9 @@ import { SharedService } from 'src/app/services/shared.service';
 })
 export class RegistedJobComponent implements OnInit {
   jobList: any = [];
+  filteredJobList: any=[];
   jobUserList: any = [];
-  registedForm: FormGroup
+  registedForm: FormGroup;
   pageIndex: number = 1;
   pageSize: number = 10;
   pageDisplay: number = 10;
@@ -23,9 +24,9 @@ export class RegistedJobComponent implements OnInit {
   constructor(private service: SharedService, private notificationService: NotificationService) { }
 
   ngOnInit(): void {
-    this.initializeForm()
     this.id = JSON.parse(localStorage.getItem(SystemConstants.CURRENT_USER)).id
     this.loadData();
+    this.initializeForm();
   }
   initializeForm() {
     this.registedForm = new FormGroup({
@@ -52,14 +53,15 @@ export class RegistedJobComponent implements OnInit {
         this.totalRow = response.TotalRows;
       })
   }
+
   deleteItem(id: any) {
-    this.notificationService.printConfirmationDialog(MessageConstants.CONFIRM_DELETE_MSG, ()=> {
+    this.notificationService.printConfirmationDialog(MessageConstants.CANCEL_JOB_MSG, ()=> {
       this.deleteItemConfirm(id);
     })
   }
   deleteItemConfirm(id: any) {
     this.service.delete('/job/unregister-job', 'id', id).subscribe((response: Response)=>{
-      this.notificationService.printSuccessMessage(MessageConstants.DELETE_OK_MSG);
+      this.notificationService.printSuccessMessage(MessageConstants.CANCEL_JOB_OK_MSG);
       this.loadData();
     })
   }

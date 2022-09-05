@@ -10,33 +10,30 @@
             <div class="col-lg-6 col-12 col">
                 <div class="login__column">
                     <div class="login-form" role="login-form">
-                        <h1 class="login__title">Chào mừng đến với JobOfferer</h1>
-                        <p class="login__description">Đăng nhập để tìm kiếm những công việc lý tưởng dành cho bạn</p>
+                        <h1 class="login__title" i18n>Chào mừng đến với JobOfferer</h1>
+                        <p class="login__description" i18n>Đăng nhập để tìm kiếm những công việc lý tưởng dành cho bạn</p>
                         <form class="loginForm" [formGroup]="loginForm" (ngSubmit)="login()">
                             <div class="block">
-                                <label for="user" class="title">Tên tài khoản: </label>
+                                <label for="user" class="title" i18n>Tên tài khoản:</label>
                                 <i class="fa-solid fa-user icon"></i>
                                 <input formControlName="username" type="text" class="input"
                                     placeholder="Nhập tên tài khoản" />
                                 <span class="error" *ngIf="loginForm.get('username').touched && 
-                                    loginForm.get('username').hasError('required')">Xin hãy nhập tên tài khoản</span>
+                                    loginForm.get('username').hasError('required')" i18n>Xin hãy nhập tên tài khoản</span>
                             </div>
                             <div class="block">
-                                <label for="password" class="title">Mật khẩu: </label>
+                                <label for="password" class="title" i18n>Mật khẩu:</label>
                                 <i class="fa-solid fa-key icon"></i>
                                 <input formControlName="password" type="password" class="input"
                                     placeholder="Nhập mật khẩu" />
                                 <span class="error" *ngIf="loginForm.get('password').touched && 
-                                    loginForm.get('password').hasError('required')">Xin hãy nhập mật khẩu</span>
+                                    loginForm.get('password').hasError('required')" i18n>Xin hãy nhập mật khẩu</span>
                             </div>
-                            <button type="submit" name="submit" class="btn login__btn">Đăng nhập</button>
+                            <button type="submit" name="submit" class="btn login__btn" i18n>Đăng nhập</button>
                         </form>
-                        <p class="register__text">Chưa có tài khoản ? <a routerLink="/register" class="link">Đăng
-                                ký ngay</a></p>
-                        <a routerLink="/user/forgot-password" class="link">Quên mật khẩu ?</a>
-                        <a  class="employer__register btn"href="http://localhost:4202">
-                            Bạn là nhà tuyển dụng ?
-                        </a>
+                        <p class="register__text" i18n>Chưa có tài khoản ? <a routerLink="/register" class="link">Đăng ký ngay</a></p>
+                        <a routerLink="/user/forgot-password" class="link" i18n>Quên mật khẩu ?</a>
+                        <a  class="employer__register btn"href="http://localhost:4202"  i18n>Bạn là nhà tuyển dụng ?</a>
                     </div>
                 </div>
             </div>

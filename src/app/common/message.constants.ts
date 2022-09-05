@@ -9,4 +9,6 @@ export class MessageConstants {
     public static NO_RESUME_MSG = "Bạn phải có hồ sơ";
     public static LOGIN_ERROR = "Tài khoản hoặc mật khẩu không đúng";
     public static CREATED_ACCOUNT_OK_MSG = "Tạo tài khoản thành công";
+    public static CANCEL_JOB_MSG = "Bạn có chắc chắn muốn rút hồ sơ khỏi công việc này ?"
+    public static CANCEL_JOB_OK_MSG = "Rút hồ sơ thành công"
 }

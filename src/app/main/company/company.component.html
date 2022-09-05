@@ -1,12 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand navbar-light bg-light">
     <div class="container-xxl">
       <a class="navbar-brand" routerLink="/home">
         <img src="../../../assets/logo/logo.png" alt="" class="logo">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <form class="filter-job" [formGroup]="companyForm">
             <div class="d-flex search-box">
@@ -23,40 +19,37 @@
                 </div> -->
             </div>
         </form>
-        <button class="btn btn-search" (click)="getCompanies()">Tìm kiếm</button>
+        <button class="btn btn-search" (click)="getCompanies()" i18n>Tìm kiếm</button>
       </div>
       <div class="header__navbar-user" *ngIf="user!==null">
         <img src="{{imageRoute + user.avatar}}" alt="" class="header__navbar-user-img">
         <span class="header__navbar-user-name">{{user.name}}</span>
         <ul class="header__navbar-user-menu">
           <li class="header__navbar-user-item">
-            <a routerLink="/main/account">Tài khoản của tôi</a>
+            <a routerLink="/main/account" i18n>Tài khoản của tôi</a>
           </li>
           <li class="header__navbar-user-item">
-            <a routerLink="/main/registed-job">Các công việc đã ứng tuyển</a>
+            <a routerLink="/main/registed-job" i18n>Các công việc đã ứng tuyển</a>
           </li>
           <li class="header__navbar-user-item header__navbar-user-item--seperate">
-            <a (click)="logout()" style="cursor: pointer">Đăng xuất</a>
+            <a (click)="logout()" style="cursor: pointer" i18n>Đăng xuất</a>
           </li>
         </ul>
-      </div>
-      <div class="header__navbar-user" *ngIf="user==null || user==undefined">
-        <a class="btn btn-purple" routerLink="/home">Đăng nhập</a>
       </div>
     </div>
   </nav>
 <div class="header">
     <div class="container-xl">
-        <h1 class="title">Công ty</h1>
-        <p>Tìm kiếm những công ty phù hợp với bạn</p>
+        <h1 class="title" i18n>Công ty</h1>
+        <p i18n>Tìm kiếm những công ty phù hợp với bạn</p>
     </div>
 </div>
 <div class="body">
     <div class="container-xl">
         <div class="row gy-5">
-            <div class="col-4" *ngFor="let item of companyList; index as i">
+            <div class="col-lg-4 col-sm-6 col-12" *ngFor="let item of companyList; index as i">
                 <div class="company">
-                    <a routerLink="/main/company/company-info/{{item.Id}}">
+                    <a routerLink="/main/company/company-info/{{item.Id}}" class="banner-holder">
                         <img src="{{imageRoute + item.avatar}}" alt="" class="banner">
                     </a>
                     <div class="info">

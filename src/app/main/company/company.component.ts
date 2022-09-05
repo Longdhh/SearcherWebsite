@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { SystemConstants } from 'src/app/common/system.constants';
 import { LoggedInUser } from 'src/app/domain/loggedin.user';
@@ -13,14 +14,16 @@ import { SharedService } from 'src/app/services/shared.service';
 export class CompanyComponent implements OnInit {
   companyList: any=[];
   pageIndex: number = 1;
-  pageSize: number = 10;
-  pageDisplay: number = 10;
+  pageSize: number = 5;
+  pageDisplay: number = 5;
   totalRow: number;
   companyForm: FormGroup;
   imageRoute = SystemConstants.BASE_SERVER;
   provinceList: any=[];
   user: LoggedInUser;
-  constructor(private service: SharedService, private router: Router) { }
+  constructor(private service: SharedService, private router: Router, private titleService: Title) {
+    this.titleService.setTitle("Tìm kiếm công ty phù hợp với bản thân bạn")
+   }
 
   ngOnInit(): void {
     this.initializeForm();

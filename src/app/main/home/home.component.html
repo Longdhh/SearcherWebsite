@@ -1,40 +1,23 @@
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/main/job">Việc làm</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/main/company">Công ty</a>
-                </li>
-            </ul>
-            <a class="d-flex btn btn-success" role="search" *ngIf="user===null" routerLink="/login">
-                Đăng nhập
-            </a>
-        </div>
-    </div>
-</nav>
 <div class="banners">
     <carousel>
         <slide *ngFor="let item of bannerList; index as i">
-          <img src="{{imgUrl + item.home_slide_image}}" alt="first slide" style="display: block; width: 100%;" class="banner">
+            <a routerLink="{{item.link}}" class="banner__link">
+                <img src="{{imgUrl + item.home_slide_image}}" alt="first slide" style="display: block; width: 100%;" class="banner">
+            </a>
         </slide>
       </carousel>
 </div>
 <div class="company">
     <div class="container-xl">
-        <h3 class="header">Các công ty đang tuyển dụng</h3>
+        <h3 class="header" i18n>Các công ty đang tuyển dụng</h3>
         <div class="company__list">
-            <div class="row">
-                <div class="col-2" *ngFor="let item of companyDisplayList">
+            <div class="row gy-3">
+                <div class="col-sm-4 col-lg-2 col-6" *ngFor="let item of companyDisplayList">
                     <div class="company__item">
-                        <a href="/main/company/company-info/{{item.Id}}">
-                            <img src="{{imgUrl + item.avatar}}" alt="" class="avatar">
+                        <a routerLink="/main/company/company-info/{{item.Id}}">
+                            <div class="avatar-holder">
+                                <img src="{{imgUrl + item.avatar}}" alt="" class="avatar">
+                            </div>
                             <h6 class="company__name">{{item.name}}</h6>
                         </a>
                     </div>
@@ -45,9 +28,9 @@
 </div>
 <div class="job">
     <div class="container-xl">
-        <h3 class="header">Các việc làm đang được đăng tuyển</h3>
+        <h3 class="header" i18n>Các việc làm đang được đăng tuyển</h3>
         <div class="row gy-3">
-            <div class="col-4" *ngFor="let item of jobList; index as i">
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let item of jobList; index as i">
                 <div class="job__item">
                     <div class="thumbnail-holder">
                         <img src="{{imgUrl + this.jobCompanyList[i].avatar}}" class="thumbnail">
@@ -61,220 +44,23 @@
         </div>
     </div>
 </div>
-<section id="footer">
-    <div class="grid wide">
-        <div class="container" style="display: flex">
-            <div class="footer__contact c-2-4 col">
-                <a class="navbar-brand" routerLink="/home">
-                    <img src="../../../assets/logo/logo.png" alt="" class="logo">
-                </a>
-                <div class="contact__messenger">
-                    <svg version="1.1" viewBox="0 0 40 40" class="svg-icon svg-fill" style="width: 40px; height: 40px;">
-                        <defs>
-                            <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="svgicon_whatsapp_b">
-                                <stop stop-color="#4B4B4B" offset="0%"></stop>
-                                <stop offset="100%"></stop>
-                            </linearGradient>
-                            <linearGradient x1="0%" y1="25.77%" x2="100%" y2="74.23%" id="svgicon_whatsapp_e">
-                                <stop stop-color="#C77D0E" offset="0%"></stop>
-                                <stop stop-color="#F98713" offset="100%"></stop>
-                            </linearGradient>
-                            <linearGradient x1="0%" y1="24.995%" x2="100%" y2="75.005%" id="svgicon_whatsapp_f">
-                                <stop stop-color="#F98713" offset="0%"></stop>
-                                <stop stop-color="#FBAC36" offset="100%"></stop>
-                            </linearGradient>
-                            <path pid="0"
-                                d="M9.083 17.431L3.52 20.16H1.76l1.4-5.483C1.182 13.132 0 11.172 0 9.04 0 4.047 6.483 0 14.48 0c7.997 0 14.48 4.047 14.48 9.04 0 4.993-6.483 9.04-14.48 9.04-1.908 0-3.73-.23-5.397-.649z"
-                                id="svgicon_whatsapp_a"></path>
-                            <path pid="1"
-                                d="M9.083 17.431L3.52 20.16H1.76l1.4-5.483C1.182 13.132 0 11.172 0 9.04 0 4.047 6.483 0 14.48 0c7.997 0 14.48 4.047 14.48 9.04 0 4.993-6.483 9.04-14.48 9.04-1.908 0-3.73-.23-5.397-.649z"
-                                id="svgicon_whatsapp_d"></path>
-                        </defs>
-                        <g fill="none" fill-rule="evenodd">
-                            <circle pid="2" fill-opacity=".03" fill="#000" cx="20" cy="20" r="20"></circle>
-                            <g transform="translate(0 4)">
-                                <mask id="svgicon_whatsapp_c" fill="#fff">
-                                    <use xlink:href="#svgicon_whatsapp_a"></use>
-                                </mask>
-                                <use fill="#6f42c1" xlink:href="#svgicon_whatsapp_a"></use>
-                                <path pid="4"
-                                    d="M10.843 17.431L5.28 20.16H3.52l1.4-5.483c-1.978-1.545-3.16-3.505-3.16-5.637C1.76 4.047 8.243 0 16.24 0c7.997 0 14.48 4.047 14.48 9.04 0 4.993-6.483 9.04-14.48 9.04-1.908 0-3.73-.23-5.397-.649z"
-                                    fill="#6f42c1" mask="url(#svgicon_whatsapp_c)"></path>
-                                <circle pid="5" fill="#FFF" opacity=".2" mask="url(#svgicon_whatsapp_c)" cx="9.6"
-                                    cy="8.48" r="1.6"></circle>
-                                <circle pid="6" fill="#FFF" opacity=".2" mask="url(#svgicon_whatsapp_c)" cx="14.72"
-                                    cy="8.48" r="1.6"></circle>
-                                <circle pid="7" fill="#FFF" opacity=".2" mask="url(#svgicon_whatsapp_c)" cx="19.84"
-                                    cy="8.48" r="1.6"></circle>
-                            </g>
-                            <g transform="matrix(-1 0 0 1 40 16)">
-                                <mask id="svgicon_whatsapp_g" fill="#fff">
-                                    <use xlink:href="#svgicon_whatsapp_d"></use>
-                                </mask>
-                                <use fill="#9d73df" xlink:href="#svgicon_whatsapp_d"></use>
-                                <path pid="8"
-                                    d="M7.808 17.112L1.6 20.16H-.16l1.759-6.03C-.21 12.622-1.28 10.75-1.28 8.72c0-4.993 6.483-9.04 14.48-9.04 7.997 0 14.48 4.047 14.48 9.04 0 4.993-6.483 9.04-14.48 9.04-1.906 0-3.725-.23-5.392-.648z"
-                                    fill="#9d73df" mask="url(#svgicon_whatsapp_g)"></path>
-                                <circle pid="9" fill="#6610f2" opacity=".413" mask="url(#svgicon_whatsapp_g)" cx="8.64"
-                                    cy="8.48" r="1.6"></circle>
-                                <circle pid="10" fill="#6610f2" opacity=".413" mask="url(#svgicon_whatsapp_g)"
-                                    cx="13.76" cy="8.48" r="1.6"></circle>
-                                <circle pid="11" fill="#6610f2" opacity=".413" mask="url(#svgicon_whatsapp_g)"
-                                    cx="18.88" cy="8.48" r="1.6"></circle>
-                            </g>
-                        </g>
-                    </svg>
-                    <div class="contact__messenger-content">
-                        <h4 class="contact__messenger-header">Messenger</h4>
-                        <a href="http://m.me/luxstay" class="contact__messenger-url">dohuuhailong@gmail.com</a>
-                    </div>
-                </div>
-                <div class="contact__phone">
-                    <svg version="1.1" viewBox="0 0 40 40" class="svg-icon svg-fill" style="width: 40px; height: 40px;">
-                        <defs>
-                            <linearGradient x1="0%" y1="25.77%" x2="100%" y2="74.23%" id="svgicon_call-center_b">
-                                <stop stop-color="#C77D0E" offset="0%"></stop>
-                                <stop stop-color="#F98713" offset="100%"></stop>
-                            </linearGradient>
-                            <linearGradient x1="0%" y1="25.77%" x2="100%" y2="74.23%" id="svgicon_call-center_c">
-                                <stop stop-color="#F98713" offset="0%"></stop>
-                                <stop stop-color="#FBAC36" offset="100%"></stop>
-                            </linearGradient>
-                            <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="svgicon_call-center_f">
-                                <stop stop-color="#4B4B4B" offset="0%"></stop>
-                                <stop offset="100%"></stop>
-                            </linearGradient>
-                            <path pid="0"
-                                d="M6.83 13.108L2.647 15.16H1.323l1.053-4.123C.89 9.875 0 8.401 0 6.797 0 3.045 4.875 0 10.889 0c6.013 0 10.888 3.044 10.888 6.798s-4.875 6.798-10.888 6.798c-1.435 0-2.805-.173-4.059-.488z"
-                                id="svgicon_call-center_a"></path>
-                            <path pid="1"
-                                d="M0 6.084c0-3 2.176-5.168 3.71-5.832C5.241-.41 9.103.39 9.53.866c.427.477 1.048 5.218.852 6.143-.11.525-.774 1.077-1.988 1.656a1 1 0 00-.55 1.097 12.858 12.858 0 001.443 3.897c.813 1.424 1.954 2.861 3.422 4.31l.632-.587a4.094 4.094 0 012.789-1.097c1.037 0 2.04.378 2.819 1.064l3.157 2.778a1 1 0 01.282 1.085c-.49 1.386-1.315 2.368-2.473 2.947-1.333.667-3.068.937-5.206.81-3 0-8.105-3.52-11-8.217C.814 12.054 0 9.084 0 6.084z"
-                                id="svgicon_call-center_e"></path>
-                        </defs>
-                        <g fill="none" fill-rule="evenodd">
-                            <circle pid="2" fill-opacity=".03" fill="#000" cx="20" cy="20" r="20"></circle>
-                            <g transform="translate(15.71 7)">
-                                <mask id="svgicon_call-center_d" fill="#fff">
-                                    <use xlink:href="#svgicon_call-center_a"></use>
-                                </mask>
-                                <use fill="#9d73df" xlink:href="#svgicon_call-center_a">
-                                </use>
-                                <path pid="4"
-                                    d="M8.154 13.108L3.97 15.16H2.647L3.7 11.037c-1.487-1.162-2.377-2.636-2.377-4.24C1.323 3.045 6.2 0 12.213 0 18.225 0 23.1 3.044 23.1 6.798s-4.875 6.798-10.889 6.798c-1.434 0-2.804-.173-4.058-.488z"
-                                    fill="#9d73df" mask="url(#svgicon_call-center_d)">
-                                </path>
-                                <circle pid="5" fill="#6f42c1" opacity=".413" mask="url(#svgicon_call-center_d)"
-                                    cx="7.219" cy="6.377" r="1.203"></circle>
-                                <circle pid="6" fill="#6f42c1" opacity=".413" mask="url(#svgicon_call-center_d)"
-                                    cx="11.069" cy="6.377" r="1.203"></circle>
-                                <circle pid="7" fill="#6f42c1" opacity=".413" mask="url(#svgicon_call-center_d)"
-                                    cx="14.919" cy="6.377" r="1.203"></circle>
-                            </g>
-                            <g transform="translate(2 11.03)">
-                                <mask id="svgicon_call-center_g" fill="#fff">
-                                    <use xlink:href="#svgicon_call-center_e"></use>
-                                </mask>
-                                <use fill="#6f42c1" xlink:href="#svgicon_call-center_e">
-                                </use>
-                                <path pid="8"
-                                    d="M2.71 6.084c0-3 2.175-5.168 3.708-5.832C7.951-.41 11.813.39 12.24.866c.426.477 1.047 5.218.852 6.143-.112.525-.775 1.077-1.99 1.656a1 1 0 00-.55 1.097 12.858 12.858 0 001.444 3.897c.813 1.424 1.954 2.861 3.422 4.31l.632-.587a4.094 4.094 0 012.789-1.097c1.038 0 2.04.378 2.819 1.064l3.157 2.778a1 1 0 01.282 1.085c-.49 1.386-1.315 2.368-2.472 2.947-1.334.667-3.07.937-5.207.81-3 0-8.105-3.52-11-8.217C3.523 12.054 2.71 9.084 2.71 6.084z"
-                                    fill="#6f42c1" mask="url(#svgicon_call-center_g)"></path>
-                            </g>
-                        </g>
-                    </svg>
-                    <div class="contact__phone-content">
-                        <h1 class="phone-content-title">Số điện thoại</h1>
-                        <div class="phone-content-numbers">
-                            <p>(+84) 0852220900</p>
+<div class="blog">
+    <div class="container-xl">
+        <h3 class="header" i18n>Cuộc sống IT</h3>
+        <div class="row gy-3">
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let item of blogList; index as i">
+                <div class="blog__item">
+                    <a href="/main/blog/blog-info/{{item.blog_id}}" class="image__link">
+                        <div class="blog__thumbnail-holder">
+                            <div class="view-mask"></div>
+                            <img src="{{imgUrl + this.blogList[i].avatar}}" class="blog__thumbnail">
                         </div>
+                    </a>
+                    <div class="blog__info">
+                        <a href="/main/blog/blog-info/{{item.blog_id}}" class="blog__name">{{item.name}}</a>
                     </div>
                 </div>
             </div>
-            <div class="footer__homestay c-2-4 col">
-                <h3 class="footer__header">JobOfferer</h3>
-                <ul class="footer__list">
-                    <li class="footer__item">
-                        <a href="">Về JobOfferer</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="">Liên hệ</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="">Hỏi đáp</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="">Điều khoản sử dụng</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="">Quy định bảo mật</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer__favorite c-2-4 col">
-                <h3 class="footer__header">TUYỂN DỤNG</h3>
-                <ul class="footer__list">
-                    <li class="footer__item">
-                        <a href="">Đăng tin tuyển dụng</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="">Tìm kiếm hồ sơ</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="">Liên hệ</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer__follow c-2-4 col">
-                <h3 class="footer__header">FOLLOW US</h3>
-                <div class="follow__content">
-                    <a class="follow__item" href="https://www.instagram.com">
-                        <svg version="1.1" viewBox="0 0 24 24" class="svg-icon svg-fill"
-                            style="width: 28px; height: 28px;">
-                            <g fill="none" fill-rule="evenodd">
-                                <circle pid="0" cx="12" cy="12" r="12" fill="#484848"></circle>
-                                <path pid="1" fill="#FFF"
-                                    d="M14.333 12c0-.644-.228-1.194-.683-1.65A2.248 2.248 0 0012 9.667c-.644 0-1.194.228-1.65.683A2.248 2.248 0 009.667 12c0 .644.228 1.194.683 1.65a2.248 2.248 0 001.65.683c.644 0 1.194-.228 1.65-.683a2.248 2.248 0 00.683-1.65zm1.258 0c0 .997-.35 1.844-1.048 2.543-.699.699-1.546 1.048-2.543 1.048-.997 0-1.844-.35-2.543-1.048-.699-.699-1.048-1.546-1.048-2.543 0-.997.35-1.844 1.048-2.543.699-.699 1.546-1.048 2.543-1.048.997 0 1.844.35 2.543 1.048.699.699 1.048 1.546 1.048 2.543zm.985-3.737a.81.81 0 01-.247.592.808.808 0 01-.592.247.808.808 0 01-.592-.247.808.808 0 01-.247-.592c0-.23.082-.428.247-.592a.808.808 0 01.592-.247.81.81 0 01.592.247.808.808 0 01.247.592zM12 6.258l-.697-.005a49.446 49.446 0 00-.962 0c-.219.003-.512.012-.88.028-.367.015-.68.045-.938.09a3.654 3.654 0 00-.652.17 2.365 2.365 0 00-.802.528c-.23.23-.407.498-.529.802a3.654 3.654 0 00-.168.652 7.223 7.223 0 00-.091.939c-.016.367-.025.66-.028.88a49.9 49.9 0 000 .96l.005.698-.005.697c-.003.423-.003.743 0 .962.003.219.012.512.028.88.015.367.045.68.09.938.046.258.103.476.17.652a2.375 2.375 0 001.33 1.331c.176.066.394.123.652.168.258.046.571.076.939.091.367.016.66.025.88.028.218.003.538.003.96 0l.698-.005.697.005c.423.003.743.003.962 0 .219-.003.512-.012.88-.028.367-.015.68-.045.938-.09.258-.046.476-.103.652-.17a2.375 2.375 0 001.331-1.33c.066-.176.123-.394.168-.652.046-.258.076-.571.091-.939.016-.367.025-.66.028-.88a49.9 49.9 0 000-.96L17.742 12l.005-.697c.003-.423.003-.743 0-.962a33.766 33.766 0 00-.028-.88 7.223 7.223 0 00-.09-.938 3.654 3.654 0 00-.17-.652 2.365 2.365 0 00-.528-.802 2.365 2.365 0 00-.802-.529 3.654 3.654 0 00-.652-.168 7.223 7.223 0 00-.939-.091c-.367-.016-.66-.025-.88-.028a49.9 49.9 0 00-.96 0L12 6.258zM19 12c0 1.392-.015 2.355-.046 2.89-.06 1.263-.437 2.242-1.13 2.934-.692.693-1.67 1.07-2.935 1.13-.534.03-1.497.046-2.889.046-1.392 0-2.355-.015-2.89-.046-1.263-.06-2.242-.437-2.934-1.13-.693-.692-1.07-1.67-1.13-2.935C5.016 14.355 5 13.392 5 12c0-1.392.015-2.355.046-2.89.06-1.263.437-2.242 1.13-2.934.692-.693 1.67-1.07 2.935-1.13C9.645 5.016 10.608 5 12 5c1.392 0 2.355.015 2.89.046 1.263.06 2.242.437 2.934 1.13.693.692 1.07 1.67 1.13 2.935.03.534.046 1.497.046 2.889z">
-                                </path>
-                            </g>
-                        </svg>
-                    </a>
-                    <a class="follow__item" href="https://www.youtube.com/channel/UC0eKzrgU7VSxYZcsf0yIn_w">
-                        <svg version="1.1" viewBox="0 0 24 24" class="svg-icon svg-fill"
-                            style="width: 28px; height: 28px;">
-                            <g fill="none" fill-rule="evenodd">
-                                <circle pid="0" cx="12" cy="12" r="12" fill="#484848"></circle>
-                                <path pid="1" fill="#FFF"
-                                    d="M10.679 13.884l3.865-1.997-3.865-2.02v4.017zM12.156 7c.894 0 1.758.012 2.591.036.834.024 1.445.05 1.833.076l.583.032a5.326 5.326 0 01.32.036l.187.036c.088.016.164.037.228.064.064.026.138.06.224.103.085.043.167.095.247.156a1.894 1.894 0 01.356.36c.05.066.127.222.231.467.104.245.174.513.212.806.042.341.076.704.1 1.09.024.386.038.688.044.907v1.405c.005.772-.043 1.544-.144 2.316a3.186 3.186 0 01-.2.795c-.096.237-.18.4-.255.491l-.112.136c-.075.08-.152.15-.232.211-.08.062-.162.112-.247.152a6.87 6.87 0 01-.224.1c-.064.027-.14.048-.228.064l-.191.036a4.882 4.882 0 01-.315.036c-1.337.1-3.006.151-5.008.151-1.102-.01-2.06-.027-2.871-.051a62.25 62.25 0 01-1.601-.06l-.392-.032-.287-.032a3.791 3.791 0 01-.435-.08 2.454 2.454 0 01-.408-.168 1.597 1.597 0 01-.575-.475c-.05-.066-.127-.222-.231-.467a3.04 3.04 0 01-.212-.807c-.042-.34-.076-.704-.1-1.09A25.651 25.651 0 015 12.894v-1.406c-.005-.772.043-1.544.144-2.316.037-.293.104-.557.2-.794.096-.237.18-.401.255-.492l.112-.135c.075-.08.152-.15.232-.212.08-.061.162-.113.247-.156a3.65 3.65 0 01.224-.103c.064-.027.14-.048.228-.064l.187-.036a5.326 5.326 0 01.32-.036C8.485 7.048 10.154 7 12.156 7z">
-                                </path>
-                            </g>
-                        </svg>
-                    </a>
-                    <a class="follow__item" href="https://www.facebook.com/idontknowif/">
-                        <svg version="1.1" viewBox="0 0 24 24" class="svg-icon svg-fill"
-                            style="width: 28px; height: 28px;">
-                            <g fill="none" fill-rule="evenodd">
-                                <circle pid="0" cx="12" cy="12" r="12" fill="#484848"></circle>
-                                <path pid="1" fill="#FFF"
-                                    d="M15.429 5.242v2.176h-1.246c-.455 0-.762.098-.921.296-.159.198-.238.495-.238.89v1.558h2.325l-.31 2.44h-2.015v6.255h-2.429v-6.255H8.571v-2.44h2.024V8.365c0-1.022.275-1.814.826-2.377.55-.564 1.283-.845 2.198-.845.778 0 1.381.033 1.81.099z">
-                                </path>
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-            </div>
         </div>
     </div>
-</section>
-<section id="credit">
-    <div class="grid wide">
-        <div class="credit__container">
-            <div class="credit__content">
-                <p>© 2021 JobOfferer. Bản quyền thuộc về Đỗ Hữu Hải Long. Mọi hành
-                    vi
-                    sao chép đều là phạm pháp nếu không có sự cho phép bằng văn bản của chúng tôi.</p>
-                <p>Số nhà 11E, ngách 206/2, ngõ 206, đường Cổ Linh, phường Long Biên, quận Long Biên, Hà Nội
-                    Email: sohuuhailong@gmail.com Số điện thoại: 0852220900.</p>
-            </div>
-        </div>
-    </div>
-</section>
+</div>

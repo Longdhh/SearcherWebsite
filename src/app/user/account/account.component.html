@@ -1,35 +1,35 @@
 
 <div class="account__page">
     <div class="container-xl">
-        <h1 class="account__title">Cập nhật tài khoản</h1>
+        <h1 class="account__title" i18n>Cập nhật tài khoản</h1>
         <div class="account__information">
-            <h3 class="account__info-title">Thông tin cá nhân</h3> 
+            <h3 class="account__info-title" i18n>Thông tin cá nhân</h3> 
             <form [formGroup]="infoForm" class="form" (ngSubmit)="saveData()">
                 <div class="block">
-                    <label for="name" class="label"><p class="must">*</p>Tên</label>
+                    <label for="name" class="label" i18n><p class="must">*</p>Tên</label>
                     <input formControlName="name" type="text" class="input">
                     <span class="error" *ngIf="infoForm.get('name').touched && 
-                    infoForm.get('name').hasError('required')">Xin hãy nhập tên của bạn</span>
+                    infoForm.get('name').hasError('required')" i18n>Xin hãy nhập tên của bạn</span>
                 </div>
                 <div class="block">
-                    <label for="PhoneNumber" class="label"><p>Số điện thoại</p></label>
+                    <label for="PhoneNumber" class="label" i18n><p>Số điện thoại</p></label>
                     <input formControlName="PhoneNumber" type="text" class="input">
                     <span class="error" *ngIf="infoForm.get('PhoneNumber').touched && 
-                    infoForm.get('PhoneNumber').hasError('required')">Xin hãy nhập số điện thoại của bạn</span>
+                    infoForm.get('PhoneNumber').hasError('required')" i18n>Xin hãy nhập số điện thoại của bạn</span>
                     <span class="error" *ngIf="infoForm.get('PhoneNumber').touched && 
-                    infoForm.get('PhoneNumber').hasError('pattern')">Số điện thoại không hợp lệ</span>
+                    infoForm.get('PhoneNumber').hasError('pattern')" i18n>Số điện thoại không hợp lệ</span>
                 </div>
                 <div class="block">
-                    <label for="birthday" class="label"><p class="must">*</p>Ngày sinh</label>
+                    <label for="birthday" class="label" i18n><p class="must">*</p>Ngày sinh</label>
                     <input formControlName="birthday" type="date" class="input">
                     <span class="error" *ngIf="infoForm.get('birthday').touched && 
-                    infoForm.get('birthday').hasError('required')">Xin hãy nhập ngày sinh của bạn</span>
+                    infoForm.get('birthday').hasError('required')" i18n>Xin hãy nhập ngày sinh của bạn</span>
                 </div>
                 <div class="block">
-                    <label class="label"><p class="must">*</p>Giới tính</label>
+                    <label class="label" i18n><p class="must">*</p>Giới tính</label>
                     <div class="radio-buttons input" >
-                        <input formControlName="gender" class="radio" type="radio" [value]="true">Nam
-                        <input formControlName="gender" class="radio" type="radio" [value]="false">Nữ
+                        <input formControlName="gender" class="radio" type="radio" [value]="true" i18n>Nam
+                        <input formControlName="gender" class="radio" type="radio" [value]="false" i18n>Nữ
                     </div>
                 </div>
                 <div class="block">
@@ -40,53 +40,53 @@
                     <input type="hidden" formControlName="avatar">
                 </div>
                 <div class="block">
-                    <label for="name" class="label"><p>Giới thiệu</p></label>
+                    <label for="name" class="label"><p i18n>Giới thiệu</p></label>
                     <textarea formControlName="description" type="text" class="input"></textarea>
                 </div>
                 <div class="block">
-                    <label class="label"><p>Tỉnh/Thành phố</p></label>
+                    <label class="label"><p i18n>Tỉnh/Thành phố</p></label>
                     <select class="input" formControlName="province_id">
-                        <option [value]="null" [disabled]="true" >--- Chọn tỉnh/thành phố ---</option>
+                        <option [value]="null" [disabled]="true" i18n>--- Chọn tỉnh/thành phố ---</option>
                         <option [value]="item.province_id" *ngFor="let item of provinceList">{{item.name}}</option>
                     </select>
                 </div>
                 <div class="block">
-                    <label for="name" class="label"><p>Địa chỉ</p></label>
+                    <label for="name" class="label"><p i18n>Địa chỉ</p></label>
                     <input formControlName="address" type="text" class="input">
                 </div>
                 <div class="block">
-                    <label class="label"><p>Trình độ làm việc</p></label>
+                    <label class="label"><p i18n>Trình độ làm việc</p></label>
                     <select class="input" formControlName="level_id">
-                        <option [value]="null" [disabled]="true" >--- Chọn trình độ ---</option>
+                        <option [value]="null" [disabled]="true" i18n>--- Chọn trình độ ---</option>
                         <option [value]="item.level_id" *ngFor="let item of levelList">{{item.name}}</option>
                     </select>
                 </div>
                 <div class="block">
-                    <label class="label"><p>Số năm kinh nghiệm</p></label>
+                    <label class="label"><p i18n>Số năm kinh nghiệm</p></label>
                     <input class="input" type="number" formControlName="years_of_experience" min="0">
                 </div>
                 <div class="block">
-                    <label class="label"><p>Công ty cũ</p></label>
+                    <label class="label"><p i18n>Công ty cũ</p></label>
                     <input class="input" formControlName="last_company">
                 </div>
-                <button class="btn btn-save" type="submit">Lưu thay đổi</button>
+                <button class="btn btn-save" type="submit" i18n>Lưu thay đổi</button>
             </form>
-            <h3 class="account__info-title">Đổi mật khẩu</h3>
+            <h3 class="account__info-title" i18n>Đổi mật khẩu</h3>
             <form action="changePasswordForm" [formGroup]="passwordForm" class="form">
                 <div class="block">
-                    <label for="oldPassword" class="label"><p class="must">*</p>Mật khẩu hiện tại</label>
+                    <label for="oldPassword" class="label" i18n><p class="must">*</p>Mật khẩu hiện tại</label>
                     <input formControlName="oldPassword" type="password" class="input">
                 </div>
                 <div class="block">
-                    <label for="Password" class="label"><p class="must">*</p>Mật khẩu mới</label>
+                    <label for="Password" class="label" i18n><p class="must">*</p>Mật khẩu mới</label>
                     <input formControlName="Password" type="password" class="input">
-                    <p class="instruction">Mật khẩu từ 6-32 ký tự, có ít nhất 1 kí tự chữ, 1 kí tự số</p>
+                    <p class="instruction" i18n>Mật khẩu từ 6-32 ký tự, có ít nhất 1 kí tự chữ, 1 kí tự số</p>
                 </div>
                 <div class="block">
-                    <label for="rePassword" class="label"><p class="must">*</p>Nhập lại mật khẩu mới</label>
+                    <label for="rePassword" class="label" i18n><p class="must">*</p>Nhập lại mật khẩu mới</label>
                     <input formControlName="rePassword" type="password" class="input">
                 </div>
-                <button class="btn btn-save">Lưu thay đổi</button>
+                <button class="btn btn-save" i18n>Lưu thay đổi</button>
             </form>
         </div>
     </div>

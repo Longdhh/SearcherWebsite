@@ -1,27 +1,27 @@
 <div class="container-xl">
-    <h1 class="title">Danh sách công việc đã ứng tuyển</h1>
+    <h1 class="title" i18n>Danh sách công việc đã ứng tuyển</h1>
     <form [formGroup]="registedForm" class="form">
       <div class="block">
-        <label for="name" class="label">Tên công việc</label>
+        <label for="name" class="label" i18n>Tên công việc</label>
         <input formControlName="name" type="text" class="input">
-        <button class="btn btn-find">Tìm kiếm</button>
-        <a routerLink="/main/job" class="btn btn-danger">Quay lại</a>
+        <button class="btn btn-find" i18n>Tìm kiếm</button>
+        <a routerLink="/main/job" class="btn btn-danger" i18n>Quay lại</a>
       </div>
     </form>
     <table class="table table-striped">
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Tên công việc</th>
-          <th scope="col">Link</th>
-          <th scope="col">Tác vụ</th>
+          <th scope="col" i18n>Tên công việc</th>
+          <th scope="col" i18n>Đường dẫn</th>
+          <th scope="col" i18n>Tác vụ</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let item of jobList; index as i">
           <th scope="row">{{i+1}}</th>
           <td>{{item.name}}</td>
-          <td><a href="/main/job/job-info/{{item.job_id}}">Trang công việc</a></td>
+          <td><a href="/main/job/job-info/{{item.job_id}}" i18n>Trang công việc</a></td>
         <td>
             <a (click)="deleteItem(jobUserList[i].job_user_id)" class="delete-link">
                 <i class="fa-solid fa-xmark"></i>

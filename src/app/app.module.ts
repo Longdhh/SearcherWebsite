@@ -15,6 +15,9 @@ import { RouterModule } from '@angular/router';
 import { InfoComponent } from './user/info/info.component';
 import { appRoutes } from './app.route';
 import { AuthGuard } from './guard/auth.guard';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { ContactComponent } from './website/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,7 @@ import { AuthGuard } from './guard/auth.guard';
     ChangePasswordComponent,
     ForgotPasswordComponent,
     InfoComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,12 @@ import { AuthGuard } from './guard/auth.guard';
     BsDropdownModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
   ],
   providers: [ AuthGuard, HttpClientModule, Title,{ provide: BsDropdownConfig, useValue: { autoClose: true } } ],
   bootstrap: [AppComponent],

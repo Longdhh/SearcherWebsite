@@ -16,20 +16,22 @@
 }
 
 .thumbnail-holder {
-    height: 150px;
     background-color: var(--bs-white);
-    margin-right: 20px;
-    display: flex;
+    display: none;
     align-items: center;
+    height: 100%;
+    width: 150px;
 }
 .thumbnail {
-    height: 80px;
     width: 100%;
     padding: 8px;
 }
 
 .job__info {
     padding: 8px;
+    margin-left: 20px;
+    display: block;
+    width: 600px;
 }
 .job__item {
     display: flex;
@@ -37,22 +39,27 @@
     align-items: center;
     background-color: rgb(228 213 252);
     border: 1px solid var(--bs-purple);
-
+    height: 180px;
     margin-top: 20px;
 }
 
 .job__title {
     cursor: pointer;
-    width: 1000px;
+    max-width: 600px;
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 .salary {
+    display: none;
+}
+
+.salary-mobile {
     color: var(--bs-yellow);
     font-weight: 700;
-    position: absolute;
-    top: 20px;
-    right: 50px;
+    display: block;
 }
 p {
     margin-bottom: 0;
@@ -89,7 +96,7 @@ p {
     justify-content: center;
     border: none;
     outline: none;
-    width: 500px;
+    width: 150px;
 }
 
 .search-bar {
@@ -214,4 +221,38 @@ p {
 
 .nav-link {
     color: white
+}
+
+.title {
+    color: var(--bs-purple);
+    margin-top: 20px;
+}
+
+@media(min-width: 992px) {
+    .salary {
+        color: var(--bs-yellow);
+        font-weight: 700;
+        position: absolute;
+        top: 20px;
+        right: 50px;
+        display: block;
+    }
+    .salary-mobile {
+        display: none;
+    }
+}
+
+@media(min-width: 768px) {
+    .search-input {
+        width: 500px;
+    }
+}
+
+@media(min-width: 576px) and (max-width: 767px) {
+    .thumbnail-holder {
+        display: flex;
+    }
+    .search-input {
+        width: 300px;
+    }
 }

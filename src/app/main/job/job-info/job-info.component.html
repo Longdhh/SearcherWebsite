@@ -6,20 +6,20 @@
             <div class="overall-info">
                 <h3 class="job-name">{{job.name}}</h3>
                 <a class="link" routerLink="/main/company/company-info/{{company.Id}}">{{company.name}}</a>
-                <div class="job-provinces">Địa điểm làm việc: {{province.name}}</div>
-                <div class="salary">Mức lương  {{salaryRange.name}}</div>
-                <div class="end-date">Ngày hết hạn {{job_end_date}}</div>
+                <div class="job-provinces" i18n>Địa điểm làm việc: {{province.name}}</div>
+                <div class="salary" i18n>Mức lương: {{salaryRange.name}}</div>
+                <div class="end-date" i18n>Ngày hết hạn: {{job_end_date}}</div>
             </div>
         </div>
         <div class="actions">
-            <button class="btn send-button" type="button" (click)="showAdd()">Nộp đơn</button>
+            <button class="btn send-button" type="button" (click)="showAdd()" i18n>Nộp đơn</button>
         </div>
     </div>
     <div class="body">
         <tabset>
             <tab heading="Thông tin" class="info">
                 <div class="welfares">
-                    <h4 class="title">Các phúc lợi dành cho bạn</h4>
+                    <h4 class="title" i18n>Các phúc lợi dành cho bạn</h4>
                     <ul class="welfare__lists">
                         <li class="welfare" *ngFor="let welfare of jobWelfares">
                             {{welfare.welfare_type.name}}: {{welfare.description}}
@@ -27,44 +27,28 @@
                     </ul>
                 </div>
                 <div class="job__description">
-                    <h4 class="title">
-                        Mô tả công việc
-                    </h4>
+                    <h4 class="title" i18n>Mô tả công việc</h4>
                     <p class="description">{{job.description}}</p>
                 </div>
                 <div class="job__requirement">
-                    <h4 class="title">
-                        Yêu cầu công việc
-                    </h4>
+                    <h4 class="title" i18n>Yêu cầu công việc</h4>
                     <p class="requirement">{{job.job_requirement}}</p>
                 </div>
                 <div class="job__place">
-                    <h4 class="title">
-                        Địa điểm làm việc
-                    </h4>    
+                    <h4 class="title"  i18n>Địa điểm làm việc</h4>    
                     <p class="place"><i class="fa-solid fa-location-dot address-icon"></i>{{job.address}}, {{province.name}}</p>
                 </div>
                 <div class="categories">
                     <div class="block">
-                        <h5 class="sub-title">
-                            Ngày đăng tuyển
-                        </h5>
-                        <p class="date">
-                            {{job_create_date}}
-                        </p>
+                        <h5 class="sub-title" i18n>Ngày đăng tuyển</h5>
+                        <p class="date">{{job_create_date}}</p>
                     </div>
                     <div class="block">
-                        <h5 class="sub-title">
-                            Cấp bậc
-                        </h5>
-                        <p class="level">
-                            {{level.name}}
-                        </p>
+                        <h5 class="sub-title"  i18n>Cấp bậc</h5>
+                        <p class="level">{{level.name}}</p>
                     </div>
                     <div class="block">
-                        <h5 class="sub-title">
-                            Ngành nghề
-                        </h5>
+                        <h5 class="sub-title"  i18n>Ngành nghề</h5>
                         <ul class="category__list">
                             <li class="category__item" *ngFor="let category of jobCategories">{{category.name}}</li>
                         </ul>
@@ -73,14 +57,12 @@
             </tab>
             <tab heading="Công ty" class="info">
                 <div class="description">
-                    <h4 class="title">Giới thiệu công ty</h4>
+                    <h4 class="title"  i18n>Giới thiệu công ty</h4>
                     <p class="description">{{company.description}}</p>
                 </div>
                 <div class="categories">
                     <div class="block">
-                        <h5 class="sub-title">
-                            Địa chỉ
-                        </h5>
+                        <h5 class="sub-title"  i18n>Địa chỉ</h5>
                         <p class="date">
                             {{company.address}}
                         </p>
@@ -95,7 +77,7 @@ aria-hidden="true">
 <div class="modal-dialog modal-lg">
   <div class="modal-content">
     <div class="modal-header">
-      <h4 class="modal-title pull-left title">Bạn đang ứng tuyển cho việc làm {{job.name}}</h4>
+      <h4 class="modal-title pull-left title" i18n>Bạn đang ứng tuyển cho việc làm {{job.name}}</h4>
       <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRegister.hide()">
         <span aria-hidden="true" class="visually-hidden">&times;</span>
       </button>
@@ -104,37 +86,26 @@ aria-hidden="true">
       <form [formGroup]="registerForm" class="form" (ngSubmit)="saveData()">
         <input type="hidden" formControlName="job_id">
         <div class="block">
-            <label for="name" class="label">
-              Tên
-            </label>
+            <label for="name" class="label" i18n>Tên</label>
             <input formControlName="name" type="text" class="input">
-            
           </div>
         <div class="block">
-          <label for="email" class="label">
-            Email
-          </label>
+          <label for="email" class="label">Email</label>
           <input formControlName="email" type="text" class="input">
         </div>
-        <div class="block">
-          <label for="phone_number" class="label">
-            Số điện thoại
-          </label>
+        <div class="block"  i18n>
+          <label for="phone_number" class="label">Số điện thoại</label>
           <input formControlName="phone_number" type="text" class="input">
         </div>
         <div class="block">
-            <label for="resume" class="label">
-                Hồ sơ
-            </label>
+            <label for="resume" class="label"  i18n>Hồ sơ</label>
             <input type="file" class="input" #resume name="resume">
             <input type="hidden" formControlName="resume">
         </div>
-        <button class="btn btn-success btn-save" type="submit">
-          <i class="fa-solid fa-plus icon"></i>Gửi hồ sơ
-        </button>
-        <button class="btn btn-danger btn-cancel" type="button" (click)="modalRegister.hide()">
-          <i class="fa-solid fa-xmark icon"></i>Quay lại
-        </button>
+        <button class="btn btn-success btn-save" type="submit"  i18n>
+          <i class="fa-solid fa-plus icon"></i>Gửi hồ sơ</button>
+        <button class="btn btn-danger btn-cancel" type="button" (click)="modalRegister.hide()"  i18n>
+          <i class="fa-solid fa-xmark icon"></i>Quay lại</button>
       </form>
     </div>
 </div>

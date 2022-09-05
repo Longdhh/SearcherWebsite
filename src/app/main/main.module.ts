@@ -10,12 +10,16 @@ import { NotificationService } from '../services/notification.service';
 import { AuthService } from '../services/auth.service';
 import { UtilityService } from '../services/utility.service';
 import { SharedService } from '../services/shared.service';
+import { BlogComponent } from './blog/blog.component';
+import { BlogInfoComponent } from './blog/blog-info/blog-info.component';
 
 @NgModule({
   declarations: [
     MainComponent,
     NavbarComponent,
     FooterComponent,
+    BlogComponent,
+    BlogInfoComponent,
   ],
   imports: [
     CommonModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment';
 import { ModalDirective } from 'ngx-bootstrap/modal';
@@ -35,7 +36,7 @@ export class JobInfoComponent implements OnInit {
   announcement: any;
   user: LoggedInUser;
   constructor(private service: SharedService, private route: ActivatedRoute, private uploadService: UploadService,
-    private notificationService: NotificationService, private router: Router) { }
+    private notificationService: NotificationService, private router: Router, private titleService: Title) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(prM => { 
@@ -68,6 +69,7 @@ export class JobInfoComponent implements OnInit {
     })
     this.service.get('/job/detail/' + id).subscribe((response: any) => {
       this.job = response;
+      this.titleService.setTitle('Thông tin về công việc' + this.job.name);
       this.service.get('/company/detail/' + this.job.Id).subscribe((response:any) => {
         this.company=response;
       })
